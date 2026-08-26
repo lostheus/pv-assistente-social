@@ -81,23 +81,23 @@
     }
     h1, h2, h3, .font-display { font-family: 'Outfit', 'DM Sans', sans-serif; letter-spacing: -0.02em; }
     body h1 { font-weight: 800; }
-    body h2 { font-weight: 800; font-size: 1.65rem; line-height: 1.22; color: #142E47; }
-    @media(min-width: 640px) { body h2 { font-size: 1.95rem; } }
-    @media(min-width: 768px) { body h2 { font-size: 2.35rem; } }
-    body h3 { font-size: clamp(1.15rem, 2vw, 1.45rem); line-height: 1.25; font-weight: 700; color: #142E47; }
+    body h2 { font-weight: 800; font-size: 1.75rem; line-height: 1.2; color: #142E47; }
+    @media(min-width: 640px) { body h2 { font-size: 2.1rem; } }
+    @media(min-width: 768px) { body h2 { font-size: 2.45rem; } }
+    body h3 { font-size: clamp(1.2rem, 2vw, 1.5rem); line-height: 1.25; font-weight: 700; color: #142E47; }
     .balance { text-wrap: balance; }
     .accent { color: #1E6847; }
     section { position: relative; }
     .divtop { position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(13,32,51,.1), transparent); }
-    .gold-rule { height: 3px; width: 56px; background: linear-gradient(90deg, #CBA255, #E5C378, transparent); border-radius: 3px; margin: 12px auto 0; }
+    .gold-rule { height: 3px; width: 56px; background: linear-gradient(90deg, #CBA255, #E5C378, transparent); border-radius: 3px; margin: 14px auto 0; }
     
     .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: .45rem;
-      font-size: .7rem;
+      gap: .5rem;
+      font-size: .78rem;
       font-weight: 800;
-      letter-spacing: .14em;
+      letter-spacing: .12em;
       text-transform: uppercase;
       color: #9C7322;
     }
@@ -108,11 +108,11 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: .55rem;
+      gap: .6rem;
       font-family: 'Outfit', sans-serif;
       font-weight: 800;
-      padding: 1rem 1.8rem;
-      border-radius: 12px;
+      padding: 1.05rem 1.8rem;
+      border-radius: 14px;
       line-height: 1.15;
       transition: all .2s cubic-bezier(.2,.8,.2,1);
       white-space: normal;
@@ -159,7 +159,7 @@
       transform: translateY(-2px);
     }
 
-    .chk { display: flex; gap: .7rem; align-items: flex-start; }
+    .chk { display: flex; gap: .75rem; align-items: flex-start; }
     .chk svg { flex: 0 0 auto; margin-top: .15rem; color: #1E6847; }
 
     @media(min-width:640px) {
@@ -167,11 +167,11 @@
         background: #ffffff;
         border: 1px solid #EFF2F6;
         border-radius: 999px;
-        padding: .55rem 1.1rem;
+        padding: .6rem 1.2rem;
         box-shadow: 0 2px 4px rgba(13,32,51,.04), 0 8px 20px -8px rgba(13,32,51,.1);
         align-items: center;
         font-weight: 600;
-        font-size: .88rem;
+        font-size: .92rem;
       }
       .hero-bullets > li svg { margin-top: 0; }
     }
@@ -212,7 +212,7 @@
     }
     .carousel {
       display: flex;
-      gap: 18px;
+      gap: 16px;
       overflow-x: auto;
       scroll-snap-type: x mandatory;
       padding: 8px 4px 18px;
@@ -229,8 +229,8 @@
     
     .carousel .slide {
       scroll-snap-align: center;
-      flex: 0 0 85%;
-      max-width: 85%;
+      flex: 0 0 86%;
+      max-width: 86%;
     }
     @media(min-width: 640px) {
       .carousel .slide {
@@ -269,15 +269,15 @@
     .carbtn.next { right: -14px; }
 
     .car-dot {
-      width: 8px;
-      height: 8px;
+      width: 9px;
+      height: 9px;
       border-radius: 999px;
       background: #DDE3EB;
       transition: all .25s ease;
       cursor: pointer;
     }
     .car-dot.active {
-      width: 24px;
+      width: 26px;
       background: #1E6847;
     }
 
@@ -332,8 +332,8 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 44px;
-      height: 44px;
+      width: 46px;
+      height: 46px;
       border-radius: 50%;
       background: #ffffff;
       border: 2px solid #0D2033;
@@ -402,16 +402,17 @@
       color: #0D2033;
       font-family: 'Outfit', sans-serif;
       font-weight: 800;
-      font-size: 0.76rem;
-      padding: 6px 22px;
+      font-size: 0.8rem;
+      padding: 7px 24px;
       border-radius: 50px;
       letter-spacing: 0.06em;
       text-transform: uppercase;
       box-shadow: 0 4px 14px rgba(203, 162, 85, 0.35);
+      white-space: nowrap;
     }
 
     .faq-content { max-height: 0; overflow: hidden; transition: max-height .35s cubic-bezier(0.4, 0, 0.2, 1); }
-    .faq-item.active .faq-content { max-height: 400px; }
+    .faq-item.active .faq-content { max-height: 450px; }
     .faq-item.active .faq-icon { transform: rotate(180deg); }
 
     .reveal {
@@ -423,37 +424,56 @@
     .reveal[data-d="1"] { transition-delay: .08s; }
     .reveal[data-d="2"] { transition-delay: .16s; }
 
+    /* STICKY CTA MOBILE */
+    .sticky-mobile-cta {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(13, 32, 51, 0.95);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-top: 1px solid rgba(203, 162, 85, 0.3);
+      padding: 10px 16px;
+      z-index: 50;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+    .sticky-mobile-cta.visible {
+      transform: translateY(0);
+    }
+
     ::selection { background: #1E6847; color: #ffffff; }
     body h1, body h2, body h3, p.balance, .balance { text-wrap: balance; }
   </style>
 </head>
-<body class="antialiased selection:bg-brand-600 selection:text-white">
+<body class="antialiased selection:bg-brand-600 selection:text-white pb-14 sm:pb-0">
 
   <!-- BLOCO 0: MARCA E IDENTIFICAÇÃO INSTITUCIONAL -->
-  <header class="bg-navy-900 text-white py-2.5 px-4 text-center border-b border-navy-800">
-    <div class="inline-flex items-center justify-center gap-2 text-xs sm:text-sm">
+  <header class="bg-navy-900 text-white py-3 px-4 text-center border-b border-navy-800">
+    <div class="inline-flex items-center justify-center gap-2 text-xs sm:text-sm font-medium">
       <svg viewBox="0 0 24 24" fill="none" class="w-4 h-4 text-gold-400 shrink-0" stroke="currentColor" stroke-width="2">
         <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
       </svg>
       <span class="font-bold tracking-wide text-ink-100 font-display">100 Mapas da Aprovação</span>
       <span class="text-white/30">|</span>
-      <span class="text-white/80">Serviço Social SES-TO & FGV</span>
+      <span class="text-white/90">Serviço Social SES-TO & FGV</span>
       <span class="hidden md:inline text-white/30">·</span>
       <span class="hidden md:inline text-gold-300 text-xs font-semibold">Material Independente de Alta Precisão</span>
     </div>
   </header>
 
   <!-- BLOCO 1: HERO (TANGIBILIDADE + ATALHO PRONTO COM HEADLINE EQUILIBRADA) -->
-  <section class="pt-6 sm:pt-10 pb-12 sm:pb-16 overflow-hidden" style="background: linear-gradient(180deg, #FAF8F1 0%, #FFFFFF 68%, #F8F9FA 100%);">
+  <section class="pt-7 sm:pt-12 pb-14 sm:pb-18 overflow-hidden" style="background: linear-gradient(180deg, #FAF8F1 0%, #FFFFFF 68%, #F8F9FA 100%);">
     <div class="relative max-w-5xl mx-auto px-4 sm:px-6 text-center">
       
       <!-- Headline Compacta e de Alto Impacto Modelada na Referência -->
-      <h1 class="font-display text-[1.45rem] sm:text-[1.95rem] lg:text-[2.35rem] leading-[1.2] text-navy-900 balance max-w-4xl mx-auto font-extrabold">
+      <h1 class="font-display text-[1.55rem] sm:text-[2rem] lg:text-[2.45rem] leading-[1.18] text-navy-900 balance max-w-4xl mx-auto font-extrabold">
         +100 Mapas Visuais de <span class="text-brand-700">Serviço Social & SUS</span>: Domine a legislação e os temas mais cobrados da FGV com <span class="text-gold-600">100% de segurança</span>
       </h1>
 
       <!-- Mockup do Pack em Destaque -->
-      <div class="reveal min-w-0 max-w-sm sm:max-w-xl lg:max-w-2xl mx-auto mt-6 relative flex items-center justify-center">
+      <div class="reveal min-w-0 max-w-sm sm:max-w-xl lg:max-w-2xl mx-auto mt-6 sm:mt-8 relative flex items-center justify-center">
         <img 
           src="mockup-principal-assistente.webp" 
           alt="100 Mapas da Aprovação Serviço Social SES-TO e FGV" 
@@ -465,33 +485,33 @@
       </div>
 
       <!-- Subheadline -->
-      <p class="mt-6 text-ink-700 text-[15px] leading-snug sm:text-base sm:leading-relaxed max-w-2xl mx-auto balance font-medium">
+      <p class="mt-6 text-ink-700 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto balance font-medium">
         A coleção visual e esquematizada no <strong class="text-navy-900">Método Gabarito Visual Social</strong> para você revisar os pontos mais cobrados da FGV em apenas <strong class="text-brand-700">15 minutos por dia</strong>.
       </p>
 
       <!-- 3 Bullets Estratégicos -->
-      <ul class="hero-bullets mt-6 flex flex-col items-start sm:flex-row sm:flex-wrap sm:items-center sm:justify-center gap-2.5 w-fit mx-auto text-left">
+      <ul class="hero-bullets mt-6 sm:mt-8 flex flex-col items-start sm:flex-row sm:flex-wrap sm:items-center sm:justify-center gap-3 w-fit mx-auto text-left">
         <li class="chk">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#1E6847"/><path d="M8 12.5l2.5 2.5 5-5.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span class="text-ink-800">100 mapas mentais radiais em PDF A4 de alta resolução</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#1E6847"/><path d="M8 12.5l2.5 2.5 5-5.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="text-ink-800 text-sm sm:text-base font-semibold">100 mapas mentais radiais em PDF A4 de alta resolução</span>
         </li>
         <li class="chk">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#1E6847"/><path d="M8 12.5l2.5 2.5 5-5.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span class="text-ink-800">Alertas estratégicos Olho FGV em todas as páginas</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#1E6847"/><path d="M8 12.5l2.5 2.5 5-5.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="text-ink-800 text-sm sm:text-base font-semibold">Alertas estratégicos Olho FGV em todas as páginas</span>
         </li>
         <li class="chk">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#1E6847"/><path d="M8 12.5l2.5 2.5 5-5.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span class="text-ink-800">Formato vertical pronto para celular, tablet ou impressão</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#1E6847"/><path d="M8 12.5l2.5 2.5 5-5.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="text-ink-800 text-sm sm:text-base font-semibold">Formato vertical pronto para celular, tablet ou impressão</span>
         </li>
       </ul>
 
       <!-- Microcopy de Confiança -->
-      <div class="mt-7 pt-5 border-t border-ink-200/60 inline-flex flex-wrap items-center justify-center gap-3.5 text-xs font-semibold text-ink-600">
-        <span class="inline-flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-brand-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> Material Digital em PDF</span>
+      <div class="mt-7 pt-5 border-t border-ink-200/60 inline-flex flex-wrap items-center justify-center gap-4 text-xs sm:text-sm font-semibold text-ink-600">
+        <span class="inline-flex items-center gap-1.5"><svg class="w-4 h-4 text-brand-600 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> Material Digital em PDF</span>
         <span class="text-ink-300">·</span>
-        <span class="inline-flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-brand-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> Acesso Imediato via Email</span>
+        <span class="inline-flex items-center gap-1.5"><svg class="w-4 h-4 text-brand-600 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> Acesso Imediato via Email</span>
         <span class="text-ink-300">·</span>
-        <span class="inline-flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-brand-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> Garantia Incondicional de 7 Dias</span>
+        <span class="inline-flex items-center gap-1.5"><svg class="w-4 h-4 text-brand-600 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> Garantia de 7 Dias</span>
       </div>
 
     </div>
@@ -513,40 +533,40 @@
         
         <div class="card p-6 border-l-4 border-l-coral-500 reveal">
           <div class="flex items-start gap-4">
-            <div class="w-9 h-9 rounded-xl bg-coral-500/10 text-coral-600 flex items-center justify-center shrink-0 font-bold text-sm">✕</div>
+            <div class="w-9 h-9 rounded-xl bg-coral-500/10 text-coral-600 flex items-center justify-center shrink-0 font-bold text-base">✕</div>
             <div>
-              <h3 class="text-base font-bold text-navy-900 mb-1">Acúmulo de apostilas e PDFs gigantes</h3>
-              <p class="text-ink-600 text-xs sm:text-sm leading-relaxed">Você abre arquivos com centenas de páginas, passa horas lendo de forma passiva e percebe que pouco fixou quando tenta lembrar os detalhes no dia seguinte.</p>
+              <h3 class="text-base sm:text-lg font-bold text-navy-900 mb-1.5">Acúmulo de apostilas e PDFs gigantes</h3>
+              <p class="text-ink-700 text-sm sm:text-[15px] leading-relaxed">Você abre arquivos com centenas de páginas, passa horas lendo de forma passiva e percebe que pouco fixou quando tenta lembrar os detalhes no dia seguinte.</p>
             </div>
           </div>
         </div>
 
         <div class="card p-6 border-l-4 border-l-coral-500 reveal" data-d="1">
           <div class="flex items-start gap-4">
-            <div class="w-9 h-9 rounded-xl bg-coral-500/10 text-coral-600 flex items-center justify-center shrink-0 font-bold text-sm">✕</div>
+            <div class="w-9 h-9 rounded-xl bg-coral-500/10 text-coral-600 flex items-center justify-center shrink-0 font-bold text-base">✕</div>
             <div>
-              <h3 class="text-base font-bold text-navy-900 mb-1">Confusão entre conceitos e competências</h3>
-              <p class="text-ink-600 text-xs sm:text-sm leading-relaxed">Na hora de responder questões da FGV, termos parecidos de competências e atribuições privativas, princípios do SUS e instrumentos técnicos acabam gerando dúvida e insegurança.</p>
+              <h3 class="text-base sm:text-lg font-bold text-navy-900 mb-1.5">Confusão entre conceitos e competências</h3>
+              <p class="text-ink-700 text-sm sm:text-[15px] leading-relaxed">Na hora de responder questões da FGV, termos parecidos de competências e atribuições privativas, princípios do SUS e instrumentos técnicos acabam gerando dúvida e insegurança.</p>
             </div>
           </div>
         </div>
 
         <div class="card p-6 border-l-4 border-l-coral-500 reveal">
           <div class="flex items-start gap-4">
-            <div class="w-9 h-9 rounded-xl bg-coral-500/10 text-coral-600 flex items-center justify-center shrink-0 font-bold text-sm">✕</div>
+            <div class="w-9 h-9 rounded-xl bg-coral-500/10 text-coral-600 flex items-center justify-center shrink-0 font-bold text-base">✕</div>
             <div>
-              <h3 class="text-base font-bold text-navy-900 mb-1">Leis secas cansativas e descontextualizadas</h3>
-              <p class="text-ink-600 text-xs sm:text-sm leading-relaxed">A leitura corrida da Lei 8.662/1993, do ECA e da Legislação do SUS (8.080 e 8.142) se torna desgastante e difícil de associar aos casos práticos exigidos em concurso.</p>
+              <h3 class="text-base sm:text-lg font-bold text-navy-900 mb-1.5">Leis secas cansativas e descontextualizadas</h3>
+              <p class="text-ink-700 text-sm sm:text-[15px] leading-relaxed">A leitura corrida da Lei 8.662/1993, do ECA e da Legislação do SUS (8.080 e 8.142) se torna desgastante e difícil de associar aos casos práticos exigidos em concurso.</p>
             </div>
           </div>
         </div>
 
         <div class="card p-6 border-l-4 border-l-coral-500 reveal" data-d="1">
           <div class="flex items-start gap-4">
-            <div class="w-9 h-9 rounded-xl bg-coral-500/10 text-coral-600 flex items-center justify-center shrink-0 font-bold text-sm">✕</div>
+            <div class="w-9 h-9 rounded-xl bg-coral-500/10 text-coral-600 flex items-center justify-center shrink-0 font-bold text-base">✕</div>
             <div>
-              <h3 class="text-base font-bold text-navy-900 mb-1">Rotina corrida sem tempo para maratonar aulas</h3>
-              <p class="text-ink-600 text-xs sm:text-sm leading-relaxed">Entre trabalho, família e compromissos, sentar por 4 ou 5 horas seguidas para estudar é inviável. Você precisa de um método de revisão que caiba em blocos de 15 minutos.</p>
+              <h3 class="text-base sm:text-lg font-bold text-navy-900 mb-1.5">Rotina corrida sem tempo para maratonar aulas</h3>
+              <p class="text-ink-700 text-sm sm:text-[15px] leading-relaxed">Entre trabalho, família e compromissos, sentar por 4 ou 5 horas seguidas para estudar é inviável. Você precisa de um método de revisão que caiba em blocos de 15 minutos.</p>
             </div>
           </div>
         </div>
@@ -555,7 +575,7 @@
 
       <!-- Amplificação da Dor -->
       <div class="mt-10 text-center max-w-3xl mx-auto reveal">
-        <p class="font-display font-bold text-lg sm:text-xl text-navy-900 balance">
+        <p class="font-display font-bold text-lg sm:text-xl text-navy-900 balance leading-snug">
           <span class="text-coral-500">E o pior:</span> a banca FGV é especialista em explorar sutilezas conceituais e pequenas distinções que passam despercebidas na leitura linear.
         </p>
       </div>
@@ -567,7 +587,7 @@
             <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
           </div>
           <div class="font-display font-extrabold text-xl sm:text-2xl text-navy-900 mb-2">A culpa não é sua.</div>
-          <p class="text-ink-700 text-sm sm:text-base leading-relaxed balance">
+          <p class="text-ink-800 text-[15px] sm:text-base leading-relaxed balance">
             O problema nunca foi sua capacidade ou dedicação. O problema é tentar memorizar matérias densas e cheias de ramificações através de textos corridos e sem hierarquia visual. Para reter conteúdos complexos, o seu cérebro precisa de <strong class="text-brand-700">conexão, cores, síntese e pontos de ancoragem</strong>.
           </p>
         </div>
@@ -581,11 +601,11 @@
     <div class="divtop"></div>
     
     <!-- Faixa Navy de Destaque -->
-    <div class="bg-navy-900 text-white py-6 sm:py-8 px-5 text-center mb-12 shadow-card">
-      <span class="font-display font-bold text-lg sm:text-2xl leading-snug max-w-4xl mx-auto block balance">
+    <div class="bg-navy-900 text-white py-7 sm:py-9 px-5 text-center mb-12 shadow-card">
+      <span class="font-display font-extrabold text-xl sm:text-2xl lg:text-3xl leading-snug max-w-4xl mx-auto block balance">
         Conheça os <span class="text-gold-300">100 Mapas da Aprovação</span> para Serviço Social
       </span>
-      <p class="text-ink-200 text-xs sm:text-sm mt-1.5 max-w-2xl mx-auto">Desenvolvido no Método Gabarito Visual Social para o concurso SES-TO</p>
+      <p class="text-ink-100 text-sm sm:text-base mt-2 max-w-2xl mx-auto font-medium">Desenvolvido no Método Gabarito Visual Social para o concurso SES-TO</p>
     </div>
 
     <div class="max-w-6xl mx-auto px-5 sm:px-6">
@@ -593,7 +613,7 @@
       <div class="text-center max-w-3xl mx-auto mb-10 reveal">
         <span class="eyebrow center">Comparação Interativa</span>
         <h2 class="mt-3 balance">Arraste e veja a transformação na prática</h2>
-        <p class="mt-3 text-ink-600 text-sm sm:text-base leading-relaxed balance">
+        <p class="mt-3 text-ink-700 text-base sm:text-lg leading-relaxed balance">
           De um lado, a lei seca densa, cansativa e sem hierarquia. Do outro, a mesma matéria esquematizada com conexões lógicas, cores e alertas diretos da FGV no Método Gabarito Visual Social.
         </p>
         <div class="gold-rule"></div>
@@ -614,26 +634,26 @@
                 class="w-full h-full object-contain pointer-events-none"
               >
               <!-- Badge Mapa Mental -->
-              <div class="absolute bottom-3 right-3 bg-navy-900/95 backdrop-blur-sm text-white text-[10px] sm:text-[11px] font-bold py-1 px-3.5 rounded-full shadow-lg pointer-events-none z-10 flex items-center gap-1.5 border border-white/20">
-                <span class="w-2 h-2 rounded-full bg-brand-400"></span>
+              <div class="absolute bottom-3.5 right-3.5 bg-navy-900/95 backdrop-blur-sm text-white text-xs font-bold py-1.5 px-3.5 rounded-full shadow-lg pointer-events-none z-10 flex items-center gap-2 border border-white/20">
+                <span class="w-2.5 h-2.5 rounded-full bg-brand-400"></span>
                 Mapa mental
               </div>
             </div>
 
             <!-- Layer Esquerda (Por cima com clip-path): Texto Corrido Totalmente Preenchido -->
             <div class="comparison-layer-left" id="comparison-overlay">
-              <div class="w-full h-full p-3 sm:p-4.5 text-left bg-[#FCFBF7] text-navy-900 flex flex-col justify-between select-none" style="font-family: Georgia, 'Times New Roman', serif;">
+              <div class="w-full h-full p-3.5 sm:p-5 text-left bg-[#FCFBF7] text-navy-900 flex flex-col justify-between select-none" style="font-family: Georgia, 'Times New Roman', serif;">
                 
                 <!-- Cabeçalho Institucional do Decreto -->
-                <div class="text-center pb-1.5 mb-1.5 border-b border-ink-300/80">
-                  <div class="text-[8.5px] sm:text-[9.5px] font-bold uppercase tracking-wider text-ink-600">PRESIDÊNCIA DA REPÚBLICA · CASA CIVIL</div>
-                  <div class="text-[10px] sm:text-[11.5px] font-bold text-navy-900 leading-tight mt-0.5">DECRETO Nº 7.508, DE 28 DE JUNHO DE 2011</div>
-                  <div class="text-[8px] sm:text-[9px] text-ink-600 italic mt-0.5">Regulamenta a Lei nº 8.080/90 para dispor sobre a organização do SUS</div>
+                <div class="text-center pb-2 mb-2 border-b border-ink-300/80">
+                  <div class="text-[9px] sm:text-[10.5px] font-bold uppercase tracking-wider text-ink-600">PRESIDÊNCIA DA REPÚBLICA · CASA CIVIL</div>
+                  <div class="text-[11px] sm:text-[12.5px] font-bold text-navy-900 leading-tight mt-0.5">DECRETO Nº 7.508, DE 28 DE JUNHO DE 2011</div>
+                  <div class="text-[8.5px] sm:text-[10px] text-ink-600 italic mt-0.5">Regulamenta a Lei nº 8.080/90 para dispor sobre a organização do SUS</div>
                 </div>
 
                 <!-- Corpo de Artigos Preenchendo 100% da Altura -->
-                <div class="text-[7.5px] sm:text-[9px] leading-[1.28] text-ink-900 space-y-1 flex-1 overflow-hidden">
-                  <p class="font-bold text-navy-900 uppercase text-[8px] sm:text-[9.5px]">CAPÍTULO I - DA ORGANIZAÇÃO DO SUS</p>
+                <div class="text-[8.5px] sm:text-[10px] leading-[1.32] text-ink-900 space-y-1.5 flex-1 overflow-hidden">
+                  <p class="font-bold text-navy-900 uppercase text-[9px] sm:text-[10.5px]">CAPÍTULO I - DA ORGANIZAÇÃO DO SUS</p>
                   <p><strong>Art. 2º</strong> Para os efeitos deste Decreto, considera-se:</p>
                   <p><strong>I - Região de Saúde:</strong> espaço geográfico contínuo constituído por agrupamentos de Municípios limítrofes, delimitado a partir de identidades culturais, econômicas e sociais e de redes de comunicação e infraestrutura de transportes compartilhados, com a finalidade de integrar a organização, o planejamento e a execução de ações e serviços de saúde;</p>
                   <p><strong>II - Contrato Organizativo da Ação Pública da Saúde:</strong> acordo de colaboração firmado entre entes federativos com a finalidade de organizar e integrar as ações e serviços de saúde na rede regionalizada e hierarquizada;</p>
@@ -649,7 +669,7 @@
                 </div>
 
                 <!-- Rodapé Discreto da Página de Lei Seca -->
-                <div class="pt-1 border-t border-ink-200 text-[7.5px] sm:text-[8.5px] text-ink-500 flex justify-between items-center mt-1">
+                <div class="pt-1.5 border-t border-ink-200 text-[8px] sm:text-[9.5px] text-ink-500 flex justify-between items-center mt-1">
                   <span>Diário Oficial da União · Seção 1</span>
                   <span>Legislação Federal</span>
                 </div>
@@ -657,8 +677,8 @@
               </div>
 
               <!-- Badge Texto Corrido -->
-              <div class="absolute bottom-3 left-3 bg-navy-900/95 backdrop-blur-sm text-white text-[10px] sm:text-[11px] font-bold py-1 px-3.5 rounded-full shadow-lg pointer-events-none z-20 flex items-center gap-1.5 border border-white/20">
-                <span class="w-2 h-2 rounded-full bg-coral-500"></span>
+              <div class="absolute bottom-3.5 left-3.5 bg-navy-900/95 backdrop-blur-sm text-white text-xs font-bold py-1.5 px-3.5 rounded-full shadow-lg pointer-events-none z-20 flex items-center gap-2 border border-white/20">
+                <span class="w-2.5 h-2.5 rounded-full bg-coral-500"></span>
                 Texto corrido
               </div>
             </div>
@@ -685,7 +705,7 @@
           </div>
 
           <!-- Dica Visual de Interação -->
-          <div class="text-center mt-3 flex items-center justify-center gap-2 text-xs font-semibold text-ink-600">
+          <div class="text-center mt-3 flex items-center justify-center gap-2 text-xs sm:text-sm font-semibold text-ink-700">
             <svg class="w-4 h-4 text-brand-700 animate-pulse" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M8 9l-4 3 4 3m8-6l4 3-4 3"/>
             </svg>
@@ -695,28 +715,28 @@
 
         <!-- Coluna de Benefícios da Metodologia -->
         <div class="reveal" data-d="1">
-          <h3 class="text-xl font-bold text-navy-900 mb-3">Em poucos dias de revisão, você vai notar:</h3>
+          <h3 class="text-xl sm:text-2xl font-bold text-navy-900 mb-4">Em poucos dias de revisão, você vai notar:</h3>
           
-          <ul class="space-y-3">
+          <ul class="space-y-3.5">
             <li class="chk">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#1E6847"/><path d="M8 12.5l2.5 2.5 5-5.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <span class="text-ink-800 text-sm font-medium">Capacidade de revisar um tema denso em menos de 3 minutos</span>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#1E6847"/><path d="M8 12.5l2.5 2.5 5-5.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="text-ink-900 text-sm sm:text-base font-semibold leading-snug">Capacidade de revisar um tema denso em menos de 3 minutos</span>
             </li>
             <li class="chk">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#1E6847"/><path d="M8 12.5l2.5 2.5 5-5.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <span class="text-ink-800 text-sm font-medium">Clareza para distinguir estudo social, laudo, relatório e parecer</span>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#1E6847"/><path d="M8 12.5l2.5 2.5 5-5.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="text-ink-900 text-sm sm:text-base font-semibold leading-snug">Clareza para distinguir estudo social, laudo, relatório e parecer</span>
             </li>
             <li class="chk">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#1E6847"/><path d="M8 12.5l2.5 2.5 5-5.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <span class="text-ink-800 text-sm font-medium">Domínio das diretrizes e leis do SUS sem reler artigos repetitivos</span>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#1E6847"/><path d="M8 12.5l2.5 2.5 5-5.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="text-ink-900 text-sm sm:text-base font-semibold leading-snug">Domínio das diretrizes e leis do SUS sem reler artigos repetitivos</span>
             </li>
             <li class="chk">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#1E6847"/><path d="M8 12.5l2.5 2.5 5-5.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <span class="text-ink-800 text-sm font-medium">Segurança imediata ao identificar as pegadinhas e distratores da FGV</span>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#1E6847"/><path d="M8 12.5l2.5 2.5 5-5.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="text-ink-900 text-sm sm:text-base font-semibold leading-snug">Segurança imediata ao identificar as pegadinhas e distratores da FGV</span>
             </li>
             <li class="chk">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#1E6847"/><path d="M8 12.5l2.5 2.5 5-5.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <span class="text-ink-800 text-sm font-medium">Uma rotina de estudos leve e sustentável de 15 minutos ao dia</span>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#1E6847"/><path d="M8 12.5l2.5 2.5 5-5.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="text-ink-900 text-sm sm:text-base font-semibold leading-snug">Uma rotina de estudos leve e sustentável de 15 minutos ao dia</span>
             </li>
           </ul>
 
@@ -735,43 +755,43 @@
       <div class="text-center mb-10 reveal">
         <span class="eyebrow center">Arquitetura Pedagógica</span>
         <h2 class="mt-3 balance">As <span class="text-brand-700">4 chaves</span> presentes em cada prancha</h2>
-        <p class="mt-2 text-ink-600 text-sm sm:text-base max-w-2xl mx-auto">Tudo o que você precisa em uma única página, sem poluição e com foco total na retenção.</p>
+        <p class="mt-2 text-ink-700 text-base sm:text-lg max-w-2xl mx-auto">Tudo o que você precisa em uma única página, sem poluição e com foco total na retenção.</p>
         <div class="gold-rule"></div>
       </div>
 
       <!-- 4 Cards Estruturais -->
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
         
-        <div class="card p-5 reveal">
-          <div class="w-10 h-10 rounded-xl bg-brand-50 text-brand-700 flex items-center justify-center font-bold text-lg mb-3 shadow-soft">
+        <div class="card p-5 sm:p-6 reveal">
+          <div class="w-11 h-11 rounded-xl bg-brand-50 text-brand-700 flex items-center justify-center font-extrabold text-lg mb-3 shadow-soft font-display">
             1
           </div>
-          <h3 class="text-base font-bold text-navy-900 mb-1.5">Nó Central Temático</h3>
-          <p class="text-ink-600 text-xs leading-relaxed">Identificação imediata do assunto do edital para localização rápida e foco no ponto chave.</p>
+          <h3 class="text-base sm:text-lg font-bold text-navy-900 mb-1.5">Nó Central Temático</h3>
+          <p class="text-ink-700 text-sm leading-relaxed">Identificação imediata do assunto do edital para localização rápida e foco no ponto chave.</p>
         </div>
 
-        <div class="card p-5 reveal" data-d="1">
-          <div class="w-10 h-10 rounded-xl bg-brand-50 text-brand-700 flex items-center justify-center font-bold text-lg mb-3 shadow-soft">
+        <div class="card p-5 sm:p-6 reveal" data-d="1">
+          <div class="w-11 h-11 rounded-xl bg-brand-50 text-brand-700 flex items-center justify-center font-extrabold text-lg mb-3 shadow-soft font-display">
             2
           </div>
-          <h3 class="text-base font-bold text-navy-900 mb-1.5">5 Ramos Conectados</h3>
-          <p class="text-ink-600 text-xs leading-relaxed">Síntese dos tópicos essenciais, princípios, artigos e conceitos desdobrados de forma lógica.</p>
+          <h3 class="text-base sm:text-lg font-bold text-navy-900 mb-1.5">5 Ramos Conectados</h3>
+          <p class="text-ink-700 text-sm leading-relaxed">Síntese dos tópicos essenciais, princípios, artigos e conceitos desdobrados de forma lógica.</p>
         </div>
 
-        <div class="card p-5 reveal" data-d="2">
-          <div class="w-10 h-10 rounded-xl bg-brand-50 text-brand-700 flex items-center justify-center font-bold text-lg mb-3 shadow-soft">
+        <div class="card p-5 sm:p-6 reveal" data-d="2">
+          <div class="w-11 h-11 rounded-xl bg-brand-50 text-brand-700 flex items-center justify-center font-extrabold text-lg mb-3 shadow-soft font-display">
             3
           </div>
-          <h3 class="text-base font-bold text-navy-900 mb-1.5">Ilustrações Associativas</h3>
-          <p class="text-ink-600 text-xs leading-relaxed">Elementos visuais em estilo educacional que ativam a memória fotográfica e facilitam a evocação.</p>
+          <h3 class="text-base sm:text-lg font-bold text-navy-900 mb-1.5">Ilustrações Associativas</h3>
+          <p class="text-ink-700 text-sm leading-relaxed">Elementos visuais em estilo educacional que ativam a memória fotográfica e facilitam a evocação.</p>
         </div>
 
-        <div class="card p-5 reveal" data-d="3">
-          <div class="w-10 h-10 rounded-xl bg-gold-50 text-gold-600 flex items-center justify-center font-bold text-lg mb-3 shadow-soft border border-gold-200">
+        <div class="card p-5 sm:p-6 reveal" data-d="3">
+          <div class="w-11 h-11 rounded-xl bg-gold-50 text-gold-600 flex items-center justify-center font-extrabold text-lg mb-3 shadow-soft border border-gold-200 font-display">
             ★
           </div>
-          <h3 class="text-base font-bold text-navy-900 mb-1.5">Alerta Olho FGV</h3>
-          <p class="text-ink-600 text-xs leading-relaxed">Destaque cirúrgico das distinções conceituais, exceções e pegadinhas recorrentes da banca.</p>
+          <h3 class="text-base sm:text-lg font-bold text-navy-900 mb-1.5">Alerta Olho FGV</h3>
+          <p class="text-ink-700 text-sm leading-relaxed">Destaque cirúrgico das distinções conceituais, exceções e pegadinhas recorrentes da banca.</p>
         </div>
 
       </div>
@@ -788,7 +808,7 @@
       <div class="text-center max-w-3xl mx-auto mb-8 reveal">
         <span class="eyebrow center">Conteúdo Completo</span>
         <h2 class="mt-3 balance">Veja as pranchas de revisão dos módulos</h2>
-        <p class="mt-2 text-ink-600 text-sm sm:text-base">Arraste para o lado com o dedo para explorar as áreas temáticas do material.</p>
+        <p class="mt-2 text-ink-700 text-base sm:text-lg">Arraste para o lado com o dedo para explorar as áreas temáticas do material.</p>
         <div class="gold-rule"></div>
       </div>
 
@@ -801,72 +821,72 @@
           
           <!-- Slide 1 -->
           <div class="slide">
-            <div class="card p-3 h-full flex flex-col justify-between">
-              <img src="assets/revisao-modulo-01.webp" class="map-preview" loading="lazy" alt="Módulo 1: Fundamentos do Serviço Social" onerror="this.outerHTML='<div class=\'ph\' style=\'aspect-ratio:16/10;border-radius:10px\'><span class=\'font-bold text-xs\'>Módulo 01: Fundamentos</span></div>'">
+            <div class="card p-3.5 h-full flex flex-col justify-between">
+              <img src="assets/revisao-modulo-01.webp" class="map-preview" loading="lazy" alt="Módulo 1: Fundamentos do Serviço Social" onerror="this.outerHTML='<div class=\'ph\' style=\'aspect-ratio:16/10;border-radius:10px\'><span class=\'font-bold text-sm\'>Módulo 01: Fundamentos</span></div>'">
               <div class="p-3 text-center">
-                <span class="text-[11px] font-bold text-brand-700 uppercase tracking-wider">Espaço 01 · 12 Mapas</span>
-                <h4 class="font-bold text-navy-900 text-sm mt-0.5">Fundamentos e Espaços Profissionais</h4>
-                <p class="text-[11px] text-ink-500 mt-1">Serviço Social contemporâneo, questão social e mediação.</p>
+                <span class="text-xs font-bold text-brand-700 uppercase tracking-wider">Espaço 01 · 12 Mapas</span>
+                <h4 class="font-bold text-navy-900 text-base mt-1">Fundamentos e Espaços Profissionais</h4>
+                <p class="text-xs sm:text-sm text-ink-600 mt-1">Serviço Social contemporâneo, questão social e mediação.</p>
               </div>
             </div>
           </div>
 
           <!-- Slide 2 -->
           <div class="slide">
-            <div class="card p-3 h-full flex flex-col justify-between">
-              <img src="assets/revisao-modulo-02.webp" class="map-preview" loading="lazy" alt="Módulo 2: Dimensão Técnico-Operativa" onerror="this.outerHTML='<div class=\'ph\' style=\'aspect-ratio:16/10;border-radius:10px\'><span class=\'font-bold text-xs\'>Módulo 02: Técnico-Operativo</span></div>'">
+            <div class="card p-3.5 h-full flex flex-col justify-between">
+              <img src="assets/revisao-modulo-02.webp" class="map-preview" loading="lazy" alt="Módulo 2: Dimensão Técnico-Operativa" onerror="this.outerHTML='<div class=\'ph\' style=\'aspect-ratio:16/10;border-radius:10px\'><span class=\'font-bold text-sm\'>Módulo 02: Técnico-Operativo</span></div>'">
               <div class="p-3 text-center">
-                <span class="text-[11px] font-bold text-brand-700 uppercase tracking-wider">Espaço 02 · 20 Mapas</span>
-                <h4 class="font-bold text-navy-900 text-sm mt-0.5">Dimensão Técnico-Operativa e Instrumentais</h4>
-                <p class="text-[11px] text-ink-500 mt-1">Visita domiciliar, estudo social, laudo, parecer e perícia.</p>
+                <span class="text-xs font-bold text-brand-700 uppercase tracking-wider">Espaço 02 · 20 Mapas</span>
+                <h4 class="font-bold text-navy-900 text-base mt-1">Dimensão Técnico-Operativa e Instrumentais</h4>
+                <p class="text-xs sm:text-sm text-ink-600 mt-1">Visita domiciliar, estudo social, laudo, parecer e perícia.</p>
               </div>
             </div>
           </div>
 
           <!-- Slide 3 -->
           <div class="slide">
-            <div class="card p-3 h-full flex flex-col justify-between">
-              <img src="assets/revisao-modulo-03.webp" class="map-preview" loading="lazy" alt="Módulo 3: Serviço Social na Saúde" onerror="this.outerHTML='<div class=\'ph\' style=\'aspect-ratio:16/10;border-radius:10px\'><span class=\'font-bold text-xs\'>Módulo 03: Saúde</span></div>'">
+            <div class="card p-3.5 h-full flex flex-col justify-between">
+              <img src="assets/revisao-modulo-03.webp" class="map-preview" loading="lazy" alt="Módulo 3: Serviço Social na Saúde" onerror="this.outerHTML='<div class=\'ph\' style=\'aspect-ratio:16/10;border-radius:10px\'><span class=\'font-bold text-sm\'>Módulo 03: Saúde</span></div>'">
               <div class="p-3 text-center">
-                <span class="text-[11px] font-bold text-brand-700 uppercase tracking-wider">Espaço 03 · 14 Mapas</span>
-                <h4 class="font-bold text-navy-900 text-sm mt-0.5">Serviço Social na Saúde</h4>
-                <p class="text-[11px] text-ink-500 mt-1">Determinantes sociais, redes de atenção e humanização.</p>
+                <span class="text-xs font-bold text-brand-700 uppercase tracking-wider">Espaço 03 · 14 Mapas</span>
+                <h4 class="font-bold text-navy-900 text-base mt-1">Serviço Social na Saúde</h4>
+                <p class="text-xs sm:text-sm text-ink-600 mt-1">Determinantes sociais, redes de atenção e humanização.</p>
               </div>
             </div>
           </div>
 
           <!-- Slide 4 -->
           <div class="slide">
-            <div class="card p-3 h-full flex flex-col justify-between">
-              <img src="assets/revisao-modulo-04.webp" class="map-preview" loading="lazy" alt="Módulo 4: Políticas Sociais e Seguridade" onerror="this.outerHTML='<div class=\'ph\' style=\'aspect-ratio:16/10;border-radius:10px\'><span class=\'font-bold text-xs\'>Módulo 04: Seguridade</span></div>'">
+            <div class="card p-3.5 h-full flex flex-col justify-between">
+              <img src="assets/revisao-modulo-04.webp" class="map-preview" loading="lazy" alt="Módulo 4: Políticas Sociais e Seguridade" onerror="this.outerHTML='<div class=\'ph\' style=\'aspect-ratio:16/10;border-radius:10px\'><span class=\'font-bold text-sm\'>Módulo 04: Seguridade</span></div>'">
               <div class="p-3 text-center">
-                <span class="text-[11px] font-bold text-brand-700 uppercase tracking-wider">Espaço 04 · 16 Mapas</span>
-                <h4 class="font-bold text-navy-900 text-sm mt-0.5">Políticas Sociais e Seguridade Social</h4>
-                <p class="text-[11px] text-ink-500 mt-1">Saúde, Previdência, Assistência Social e financiamento.</p>
+                <span class="text-xs font-bold text-brand-700 uppercase tracking-wider">Espaço 04 · 16 Mapas</span>
+                <h4 class="font-bold text-navy-900 text-base mt-1">Políticas Sociais e Seguridade Social</h4>
+                <p class="text-xs sm:text-sm text-ink-600 mt-1">Saúde, Previdência, Assistência Social e financiamento.</p>
               </div>
             </div>
           </div>
 
           <!-- Slide 5 -->
           <div class="slide">
-            <div class="card p-3 h-full flex flex-col justify-between">
-              <img src="assets/revisao-modulo-05.webp" class="map-preview" loading="lazy" alt="Módulo 5: Criança, Adolescente e Família" onerror="this.outerHTML='<div class=\'ph\' style=\'aspect-ratio:16/10;border-radius:10px\'><span class=\'font-bold text-xs\'>Módulo 05: Famílias</span></div>'">
+            <div class="card p-3.5 h-full flex flex-col justify-between">
+              <img src="assets/revisao-modulo-05.webp" class="map-preview" loading="lazy" alt="Módulo 5: Criança, Adolescente e Família" onerror="this.outerHTML='<div class=\'ph\' style=\'aspect-ratio:16/10;border-radius:10px\'><span class=\'font-bold text-sm\'>Módulo 05: Famílias</span></div>'">
               <div class="p-3 text-center">
-                <span class="text-[11px] font-bold text-brand-700 uppercase tracking-wider">Espaço 05 · 20 Mapas</span>
-                <h4 class="font-bold text-navy-900 text-sm mt-0.5">Criança, Família e Violências</h4>
-                <p class="text-[11px] text-ink-500 mt-1">ECA esquematizado, medidas de proteção e enfrentamento.</p>
+                <span class="text-xs font-bold text-brand-700 uppercase tracking-wider">Espaço 05 · 20 Mapas</span>
+                <h4 class="font-bold text-navy-900 text-base mt-1">Criança, Família e Violências</h4>
+                <p class="text-xs sm:text-sm text-ink-600 mt-1">ECA esquematizado, medidas de proteção e enfrentamento.</p>
               </div>
             </div>
           </div>
 
           <!-- Slide 6 -->
           <div class="slide">
-            <div class="card p-3 h-full flex flex-col justify-between">
-              <img src="assets/revisao-modulo-07.webp" class="map-preview" loading="lazy" alt="Módulo 6: Legislação do SUS e Ética" onerror="this.outerHTML='<div class=\'ph\' style=\'aspect-ratio:16/10;border-radius:10px\'><span class=\'font-bold text-xs\'>Módulo 06: SUS & Ética</span></div>'">
+            <div class="card p-3.5 h-full flex flex-col justify-between">
+              <img src="assets/revisao-modulo-07.webp" class="map-preview" loading="lazy" alt="Módulo 6: Legislação do SUS e Ética" onerror="this.outerHTML='<div class=\'ph\' style=\'aspect-ratio:16/10;border-radius:10px\'><span class=\'font-bold text-sm\'>Módulo 06: SUS & Ética</span></div>'">
               <div class="p-3 text-center">
-                <span class="text-[11px] font-bold text-brand-700 uppercase tracking-wider">Espaço 06 · 18 Mapas</span>
-                <h4 class="font-bold text-navy-900 text-sm mt-0.5">Legislação do SUS, Ética e Lei 8.662</h4>
-                <p class="text-[11px] text-ink-500 mt-1">Leis 8.080, 8.142, Decreto 7.508 e Código de Ética.</p>
+                <span class="text-xs font-bold text-brand-700 uppercase tracking-wider">Espaço 06 · 18 Mapas</span>
+                <h4 class="font-bold text-navy-900 text-base mt-1">Legislação do SUS, Ética e Lei 8.662</h4>
+                <p class="text-xs sm:text-sm text-ink-600 mt-1">Leis 8.080, 8.142, Decreto 7.508 e Código de Ética.</p>
               </div>
             </div>
           </div>
@@ -901,22 +921,22 @@
 
       <div class="grid md:grid-cols-3 gap-5">
         
-        <div class="rounded-2xl bg-navy-800/80 border border-navy-700 p-5 sm:p-6 reveal">
-          <div class="text-coral-500 font-bold text-xs uppercase tracking-wider mb-2">Antes</div>
-          <h3 class="text-lg font-bold text-white mb-2">Estudo Disperso e Cansativo</h3>
-          <p class="text-ink-200 text-xs sm:text-sm leading-relaxed">Horas gastas lendo apostilas sem saber exatamente o que focar, gerando ansiedade e a sensação de estar sempre atrasado em relação ao edital.</p>
+        <div class="rounded-2xl bg-navy-800/80 border border-navy-700 p-6 reveal">
+          <div class="text-coral-500 font-extrabold text-xs uppercase tracking-wider mb-2">Antes</div>
+          <h3 class="text-lg sm:text-xl font-bold text-white mb-2">Estudo Disperso e Cansativo</h3>
+          <p class="text-ink-200 text-sm sm:text-[15px] leading-relaxed">Horas gastas lendo apostilas sem saber exatamente o que focar, gerando ansiedade e a sensação de estar sempre atrasado em relação ao edital.</p>
         </div>
 
-        <div class="rounded-2xl bg-brand-900/60 border border-brand-500/40 p-5 sm:p-6 reveal" data-d="1">
-          <div class="text-gold-300 font-bold text-xs uppercase tracking-wider mb-2">Com os 100 Mapas</div>
-          <h3 class="text-lg font-bold text-white mb-2">Revisão Rápida de 15 Minutos</h3>
-          <p class="text-ink-100 text-xs sm:text-sm leading-relaxed">Estudo ativo e recorrente. Cada mapa entrega uma visão completa do tema com conexões visuais e o alerta direto para a banca FGV.</p>
+        <div class="rounded-2xl bg-brand-900/60 border border-brand-500/40 p-6 reveal" data-d="1">
+          <div class="text-gold-300 font-extrabold text-xs uppercase tracking-wider mb-2">Com os 100 Mapas</div>
+          <h3 class="text-lg sm:text-xl font-bold text-white mb-2">Revisão Rápida de 15 Minutos</h3>
+          <p class="text-ink-100 text-sm sm:text-[15px] leading-relaxed">Estudo ativo e recorrente. Cada mapa entrega uma visão completa do tema com conexões visuais e o alerta direto para a banca FGV.</p>
         </div>
 
-        <div class="rounded-2xl bg-navy-800/80 border border-navy-700 p-5 sm:p-6 reveal" data-d="2">
-          <div class="text-brand-400 font-bold text-xs uppercase tracking-wider mb-2">No Dia da Prova</div>
-          <h3 class="text-lg font-bold text-white mb-2">Segurança e Clareza</h3>
-          <p class="text-ink-200 text-xs sm:text-sm leading-relaxed">Reconhecimento imediato dos conceitos técnicos, diferenciação das pegadinhas e tranquilidade para responder as questões específicas.</p>
+        <div class="rounded-2xl bg-navy-800/80 border border-navy-700 p-6 reveal" data-d="2">
+          <div class="text-brand-400 font-extrabold text-xs uppercase tracking-wider mb-2">No Dia da Prova</div>
+          <h3 class="text-lg sm:text-xl font-bold text-white mb-2">Segurança e Clareza</h3>
+          <p class="text-ink-200 text-sm sm:text-[15px] leading-relaxed">Reconhecimento imediato dos conceitos técnicos, diferenciação das pegadinhas e tranquilidade para responder as questões específicas.</p>
         </div>
 
       </div>
@@ -934,7 +954,7 @@
         <h2 class="text-white mt-3 text-2xl sm:text-4xl font-extrabold balance">
           E você ainda recebe estes <span class="text-gold-400">6 bônus estratégicos, de graça</span>
         </h2>
-        <p class="text-ink-200 mt-2 text-sm sm:text-base max-w-2xl mx-auto">
+        <p class="text-ink-200 mt-2 text-base sm:text-lg max-w-2xl mx-auto">
           Materiais complementares desenvolvidos para acelerar sua fixação e blindar seus pontos na prova da FGV.
         </p>
         <div class="gold-rule"></div>
@@ -951,12 +971,12 @@
             <div>
               <div class="text-[#F59E0B] font-extrabold text-sm sm:text-base uppercase tracking-wider mb-2 font-display">BÔNUS 1</div>
               <h3 class="text-white font-extrabold text-lg sm:text-xl leading-snug mb-2.5">Guia Rápido de Legislação do SUS</h3>
-              <p class="text-ink-200 text-xs sm:text-sm leading-relaxed mb-6 font-normal">
+              <p class="text-ink-200 text-sm sm:text-[15px] leading-relaxed mb-6 font-normal">
                 Esquemas visuais das Leis 8.080, 8.142 e Decreto 7.508 para você revisar diretrizes, regionalização e controle social em poucos minutos.
               </p>
             </div>
-            <div class="w-full pt-4 border-t border-white/10 text-xs sm:text-sm text-ink-300">
-              De <del class="line-through text-ink-400">R$ 29,00</del> por <strong class="text-[#F59E0B] font-extrabold text-sm sm:text-base">R$ 0,00</strong>
+            <div class="w-full pt-4 border-t border-white/10 text-sm sm:text-base text-ink-300">
+              De <del class="line-through text-ink-400">R$ 29,00</del> por <strong class="text-[#F59E0B] font-extrabold text-base sm:text-lg">R$ 0,00</strong>
             </div>
           </div>
         </div>
@@ -970,12 +990,12 @@
             <div>
               <div class="text-[#F59E0B] font-extrabold text-sm sm:text-base uppercase tracking-wider mb-2 font-display">BÔNUS 2</div>
               <h3 class="text-white font-extrabold text-lg sm:text-xl leading-snug mb-2.5">Checklist de Véspera FGV</h3>
-              <p class="text-ink-200 text-xs sm:text-sm leading-relaxed mb-6 font-normal">
+              <p class="text-ink-200 text-sm sm:text-[15px] leading-relaxed mb-6 font-normal">
                 As pegadinhas, distratores e distinções de competências vs atribuições privativas que a banca mais explora para confundir os candidatos.
               </p>
             </div>
-            <div class="w-full pt-4 border-t border-white/10 text-xs sm:text-sm text-ink-300">
-              De <del class="line-through text-ink-400">R$ 27,00</del> por <strong class="text-[#F59E0B] font-extrabold text-sm sm:text-base">R$ 0,00</strong>
+            <div class="w-full pt-4 border-t border-white/10 text-sm sm:text-base text-ink-300">
+              De <del class="line-through text-ink-400">R$ 27,00</del> por <strong class="text-[#F59E0B] font-extrabold text-base sm:text-lg">R$ 0,00</strong>
             </div>
           </div>
         </div>
@@ -989,12 +1009,12 @@
             <div>
               <div class="text-[#F59E0B] font-extrabold text-sm sm:text-base uppercase tracking-wider mb-2 font-display">BÔNUS 3</div>
               <h3 class="text-white font-extrabold text-lg sm:text-xl leading-snug mb-2.5">Caderno de Conceitos Críticos</h3>
-              <p class="text-ink-200 text-xs sm:text-sm leading-relaxed mb-6 font-normal">
+              <p class="text-ink-200 text-sm sm:text-[15px] leading-relaxed mb-6 font-normal">
                 Quadro comparativo definitivo para diferenciar estudo social, relatório, laudo pericial, parecer e perícia sem nenhuma dúvida na prova.
               </p>
             </div>
-            <div class="w-full pt-4 border-t border-white/10 text-xs sm:text-sm text-ink-300">
-              De <del class="line-through text-ink-400">R$ 29,00</del> por <strong class="text-[#F59E0B] font-extrabold text-sm sm:text-base">R$ 0,00</strong>
+            <div class="w-full pt-4 border-t border-white/10 text-sm sm:text-base text-ink-300">
+              De <del class="line-through text-ink-400">R$ 29,00</del> por <strong class="text-[#F59E0B] font-extrabold text-base sm:text-lg">R$ 0,00</strong>
             </div>
           </div>
         </div>
@@ -1008,12 +1028,12 @@
             <div>
               <div class="text-[#F59E0B] font-extrabold text-sm sm:text-base uppercase tracking-wider mb-2 font-display">BÔNUS 4</div>
               <h3 class="text-white font-extrabold text-lg sm:text-xl leading-snug mb-2.5">Mapa Expresso do ECA e Proteção</h3>
-              <p class="text-ink-200 text-xs sm:text-sm leading-relaxed mb-6 font-normal">
+              <p class="text-ink-200 text-sm sm:text-[15px] leading-relaxed mb-6 font-normal">
                 Síntese dos artigos essenciais do Estatuto da Criança e do Adolescente, acolhimento, guarda, tutela e fluxo da rede de proteção a violências.
               </p>
             </div>
-            <div class="w-full pt-4 border-t border-white/10 text-xs sm:text-sm text-ink-300">
-              De <del class="line-through text-ink-400">R$ 37,00</del> por <strong class="text-[#F59E0B] font-extrabold text-sm sm:text-base">R$ 0,00</strong>
+            <div class="w-full pt-4 border-t border-white/10 text-sm sm:text-base text-ink-300">
+              De <del class="line-through text-ink-400">R$ 37,00</del> por <strong class="text-[#F59E0B] font-extrabold text-base sm:text-lg">R$ 0,00</strong>
             </div>
           </div>
         </div>
@@ -1027,12 +1047,12 @@
             <div>
               <div class="text-[#F59E0B] font-extrabold text-sm sm:text-base uppercase tracking-wider mb-2 font-display">BÔNUS 5</div>
               <h3 class="text-white font-extrabold text-lg sm:text-xl leading-snug mb-2.5">Guia de Atribuições Privativas vs Gerais</h3>
-              <p class="text-ink-200 text-xs sm:text-sm leading-relaxed mb-6 font-normal">
+              <p class="text-ink-200 text-sm sm:text-[15px] leading-relaxed mb-6 font-normal">
                 Tabela visual esquemática comparando os Artigos 4º e 5º da Lei 8.662/93 e os princípios fundamentais do Código de Ética Profissional.
               </p>
             </div>
-            <div class="w-full pt-4 border-t border-white/10 text-xs sm:text-sm text-ink-300">
-              De <del class="line-through text-ink-400">R$ 29,00</del> por <strong class="text-[#F59E0B] font-extrabold text-sm sm:text-base">R$ 0,00</strong>
+            <div class="w-full pt-4 border-t border-white/10 text-sm sm:text-base text-ink-300">
+              De <del class="line-through text-ink-400">R$ 29,00</del> por <strong class="text-[#F59E0B] font-extrabold text-base sm:text-lg">R$ 0,00</strong>
             </div>
           </div>
         </div>
@@ -1046,12 +1066,12 @@
             <div>
               <div class="text-[#F59E0B] font-extrabold text-sm sm:text-base uppercase tracking-wider mb-2 font-display">BÔNUS 6</div>
               <h3 class="text-white font-extrabold text-lg sm:text-xl leading-snug mb-2.5">Cronograma Tático de Revisão 15 Min</h3>
-              <p class="text-ink-200 text-xs sm:text-sm leading-relaxed mb-6 font-normal">
+              <p class="text-ink-200 text-sm sm:text-[15px] leading-relaxed mb-6 font-normal">
                 Roteiro passo a passo para distribuir os 100 mapas ao longo das semanas até a prova, garantindo 100% de cobertura sem sobrecarga.
               </p>
             </div>
-            <div class="w-full pt-4 border-t border-white/10 text-xs sm:text-sm text-ink-300">
-              De <del class="line-through text-ink-400">R$ 37,00</del> por <strong class="text-[#F59E0B] font-extrabold text-sm sm:text-base">R$ 0,00</strong>
+            <div class="w-full pt-4 border-t border-white/10 text-sm sm:text-base text-ink-300">
+              De <del class="line-through text-ink-400">R$ 37,00</del> por <strong class="text-[#F59E0B] font-extrabold text-base sm:text-lg">R$ 0,00</strong>
             </div>
           </div>
         </div>
@@ -1076,7 +1096,7 @@
       <span class="eyebrow center">Metodologia e Precisão</span>
       <h2 class="mt-2 balance">Desenvolvido com foco no perfil de cobrança da banca FGV</h2>
       
-      <p class="mt-3 text-ink-700 text-sm sm:text-base leading-relaxed balance max-w-3xl mx-auto">
+      <p class="mt-3 text-ink-800 text-[15px] sm:text-base leading-relaxed balance max-w-3xl mx-auto">
         O material foi estruturado a partir da análise aprofundada do conteúdo programático de Assistente Social e dos padrões históricos de questões da FGV em concursos de saúde e assistência social, garantindo rigor conceitual, fidelidade à legislação e linguagem precisa.
       </p>
 
@@ -1094,33 +1114,33 @@
         <div class="gold-rule"></div>
       </div>
 
-      <div class="grid sm:grid-cols-2 gap-3.5">
+      <div class="grid sm:grid-cols-2 gap-4">
         
-        <div class="card p-4 sm:p-5 flex items-start gap-3 reveal">
-          <svg class="w-4 h-4 text-brand-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-          <p class="text-xs sm:text-sm font-semibold text-navy-900">Vai prestar o concurso da SES-TO para o cargo de Assistente Social e precisa revisar Conhecimentos Específicos e SUS.</p>
+        <div class="card p-5 flex items-start gap-3.5 reveal">
+          <svg class="w-5 h-5 text-brand-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          <p class="text-sm sm:text-base font-semibold text-navy-900 leading-snug">Vai prestar o concurso da SES-TO para o cargo de Assistente Social e precisa revisar Conhecimentos Específicos e SUS.</p>
         </div>
 
-        <div class="card p-4 sm:p-5 flex items-start gap-3 reveal" data-d="1">
-          <svg class="w-4 h-4 text-brand-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-          <p class="text-xs sm:text-sm font-semibold text-navy-900">Tem pouco tempo diário e precisa de uma ferramenta rápida de 15 minutos que funcione de verdade.</p>
+        <div class="card p-5 flex items-start gap-3.5 reveal" data-d="1">
+          <svg class="w-5 h-5 text-brand-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          <p class="text-sm sm:text-base font-semibold text-navy-900 leading-snug">Tem pouco tempo diário e precisa de uma ferramenta rápida de 15 minutos que funcione de verdade.</p>
         </div>
 
-        <div class="card p-4 sm:p-5 flex items-start gap-3 reveal">
-          <svg class="w-4 h-4 text-brand-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-          <p class="text-xs sm:text-sm font-semibold text-navy-900">Fica confuso com textos longos e aprende muito mais rápido através de esquemas, cores e diagramas visuais.</p>
+        <div class="card p-5 flex items-start gap-3.5 reveal">
+          <svg class="w-5 h-5 text-brand-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          <p class="text-sm sm:text-base font-semibold text-navy-900 leading-snug">Fica confuso com textos longos e aprende muito mais rápido através de esquemas, cores e diagramas visuais.</p>
         </div>
 
-        <div class="card p-4 sm:p-5 flex items-start gap-3 reveal" data-d="1">
-          <svg class="w-4 h-4 text-brand-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-          <p class="text-xs sm:text-sm font-semibold text-navy-900">Quer revisar no celular, tablet ou imprimir as pranchas em A4 para estudar onde e como preferir.</p>
+        <div class="card p-5 flex items-start gap-3.5 reveal" data-d="1">
+          <svg class="w-5 h-5 text-brand-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          <p class="text-sm sm:text-base font-semibold text-navy-900 leading-snug">Quer revisar no celular, tablet ou imprimir as pranchas em A4 para estudar onde e como preferir.</p>
         </div>
 
       </div>
 
       <!-- Card de Conexão com a Oferta -->
       <div class="mt-7 text-center reveal">
-        <a href="#oferta" class="inline-flex items-center gap-1.5 text-brand-700 hover:text-brand-800 font-bold text-xs sm:text-sm underline underline-offset-4 decoration-2">
+        <a href="#oferta" class="inline-flex items-center gap-1.5 text-brand-700 hover:text-brand-800 font-bold text-sm sm:text-base underline underline-offset-4 decoration-2">
           Se identificou? Garanta seus mapas com valor especial de lançamento →
         </a>
       </div>
@@ -1141,28 +1161,28 @@
 
       <div class="grid sm:grid-cols-3 gap-5 text-center">
         
-        <div class="card p-5 reveal">
-          <div class="w-10 h-10 rounded-full bg-navy-900 text-white font-bold flex items-center justify-center mx-auto mb-3 text-base shadow-soft font-display">
+        <div class="card p-6 reveal">
+          <div class="w-11 h-11 rounded-full bg-navy-900 text-white font-extrabold flex items-center justify-center mx-auto mb-3 text-lg shadow-soft font-display">
             1
           </div>
-          <h3 class="text-sm font-bold text-navy-900 mb-1">Inscrição Segura</h3>
-          <p class="text-xs text-ink-600 leading-relaxed">Conclua seu pedido na página de pagamento blindada da Kiwify em poucos segundos.</p>
+          <h3 class="text-base font-bold text-navy-900 mb-1.5">Inscrição Segura</h3>
+          <p class="text-sm text-ink-600 leading-relaxed">Conclua seu pedido na página de pagamento blindada da Kiwify em poucos segundos.</p>
         </div>
 
-        <div class="card p-5 reveal" data-d="1">
-          <div class="w-10 h-10 rounded-full bg-brand-700 text-white font-bold flex items-center justify-center mx-auto mb-3 text-base shadow-soft font-display">
+        <div class="card p-6 reveal" data-d="1">
+          <div class="w-11 h-11 rounded-full bg-brand-700 text-white font-extrabold flex items-center justify-center mx-auto mb-3 text-lg shadow-soft font-display">
             2
           </div>
-          <h3 class="text-sm font-bold text-navy-900 mb-1">Envio Imediato</h3>
-          <p class="text-xs text-ink-600 leading-relaxed">Você recebe instantaneamente no seu email o link exclusivo para baixar todos os arquivos em PDF.</p>
+          <h3 class="text-base font-bold text-navy-900 mb-1.5">Envio Imediato</h3>
+          <p class="text-sm text-ink-600 leading-relaxed">Você recebe instantaneamente no seu email o link exclusivo para baixar todos os arquivos em PDF.</p>
         </div>
 
-        <div class="card p-5 reveal" data-d="2">
-          <div class="w-10 h-10 rounded-full bg-gold-500 text-navy-900 font-bold flex items-center justify-center mx-auto mb-3 text-base shadow-soft font-display">
+        <div class="card p-6 reveal" data-d="2">
+          <div class="w-11 h-11 rounded-full bg-gold-500 text-navy-900 font-extrabold flex items-center justify-center mx-auto mb-3 text-lg shadow-soft font-display">
             3
           </div>
-          <h3 class="text-sm font-bold text-navy-900 mb-1">Estude Onde Quiser</h3>
-          <p class="text-xs text-ink-600 leading-relaxed">Abra no celular, tablet, computador ou imprima as pranchas em alta definição para revisar.</p>
+          <h3 class="text-base font-bold text-navy-900 mb-1.5">Estude Onde Quiser</h3>
+          <p class="text-sm text-ink-600 leading-relaxed">Abra no celular, tablet, computador ou imprima as pranchas em alta definição para revisar.</p>
         </div>
 
       </div>
@@ -1207,54 +1227,54 @@
           </div>
 
           <!-- Lista de Entregáveis Estilo Referência com 6 Bônus -->
-          <ul class="space-y-2.5 mb-7">
+          <ul class="space-y-3 mb-8">
             
-            <li class="flex items-start gap-3 text-xs sm:text-sm text-ink-700 font-medium">
+            <li class="flex items-start gap-3 text-sm sm:text-base text-ink-800 font-semibold">
               <svg class="w-5 h-5 text-brand-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
               <span><strong>100 Mapas Mentais Radiais</strong> de Serviço Social (PDF de Alta Resolução)</span>
             </li>
 
-            <li class="flex items-start gap-3 text-xs sm:text-sm text-ink-800 font-semibold bg-brand-50/70 p-2 rounded-lg border border-brand-100">
-              <svg class="w-4 h-4 text-brand-700 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+            <li class="flex items-start gap-3 text-sm sm:text-base text-ink-900 font-semibold bg-brand-50/70 p-2.5 rounded-xl border border-brand-100">
+              <svg class="w-4 h-4 text-brand-700 shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
               <span><strong class="text-brand-700">Bônus 1:</strong> Guia Rápido de Legislação do SUS (8.080, 8.142 e Dec. 7.508)</span>
             </li>
 
-            <li class="flex items-start gap-3 text-xs sm:text-sm text-ink-800 font-semibold bg-brand-50/70 p-2 rounded-lg border border-brand-100">
-              <svg class="w-4 h-4 text-brand-700 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+            <li class="flex items-start gap-3 text-sm sm:text-base text-ink-900 font-semibold bg-brand-50/70 p-2.5 rounded-xl border border-brand-100">
+              <svg class="w-4 h-4 text-brand-700 shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
               <span><strong class="text-brand-700">Bônus 2:</strong> Checklist de Véspera FGV (Pegadinhas e Distratores)</span>
             </li>
 
-            <li class="flex items-start gap-3 text-xs sm:text-sm text-ink-800 font-semibold bg-brand-50/70 p-2 rounded-lg border border-brand-100">
-              <svg class="w-4 h-4 text-brand-700 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+            <li class="flex items-start gap-3 text-sm sm:text-base text-ink-900 font-semibold bg-brand-50/70 p-2.5 rounded-xl border border-brand-100">
+              <svg class="w-4 h-4 text-brand-700 shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
               <span><strong class="text-brand-700">Bônus 3:</strong> Caderno de Conceitos Críticos (Laudo, Parecer e Estudo Social)</span>
             </li>
 
-            <li class="flex items-start gap-3 text-xs sm:text-sm text-ink-800 font-semibold bg-brand-50/70 p-2 rounded-lg border border-brand-100">
-              <svg class="w-4 h-4 text-brand-700 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+            <li class="flex items-start gap-3 text-sm sm:text-base text-ink-900 font-semibold bg-brand-50/70 p-2.5 rounded-xl border border-brand-100">
+              <svg class="w-4 h-4 text-brand-700 shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
               <span><strong class="text-brand-700">Bônus 4:</strong> Mapa Expresso do ECA e Medidas de Proteção</span>
             </li>
 
-            <li class="flex items-start gap-3 text-xs sm:text-sm text-ink-800 font-semibold bg-brand-50/70 p-2 rounded-lg border border-brand-100">
-              <svg class="w-4 h-4 text-brand-700 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+            <li class="flex items-start gap-3 text-sm sm:text-base text-ink-900 font-semibold bg-brand-50/70 p-2.5 rounded-xl border border-brand-100">
+              <svg class="w-4 h-4 text-brand-700 shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
               <span><strong class="text-brand-700">Bônus 5:</strong> Guia de Atribuições Privativas vs Competências Gerais</span>
             </li>
 
-            <li class="flex items-start gap-3 text-xs sm:text-sm text-ink-800 font-semibold bg-brand-50/70 p-2 rounded-lg border border-brand-100">
-              <svg class="w-4 h-4 text-brand-700 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+            <li class="flex items-start gap-3 text-sm sm:text-base text-ink-900 font-semibold bg-brand-50/70 p-2.5 rounded-xl border border-brand-100">
+              <svg class="w-4 h-4 text-brand-700 shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
               <span><strong class="text-brand-700">Bônus 6:</strong> Cronograma Tático de Revisão em 15 Minutos</span>
             </li>
 
-            <li class="flex items-start gap-3 text-xs sm:text-sm text-ink-700 pt-1">
+            <li class="flex items-start gap-3 text-sm sm:text-base text-ink-700 pt-1">
               <svg class="w-5 h-5 text-brand-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
               <span>Alertas Estratégicos Olho FGV integrados em todas as pranchas</span>
             </li>
 
-            <li class="flex items-start gap-3 text-xs sm:text-sm text-ink-700">
+            <li class="flex items-start gap-3 text-sm sm:text-base text-ink-700">
               <svg class="w-5 h-5 text-brand-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
               <span>Acesso Otimizado para Celular, Tablet e Impressão A4</span>
             </li>
 
-            <li class="flex items-start gap-3 text-xs sm:text-sm text-ink-700">
+            <li class="flex items-start gap-3 text-sm sm:text-base text-ink-700">
               <svg class="w-5 h-5 text-brand-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
               <span>Acesso Vitalício sem Qualquer Taxa ou Mensalidade</span>
             </li>
@@ -1262,33 +1282,33 @@
           </ul>
 
           <!-- Valores e Preço Estilo Referência -->
-          <div class="text-center pt-3 border-t border-ink-100">
+          <div class="text-center pt-4 border-t border-ink-100">
             
-            <div class="text-xs sm:text-sm text-ink-500 font-medium mb-1">
+            <div class="text-sm sm:text-base text-ink-600 font-medium mb-1">
               Valor total do pacote: <del class="text-coral-500 font-bold">R$ 285,00</del>
             </div>
             
-            <div class="font-display font-extrabold text-5xl sm:text-6xl text-brand-700 leading-none my-2 flex items-start justify-center">
+            <div class="font-display font-extrabold text-5xl sm:text-6xl text-brand-700 leading-none my-2.5 flex items-start justify-center">
               R$ 37<span class="text-2xl sm:text-3xl font-bold mt-1">,00</span>
             </div>
 
-            <div class="text-xs sm:text-sm font-bold text-brand-700 uppercase tracking-wide mb-4">
+            <div class="text-sm sm:text-base font-bold text-brand-700 uppercase tracking-wide mb-4">
               Oferta de lançamento: economize R$ 248,00 hoje
             </div>
 
             <!-- Botão com Animação Pulsante -->
             <div class="mt-2">
-              <a href="https://pay.kiwify.com.br/GZBE5RQ" class="btn btn-action btn-pulse w-full text-sm sm:text-base uppercase tracking-wider font-extrabold py-4 shadow-lift" target="_blank" rel="noopener noreferrer">
+              <a href="https://pay.kiwify.com.br/GZBE5RQ" class="btn btn-action btn-pulse w-full text-base sm:text-lg uppercase tracking-wider font-extrabold py-4 sm:py-5 shadow-lift" target="_blank" rel="noopener noreferrer">
                 QUERO O ACESSO COMPLETO AGORA
               </a>
             </div>
 
-            <p class="text-xs text-ink-500 mt-3 leading-relaxed">
+            <p class="text-xs sm:text-sm text-ink-600 mt-3.5 leading-relaxed">
               Acesso imediato e vitalício · 7 dias de garantia incondicional
             </p>
 
             <!-- Selo de Garantia -->
-            <div class="mt-5 pt-4 border-t border-ink-100 flex items-center justify-center gap-2 text-xs font-bold text-ink-700">
+            <div class="mt-5 pt-4 border-t border-ink-100 flex items-center justify-center gap-2 text-xs sm:text-sm font-bold text-ink-800">
               <svg class="w-5 h-5 text-brand-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
               <span>Garantia de 7 Dias Incondicional</span>
             </div>
@@ -1298,18 +1318,18 @@
         </div>
 
         <!-- 3 Selos de Confiança fora do Card -->
-        <div class="grid grid-cols-3 gap-3 max-w-xs mx-auto mt-6 text-center">
+        <div class="grid grid-cols-3 gap-3 max-w-sm mx-auto mt-6 text-center">
           <div>
             <svg viewBox="0 0 24 24" fill="none" stroke="#1E6847" stroke-width="1.8" class="w-6 h-6 mx-auto mb-1"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            <div class="text-[11px] font-bold text-navy-900 leading-tight">Compra<br>SEGURA</div>
+            <div class="text-xs font-bold text-navy-900 leading-tight">Compra<br>SEGURA</div>
           </div>
           <div>
             <svg viewBox="0 0 24 24" fill="none" stroke="#1E6847" stroke-width="1.8" class="w-6 h-6 mx-auto mb-1"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
-            <div class="text-[11px] font-bold text-navy-900 leading-tight">Garantia<br>7 DIAS</div>
+            <div class="text-xs font-bold text-navy-900 leading-tight">Garantia<br>7 DIAS</div>
           </div>
           <div>
             <svg viewBox="0 0 24 24" fill="none" stroke="#1E6847" stroke-width="1.8" class="w-6 h-6 mx-auto mb-1"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-            <div class="text-[11px] font-bold text-navy-900 leading-tight">Acesso<br>IMEDIATO</div>
+            <div class="text-xs font-bold text-navy-900 leading-tight">Acesso<br>IMEDIATO</div>
           </div>
         </div>
 
@@ -1323,7 +1343,7 @@
     <div class="divtop"></div>
     <div class="max-w-3xl mx-auto px-5 sm:px-6">
       
-      <div class="card p-5 sm:p-7 border border-gold-300 bg-white flex flex-col sm:flex-row items-center gap-5 text-center sm:text-left reveal">
+      <div class="card p-6 sm:p-8 border border-gold-300 bg-white flex flex-col sm:flex-row items-center gap-5 text-center sm:text-left reveal">
         
         <div class="w-16 h-16 rounded-2xl bg-gold-50 border border-gold-300 text-gold-600 flex items-center justify-center shrink-0 shadow-soft">
           <svg viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
@@ -1332,9 +1352,9 @@
         </div>
 
         <div>
-          <span class="text-xs font-bold uppercase tracking-wider text-gold-600">Garantia Blindada de 7 Dias</span>
-          <h3 class="text-lg font-bold text-navy-900 mt-0.5 mb-1.5">Risco Zero para Sua Preparação</h3>
-          <p class="text-xs sm:text-sm text-ink-600 leading-relaxed">
+          <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-gold-600">Garantia Blindada de 7 Dias</span>
+          <h3 class="text-lg sm:text-xl font-bold text-navy-900 mt-0.5 mb-1.5">Risco Zero para Sua Preparação</h3>
+          <p class="text-sm sm:text-[15px] text-ink-700 leading-relaxed">
             Acesse o material, baixe os mapas e teste a metodologia na sua rotina. Se dentro de 7 dias você sentir que o conteúdo não agregou clareza aos seus estudos, basta solicitar o reembolso na Kiwify para receber 100% do seu dinheiro de volta, sem burocracia e sem perguntas.
           </p>
         </div>
@@ -1355,64 +1375,64 @@
         <div class="gold-rule"></div>
       </div>
 
-      <div class="space-y-3">
+      <div class="space-y-3.5">
         
-        <div class="card p-4 sm:p-5 faq-item cursor-pointer" onclick="toggleFaq(this)">
+        <div class="card p-5 faq-item cursor-pointer" onclick="toggleFaq(this)">
           <div class="flex items-center justify-between gap-3">
-            <h4 class="font-bold text-navy-900 text-xs sm:text-sm">1. O material é em vídeo ou em PDF?</h4>
-            <span class="faq-icon text-ink-400 font-bold transition-transform text-base">↓</span>
+            <h4 class="font-bold text-navy-900 text-sm sm:text-base">1. O material é em vídeo ou em PDF?</h4>
+            <span class="faq-icon text-ink-400 font-bold transition-transform text-lg">↓</span>
           </div>
-          <div class="faq-content text-xs sm:text-sm text-ink-600 pt-2 leading-relaxed">
+          <div class="faq-content text-sm sm:text-[15px] text-ink-700 pt-2.5 leading-relaxed">
             O material é 100% digital, entregue em arquivos PDF de alta resolução. Você pode visualizar confortavelmente no celular, tablet, computador ou realizar a impressão das pranchas em tamanho A4.
           </div>
         </div>
 
-        <div class="card p-4 sm:p-5 faq-item cursor-pointer" onclick="toggleFaq(this)">
+        <div class="card p-5 faq-item cursor-pointer" onclick="toggleFaq(this)">
           <div class="flex items-center justify-between gap-3">
-            <h4 class="font-bold text-navy-900 text-xs sm:text-sm">2. O produto cobre toda a prova do concurso?</h4>
-            <span class="faq-icon text-ink-400 font-bold transition-transform text-base">↓</span>
+            <h4 class="font-bold text-navy-900 text-sm sm:text-base">2. O produto cobre toda a prova do concurso?</h4>
+            <span class="faq-icon text-ink-400 font-bold transition-transform text-lg">↓</span>
           </div>
-          <div class="faq-content text-xs sm:text-sm text-ink-600 pt-2 leading-relaxed">
+          <div class="faq-content text-sm sm:text-[15px] text-ink-700 pt-2.5 leading-relaxed">
             Não. O foco do material é a parte mais decisiva e densa para o cargo: Conhecimentos Específicos de Assistente Social e Legislação do SUS. Não contempla matérias básicas gerais como Língua Portuguesa ou Raciocínio Lógico.
           </div>
         </div>
 
-        <div class="card p-4 sm:p-5 faq-item cursor-pointer" onclick="toggleFaq(this)">
+        <div class="card p-5 faq-item cursor-pointer" onclick="toggleFaq(this)">
           <div class="flex items-center justify-between gap-3">
-            <h4 class="font-bold text-navy-900 text-xs sm:text-sm">3. Os mapas servem para quem estuda pelo celular?</h4>
-            <span class="faq-icon text-ink-400 font-bold transition-transform text-base">↓</span>
+            <h4 class="font-bold text-navy-900 text-sm sm:text-base">3. Os mapas servem para quem estuda pelo celular?</h4>
+            <span class="faq-icon text-ink-400 font-bold transition-transform text-lg">↓</span>
           </div>
-          <div class="faq-content text-xs sm:text-sm text-ink-600 pt-2 leading-relaxed">
+          <div class="faq-content text-sm sm:text-[15px] text-ink-700 pt-2.5 leading-relaxed">
             Sim. As páginas foram diagramadas verticalmente em alta definição, permitindo leitura limpa, zoom nítido e navegação rápida direto na tela do seu smartphone ou tablet.
           </div>
         </div>
 
-        <div class="card p-4 sm:p-5 faq-item cursor-pointer" onclick="toggleFaq(this)">
+        <div class="card p-5 faq-item cursor-pointer" onclick="toggleFaq(this)">
           <div class="flex items-center justify-between gap-3">
-            <h4 class="font-bold text-navy-900 text-xs sm:text-sm">4. Os mapas substituem a leitura de todas as leis?</h4>
-            <span class="faq-icon text-ink-400 font-bold transition-transform text-base">↓</span>
+            <h4 class="font-bold text-navy-900 text-sm sm:text-base">4. Os mapas substituem a leitura de todas as leis?</h4>
+            <span class="faq-icon text-ink-400 font-bold transition-transform text-lg">↓</span>
           </div>
-          <div class="faq-content text-xs sm:text-sm text-ink-600 pt-2 leading-relaxed">
+          <div class="faq-content text-sm sm:text-[15px] text-ink-700 pt-2.5 leading-relaxed">
             O objetivo é ser uma ferramenta de revisão ativa, fixação e conexão visual dos pontos críticos. Ele é perfeito para consolidar a matéria sem precisar reler apostilas inteiras a cada semana de estudo.
           </div>
         </div>
 
-        <div class="card p-4 sm:p-5 faq-item cursor-pointer" onclick="toggleFaq(this)">
+        <div class="card p-5 faq-item cursor-pointer" onclick="toggleFaq(this)">
           <div class="flex items-center justify-between gap-3">
-            <h4 class="font-bold text-navy-900 text-xs sm:text-sm">5. O que é o alerta Olho FGV presente nas páginas?</h4>
-            <span class="faq-icon text-ink-400 font-bold transition-transform text-base">↓</span>
+            <h4 class="font-bold text-navy-900 text-sm sm:text-base">5. O que é o alerta Olho FGV presente nas páginas?</h4>
+            <span class="faq-icon text-ink-400 font-bold transition-transform text-lg">↓</span>
           </div>
-          <div class="faq-content text-xs sm:text-sm text-ink-600 pt-2 leading-relaxed">
+          <div class="faq-content text-sm sm:text-[15px] text-ink-700 pt-2.5 leading-relaxed">
             Em cada mapa há um quadro dedicado às pegadinhas mais comuns da banca examinadora, destacando sutilezas conceituais, termos trocados e artigos que costumam confundir os candidatos.
           </div>
         </div>
 
-        <div class="card p-4 sm:p-5 faq-item cursor-pointer" onclick="toggleFaq(this)">
+        <div class="card p-5 faq-item cursor-pointer" onclick="toggleFaq(this)">
           <div class="flex items-center justify-between gap-3">
-            <h4 class="font-bold text-navy-900 text-xs sm:text-sm">6. Como e quando recebo o meu acesso?</h4>
-            <span class="faq-icon text-ink-400 font-bold transition-transform text-base">↓</span>
+            <h4 class="font-bold text-navy-900 text-sm sm:text-base">6. Como e quando recebo o meu acesso?</h4>
+            <span class="faq-icon text-ink-400 font-bold transition-transform text-lg">↓</span>
           </div>
-          <div class="faq-content text-xs sm:text-sm text-ink-600 pt-2 leading-relaxed">
+          <div class="faq-content text-sm sm:text-[15px] text-ink-700 pt-2.5 leading-relaxed">
             O acesso é imediato. Assim que o pagamento for confirmado pela Kiwify (instantâneo no PIX e cartão), você receberá um email com os links diretos para download seguro de todos os arquivos.
           </div>
         </div>
@@ -1429,24 +1449,37 @@
       
       <span class="eyebrow center !text-gold-400">Reta Final para a SES-TO</span>
       
-      <h2 class="text-xl sm:text-3xl lg:text-4xl font-bold text-white mt-3 mb-3 balance leading-tight">
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white mt-3 mb-3.5 balance leading-tight">
         Chegue no dia da prova com a certeza de quem <span class="text-gold-300">revisou o que realmente importa</span>
       </h2>
       
-      <p class="text-ink-200 text-xs sm:text-sm max-w-2xl mx-auto mb-7 balance">
+      <p class="text-ink-200 text-sm sm:text-base max-w-2xl mx-auto mb-8 balance leading-relaxed">
         O tempo até o concurso não para. Você pode continuar se desgastando em pilhas de PDFs ou organizar sua mente com 100 mapas visuais objetivos.
       </p>
 
-      <a href="#oferta" class="btn btn-gold text-sm sm:text-base uppercase tracking-wide font-extrabold shadow-lift px-7 py-3.5">
+      <a href="#oferta" class="btn btn-gold text-base sm:text-lg uppercase tracking-wide font-extrabold shadow-lift px-8 py-4">
         QUERO MEUS 100 MAPAS PARA A SES-TO
       </a>
 
-      <div class="mt-5 text-[11px] text-ink-300 font-medium">
+      <div class="mt-5 text-xs sm:text-sm text-ink-300 font-medium">
         Garantia incondicional de 7 dias · Acesso imediato · Material em PDF
       </div>
 
     </div>
   </section>
+
+  <!-- STICKY CTA MOBILE (FLUTUANTE NO RODAPÉ EM CELULARES) -->
+  <div class="sticky-mobile-cta sm:hidden" id="sticky-bar">
+    <div class="flex items-center justify-between gap-3">
+      <div>
+        <div class="text-[10px] text-gold-300 font-bold uppercase tracking-wide">Oferta de Lançamento</div>
+        <div class="text-white font-extrabold text-lg leading-none font-display">R$ 37,00</div>
+      </div>
+      <a href="https://pay.kiwify.com.br/GZBE5RQ" class="btn btn-action text-xs font-extrabold py-2.5 px-4 rounded-xl shadow-lg shrink-0" target="_blank" rel="noopener noreferrer">
+        COMPRAR AGORA
+      </a>
+    </div>
+  </div>
 
   <!-- FOOTER -->
   <footer class="bg-navy-900 border-t border-navy-800 text-ink-400 py-8 px-5 text-center text-xs">
@@ -1454,10 +1487,10 @@
       <div class="font-display font-bold text-xs sm:text-sm text-ink-200">
         100 Mapas da Aprovação | Serviço Social para Concursos
       </div>
-      <p class="text-[11px] leading-relaxed max-w-2xl mx-auto text-ink-400">
+      <p class="text-xs leading-relaxed max-w-2xl mx-auto text-ink-400">
         Aviso Legal: Este material é uma produção pedagógica independente de apoio ao candidato. Não possui qualquer vínculo institucional ou afiliação com o Governo do Estado do Tocantins, Secretaria de Estado da Saúde (SES-TO) ou Fundação Getulio Vargas (FGV).
       </p>
-      <div class="text-[10px] text-ink-500 pt-3 border-t border-navy-800">
+      <div class="text-[11px] text-ink-500 pt-3 border-t border-navy-800">
         &copy; 2026 100 Mapas da Aprovação. Todos os direitos reservados.
       </div>
     </div>
@@ -1484,7 +1517,7 @@
       if (!car || !dots.length) return;
       const scrollLeft = car.scrollLeft;
       const slideWidth = car.querySelector('.slide')?.offsetWidth || 300;
-      const activeIndex = Math.round(scrollLeft / (slideWidth + 18));
+      const activeIndex = Math.round(scrollLeft / (slideWidth + 16));
       dots.forEach((dot, idx) => {
         dot.classList.toggle('active', idx === Math.min(activeIndex, dots.length - 1));
       });
@@ -1493,13 +1526,13 @@
     function slideCarousel(direction) {
       if (!car) return;
       const slideWidth = car.querySelector('.slide')?.offsetWidth || 300;
-      car.scrollBy({ left: direction * (slideWidth + 18), behavior: 'smooth' });
+      car.scrollBy({ left: direction * (slideWidth + 16), behavior: 'smooth' });
     }
 
     function goToSlide(index) {
       if (!car) return;
       const slideWidth = car.querySelector('.slide')?.offsetWidth || 300;
-      car.scrollTo({ left: index * (slideWidth + 18), behavior: 'smooth' });
+      car.scrollTo({ left: index * (slideWidth + 16), behavior: 'smooth' });
     }
 
     if (car) {
@@ -1568,6 +1601,17 @@
       // Inicia em 50%
       updateComparisonSlider(50);
     }
+
+    // STICKY CTA MOBILE
+    const stickyBar = document.getElementById('sticky-bar');
+    window.addEventListener('scroll', () => {
+      if (!stickyBar) return;
+      if (window.scrollY > 450) {
+        stickyBar.classList.add('visible');
+      } else {
+        stickyBar.classList.remove('visible');
+      }
+    }, { passive: true });
 
     // Reveal Animation on Scroll
     const observer = new IntersectionObserver((entries) => {
