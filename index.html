@@ -361,19 +361,23 @@
       padding: 0;
     }
 
-    /* ESTILOS DE OFERTA E BÔNUS (MODELADOS NA REFERÊNCIA) */
     .bonus-card-ref {
-      background: #142E47;
-      border: 1px solid rgba(79, 164, 107, 0.25);
-      border-radius: 18px;
-      padding: 24px;
+      background: #131B2A;
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: 22px;
+      padding: 28px 22px;
       transition: all .25s ease;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
     }
     .bonus-card-ref:hover {
-      transform: translateY(-3px);
-      border-color: rgba(203, 162, 85, 0.5);
-      box-shadow: 0 18px 40px -10px rgba(0, 0, 0, 0.35);
-      background: #173755;
+      transform: translateY(-4px);
+      border-color: rgba(245, 158, 11, 0.45);
+      box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.5);
+      background: #172235;
     }
 
     .plan-card-ref {
@@ -936,124 +940,118 @@
         <div class="gold-rule"></div>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-5 max-w-5xl mx-auto reveal">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto reveal">
         
         <!-- Bônus 1 -->
-        <div class="bonus-card-ref flex flex-col justify-between">
-          <div class="h-48 sm:h-56 flex items-center justify-center p-3 bg-navy-900/80 rounded-xl border border-white/10 mb-4">
-            <img src="bonus/bonus-01.webp" alt="Bônus 1: Guia Rápido de Legislação do SUS" class="max-h-full max-w-full object-contain rounded drop-shadow-md" loading="lazy">
+        <div class="bonus-card-ref">
+          <div class="h-52 sm:h-60 mb-5 flex items-center justify-center w-full">
+            <img src="bonus/bonus-01.webp" alt="Bônus 1: Guia Rápido de Legislação do SUS" class="max-h-full max-w-full object-contain drop-shadow-[0_12px_22px_rgba(0,0,0,0.4)]" loading="lazy">
           </div>
-          <div class="flex-1 flex flex-col justify-between">
+          <div class="w-full flex-1 flex flex-col justify-between items-center">
             <div>
-              <span class="text-gold-400 font-extrabold uppercase text-xs tracking-wider mb-1.5 block">BÔNUS 1</span>
-              <h3 class="text-white font-bold text-base sm:text-lg mb-2">Guia Rápido de Legislação do SUS</h3>
-              <p class="text-ink-200 text-xs sm:text-sm leading-relaxed mb-3">
+              <div class="text-[#F59E0B] font-extrabold text-sm sm:text-base uppercase tracking-wider mb-2 font-display">BÔNUS 1</div>
+              <h3 class="text-white font-extrabold text-lg sm:text-xl leading-snug mb-2.5">Guia Rápido de Legislação do SUS</h3>
+              <p class="text-ink-200 text-xs sm:text-sm leading-relaxed mb-6 font-normal">
                 Esquemas visuais das Leis 8.080, 8.142 e Decreto 7.508 para você revisar diretrizes, regionalização e controle social em poucos minutos.
               </p>
             </div>
-            <div class="text-xs text-ink-300 pt-3 border-t border-white/10 flex items-center justify-between mt-auto">
-              <span>Valor avulso: <del class="text-coral-500 font-semibold">R$ 29,00</del></span>
-              <span class="text-gold-400 font-bold text-sm">HOJE: GRÁTIS</span>
+            <div class="w-full pt-4 border-t border-white/10 text-xs sm:text-sm text-ink-300">
+              De <del class="line-through text-ink-400">R$ 29,00</del> por <strong class="text-[#F59E0B] font-extrabold text-sm sm:text-base">R$ 0,00</strong>
             </div>
           </div>
         </div>
 
         <!-- Bônus 2 -->
-        <div class="bonus-card-ref flex flex-col justify-between">
-          <div class="h-48 sm:h-56 flex items-center justify-center p-3 bg-navy-900/80 rounded-xl border border-white/10 mb-4">
-            <img src="bonus/bonus-02.webp" alt="Bônus 2: Checklist de Véspera FGV" class="max-h-full max-w-full object-contain rounded drop-shadow-md" loading="lazy">
+        <div class="bonus-card-ref">
+          <div class="h-52 sm:h-60 mb-5 flex items-center justify-center w-full">
+            <img src="bonus/bonus-02.webp" alt="Bônus 2: Checklist de Véspera FGV" class="max-h-full max-w-full object-contain drop-shadow-[0_12px_22px_rgba(0,0,0,0.4)]" loading="lazy">
           </div>
-          <div class="flex-1 flex flex-col justify-between">
+          <div class="w-full flex-1 flex flex-col justify-between items-center">
             <div>
-              <span class="text-gold-400 font-extrabold uppercase text-xs tracking-wider mb-1.5 block">BÔNUS 2</span>
-              <h3 class="text-white font-bold text-base sm:text-lg mb-2">Checklist de Véspera FGV</h3>
-              <p class="text-ink-200 text-xs sm:text-sm leading-relaxed mb-3">
+              <div class="text-[#F59E0B] font-extrabold text-sm sm:text-base uppercase tracking-wider mb-2 font-display">BÔNUS 2</div>
+              <h3 class="text-white font-extrabold text-lg sm:text-xl leading-snug mb-2.5">Checklist de Véspera FGV</h3>
+              <p class="text-ink-200 text-xs sm:text-sm leading-relaxed mb-6 font-normal">
                 As pegadinhas, distratores e distinções de competências vs atribuições privativas que a banca mais explora para confundir os candidatos.
               </p>
             </div>
-            <div class="text-xs text-ink-300 pt-3 border-t border-white/10 flex items-center justify-between mt-auto">
-              <span>Valor avulso: <del class="text-coral-500 font-semibold">R$ 27,00</del></span>
-              <span class="text-gold-400 font-bold text-sm">HOJE: GRÁTIS</span>
+            <div class="w-full pt-4 border-t border-white/10 text-xs sm:text-sm text-ink-300">
+              De <del class="line-through text-ink-400">R$ 27,00</del> por <strong class="text-[#F59E0B] font-extrabold text-sm sm:text-base">R$ 0,00</strong>
             </div>
           </div>
         </div>
 
         <!-- Bônus 3 -->
-        <div class="bonus-card-ref flex flex-col justify-between">
-          <div class="h-48 sm:h-56 flex items-center justify-center p-3 bg-navy-900/80 rounded-xl border border-white/10 mb-4">
-            <img src="bonus/bonus-03.webp" alt="Bônus 3: Caderno de Conceitos Críticos" class="max-h-full max-w-full object-contain rounded drop-shadow-md" loading="lazy">
+        <div class="bonus-card-ref">
+          <div class="h-52 sm:h-60 mb-5 flex items-center justify-center w-full">
+            <img src="bonus/bonus-03.webp" alt="Bônus 3: Caderno de Conceitos Críticos" class="max-h-full max-w-full object-contain drop-shadow-[0_12px_22px_rgba(0,0,0,0.4)]" loading="lazy">
           </div>
-          <div class="flex-1 flex flex-col justify-between">
+          <div class="w-full flex-1 flex flex-col justify-between items-center">
             <div>
-              <span class="text-gold-400 font-extrabold uppercase text-xs tracking-wider mb-1.5 block">BÔNUS 3</span>
-              <h3 class="text-white font-bold text-base sm:text-lg mb-2">Caderno de Conceitos Críticos</h3>
-              <p class="text-ink-200 text-xs sm:text-sm leading-relaxed mb-3">
+              <div class="text-[#F59E0B] font-extrabold text-sm sm:text-base uppercase tracking-wider mb-2 font-display">BÔNUS 3</div>
+              <h3 class="text-white font-extrabold text-lg sm:text-xl leading-snug mb-2.5">Caderno de Conceitos Críticos</h3>
+              <p class="text-ink-200 text-xs sm:text-sm leading-relaxed mb-6 font-normal">
                 Quadro comparativo definitivo para diferenciar estudo social, relatório, laudo pericial, parecer e perícia sem nenhuma dúvida na prova.
               </p>
             </div>
-            <div class="text-xs text-ink-300 pt-3 border-t border-white/10 flex items-center justify-between mt-auto">
-              <span>Valor avulso: <del class="text-coral-500 font-semibold">R$ 29,00</del></span>
-              <span class="text-gold-400 font-bold text-sm">HOJE: GRÁTIS</span>
+            <div class="w-full pt-4 border-t border-white/10 text-xs sm:text-sm text-ink-300">
+              De <del class="line-through text-ink-400">R$ 29,00</del> por <strong class="text-[#F59E0B] font-extrabold text-sm sm:text-base">R$ 0,00</strong>
             </div>
           </div>
         </div>
 
         <!-- Bônus 4 -->
-        <div class="bonus-card-ref flex flex-col justify-between">
-          <div class="h-48 sm:h-56 flex items-center justify-center p-3 bg-navy-900/80 rounded-xl border border-white/10 mb-4">
-            <img src="bonus/bonus-04.webp" alt="Bônus 4: Mapa Expresso do ECA e Medidas de Proteção" class="max-h-full max-w-full object-contain rounded drop-shadow-md" loading="lazy">
+        <div class="bonus-card-ref">
+          <div class="h-52 sm:h-60 mb-5 flex items-center justify-center w-full">
+            <img src="bonus/bonus-04.webp" alt="Bônus 4: Mapa Expresso do ECA e Medidas de Proteção" class="max-h-full max-w-full object-contain drop-shadow-[0_12px_22px_rgba(0,0,0,0.4)]" loading="lazy">
           </div>
-          <div class="flex-1 flex flex-col justify-between">
+          <div class="w-full flex-1 flex flex-col justify-between items-center">
             <div>
-              <span class="text-gold-400 font-extrabold uppercase text-xs tracking-wider mb-1.5 block">BÔNUS 4</span>
-              <h3 class="text-white font-bold text-base sm:text-lg mb-2">Mapa Expresso do ECA e Proteção</h3>
-              <p class="text-ink-200 text-xs sm:text-sm leading-relaxed mb-3">
+              <div class="text-[#F59E0B] font-extrabold text-sm sm:text-base uppercase tracking-wider mb-2 font-display">BÔNUS 4</div>
+              <h3 class="text-white font-extrabold text-lg sm:text-xl leading-snug mb-2.5">Mapa Expresso do ECA e Proteção</h3>
+              <p class="text-ink-200 text-xs sm:text-sm leading-relaxed mb-6 font-normal">
                 Síntese dos artigos essenciais do Estatuto da Criança e do Adolescente, acolhimento, guarda, tutela e fluxo da rede de proteção a violências.
               </p>
             </div>
-            <div class="text-xs text-ink-300 pt-3 border-t border-white/10 flex items-center justify-between mt-auto">
-              <span>Valor avulso: <del class="text-coral-500 font-semibold">R$ 37,00</del></span>
-              <span class="text-gold-400 font-bold text-sm">HOJE: GRÁTIS</span>
+            <div class="w-full pt-4 border-t border-white/10 text-xs sm:text-sm text-ink-300">
+              De <del class="line-through text-ink-400">R$ 37,00</del> por <strong class="text-[#F59E0B] font-extrabold text-sm sm:text-base">R$ 0,00</strong>
             </div>
           </div>
         </div>
 
         <!-- Bônus 5 -->
-        <div class="bonus-card-ref flex flex-col justify-between">
-          <div class="h-48 sm:h-56 flex items-center justify-center p-3 bg-navy-900/80 rounded-xl border border-white/10 mb-4">
-            <img src="bonus/bonus-05.webp" alt="Bônus 5: Guia da Lei 8.662 e Código de Ética" class="max-h-full max-w-full object-contain rounded drop-shadow-md" loading="lazy">
+        <div class="bonus-card-ref">
+          <div class="h-52 sm:h-60 mb-5 flex items-center justify-center w-full">
+            <img src="bonus/bonus-05.webp" alt="Bônus 5: Guia da Lei 8.662 e Código de Ética" class="max-h-full max-w-full object-contain drop-shadow-[0_12px_22px_rgba(0,0,0,0.4)]" loading="lazy">
           </div>
-          <div class="flex-1 flex flex-col justify-between">
+          <div class="w-full flex-1 flex flex-col justify-between items-center">
             <div>
-              <span class="text-gold-400 font-extrabold uppercase text-xs tracking-wider mb-1.5 block">BÔNUS 5</span>
-              <h3 class="text-white font-bold text-base sm:text-lg mb-2">Guia de Atribuições Privativas vs Gerais</h3>
-              <p class="text-ink-200 text-xs sm:text-sm leading-relaxed mb-3">
+              <div class="text-[#F59E0B] font-extrabold text-sm sm:text-base uppercase tracking-wider mb-2 font-display">BÔNUS 5</div>
+              <h3 class="text-white font-extrabold text-lg sm:text-xl leading-snug mb-2.5">Guia de Atribuições Privativas vs Gerais</h3>
+              <p class="text-ink-200 text-xs sm:text-sm leading-relaxed mb-6 font-normal">
                 Tabela visual esquemática comparando os Artigos 4º e 5º da Lei 8.662/93 e os princípios fundamentais do Código de Ética Profissional.
               </p>
             </div>
-            <div class="text-xs text-ink-300 pt-3 border-t border-white/10 flex items-center justify-between mt-auto">
-              <span>Valor avulso: <del class="text-coral-500 font-semibold">R$ 29,00</del></span>
-              <span class="text-gold-400 font-bold text-sm">HOJE: GRÁTIS</span>
+            <div class="w-full pt-4 border-t border-white/10 text-xs sm:text-sm text-ink-300">
+              De <del class="line-through text-ink-400">R$ 29,00</del> por <strong class="text-[#F59E0B] font-extrabold text-sm sm:text-base">R$ 0,00</strong>
             </div>
           </div>
         </div>
 
         <!-- Bônus 6 -->
-        <div class="bonus-card-ref flex flex-col justify-between">
-          <div class="h-48 sm:h-56 flex items-center justify-center p-3 bg-navy-900/80 rounded-xl border border-white/10 mb-4">
-            <img src="bonus/bonus-06.webp" alt="Bônus 6: Cronograma Tático de Revisão" class="max-h-full max-w-full object-contain rounded drop-shadow-md" loading="lazy">
+        <div class="bonus-card-ref">
+          <div class="h-52 sm:h-60 mb-5 flex items-center justify-center w-full">
+            <img src="bonus/bonus-06.webp" alt="Bônus 6: Cronograma Tático de Revisão" class="max-h-full max-w-full object-contain drop-shadow-[0_12px_22px_rgba(0,0,0,0.4)]" loading="lazy">
           </div>
-          <div class="flex-1 flex flex-col justify-between">
+          <div class="w-full flex-1 flex flex-col justify-between items-center">
             <div>
-              <span class="text-gold-400 font-extrabold uppercase text-xs tracking-wider mb-1.5 block">BÔNUS 6</span>
-              <h3 class="text-white font-bold text-base sm:text-lg mb-2">Cronograma Tático de Revisão 15 Min</h3>
-              <p class="text-ink-200 text-xs sm:text-sm leading-relaxed mb-3">
+              <div class="text-[#F59E0B] font-extrabold text-sm sm:text-base uppercase tracking-wider mb-2 font-display">BÔNUS 6</div>
+              <h3 class="text-white font-extrabold text-lg sm:text-xl leading-snug mb-2.5">Cronograma Tático de Revisão 15 Min</h3>
+              <p class="text-ink-200 text-xs sm:text-sm leading-relaxed mb-6 font-normal">
                 Roteiro passo a passo para distribuir os 100 mapas ao longo das semanas até a prova, garantindo 100% de cobertura sem sobrecarga.
               </p>
             </div>
-            <div class="text-xs text-ink-300 pt-3 border-t border-white/10 flex items-center justify-between mt-auto">
-              <span>Valor avulso: <del class="text-coral-500 font-semibold">R$ 37,00</del></span>
-              <span class="text-gold-400 font-bold text-sm">HOJE: GRÁTIS</span>
+            <div class="w-full pt-4 border-t border-white/10 text-xs sm:text-sm text-ink-300">
+              De <del class="line-through text-ink-400">R$ 37,00</del> por <strong class="text-[#F59E0B] font-extrabold text-sm sm:text-base">R$ 0,00</strong>
             </div>
           </div>
         </div>
