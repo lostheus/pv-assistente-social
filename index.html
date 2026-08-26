@@ -1,0 +1,1587 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>100 Mapas da AprovaÃ§Ã£o | ServiÃ§o Social SES-TO & FGV</title>
+  <meta name="description" content="O mÃ©todo visual para dominar LegislaÃ§Ã£o Social, SUS e Ã‰tica Profissional em 15 minutos por dia, focado no concurso SES-TO da banca FGV.">
+  <meta name="theme-color" content="#0D2033">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+            display: ['Sora', '"Plus Jakarta Sans"', 'sans-serif']
+          },
+          colors: {
+            brand: {
+              50: '#EAF4ED',
+              100: '#CFE6D6',
+              200: '#A3D0AF',
+              400: '#4FA46B',
+              500: '#2F8350',
+              600: '#277A47',
+              700: '#1E6847',
+              800: '#164E35',
+              900: '#0F3624'
+            },
+            gold: {
+              50: '#FAF6EA',
+              100: '#F4ECD0',
+              300: '#DCBF79',
+              400: '#CBA255',
+              500: '#B88E3A',
+              600: '#9C7322',
+              700: '#7E5B15'
+            },
+            ink: {
+              50: '#F8F9FA',
+              100: '#EFF2F6',
+              200: '#DDE3EB',
+              400: '#7B8A9D',
+              500: '#56667A',
+              600: '#3D4D61',
+              700: '#28384D',
+              800: '#17273A',
+              900: '#0E1A29'
+            },
+            navy: {
+              600: '#254E75',
+              700: '#1C3D5E',
+              800: '#142E47',
+              900: '#0D2033'
+            },
+            coral: {
+              500: '#C0392B',
+              600: '#A92D20'
+            }
+          },
+          boxShadow: {
+            soft: '0 2px 4px rgba(13,32,51,.04), 0 10px 28px -8px rgba(13,32,51,.08)',
+            card: '0 2px 5px rgba(13,32,51,.04), 0 16px 36px -16px rgba(13,32,51,.16)',
+            lift: '0 24px 60px -20px rgba(13,32,51,.32)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { font-size: 16px; }
+    html, body { background: #FAF8F1; color: #17273A; overflow-x: hidden; max-width: 100%; }
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      background-image: radial-gradient(rgba(14, 26, 41, 0.025) 1px, transparent 1px);
+      background-size: 4px 4px;
+    }
+    h1, h2, h3, .font-display { font-family: 'Sora', 'Plus Jakarta Sans', sans-serif; letter-spacing: -0.02em; }
+    body h1 { font-weight: 700; }
+    body h2 { font-weight: 700; font-size: 1.65rem; line-height: 1.22; color: #142E47; }
+    @media(min-width: 640px) { body h2 { font-size: 1.95rem; } }
+    @media(min-width: 768px) { body h2 { font-size: 2.35rem; } }
+    body h3 { font-size: clamp(1.15rem, 2vw, 1.45rem); line-height: 1.25; font-weight: 700; color: #142E47; }
+    .balance { text-wrap: balance; }
+    .accent { color: #1E6847; }
+    section { position: relative; }
+    .divtop { position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(13,32,51,.1), transparent); }
+    .gold-rule { height: 3px; width: 56px; background: linear-gradient(90deg, #CBA255, #E5C378, transparent); border-radius: 3px; margin: 12px auto 0; }
+    
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: .45rem;
+      font-size: .7rem;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: #9C7322;
+    }
+    .eyebrow::before { content: ""; width: 18px; height: 2px; background: #CBA255; border-radius: 2px; }
+    .eyebrow.center::after { content: ""; width: 18px; height: 2px; background: #CBA255; border-radius: 2px; }
+    
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .55rem;
+      font-family: 'Sora', sans-serif;
+      font-weight: 700;
+      padding: 1rem 1.8rem;
+      border-radius: 12px;
+      line-height: 1.15;
+      transition: all .2s cubic-bezier(.2,.8,.2,1);
+      white-space: normal;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+    }
+    .btn-action {
+      background: #1E6847;
+      color: #ffffff;
+      border: 0;
+      box-shadow: 0 12px 26px -8px rgba(30,104,71,.5), inset 0 -3px 0 rgba(0,0,0,.18);
+    }
+    .btn-action:hover { transform: translateY(-2px); filter: brightness(1.06); box-shadow: 0 16px 32px -8px rgba(30,104,71,.6), inset 0 -3px 0 rgba(0,0,0,.2); }
+    .btn-action:active { transform: translateY(1px); }
+
+    .btn-pulse {
+      animation: pulseGlow 2.6s infinite ease-in-out;
+    }
+    @keyframes pulseGlow {
+      0% { transform: scale(1); box-shadow: 0 12px 26px -8px rgba(30,104,71,0.5), inset 0 -3px 0 rgba(0,0,0,0.18); }
+      50% { transform: scale(1.02); box-shadow: 0 18px 36px -6px rgba(30,104,71,0.7), inset 0 -3px 0 rgba(0,0,0,0.22); }
+      100% { transform: scale(1); box-shadow: 0 12px 26px -8px rgba(30,104,71,0.5), inset 0 -3px 0 rgba(0,0,0,0.18); }
+    }
+
+    .btn-gold {
+      background: #CBA255;
+      color: #0D2033;
+      border: 0;
+      box-shadow: 0 12px 24px -8px rgba(203,162,85,.45), inset 0 -3px 0 rgba(0,0,0,.14);
+    }
+    .btn-gold:hover { transform: translateY(-2px); filter: brightness(1.05); }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #EFF2F6;
+      border-radius: 18px;
+      box-shadow: 0 2px 5px rgba(13,32,51,.03);
+      transition: all .25s ease;
+    }
+    .card:hover {
+      border-color: #DDE3EB;
+      box-shadow: 0 16px 36px -16px rgba(13,32,51,.16);
+      transform: translateY(-2px);
+    }
+
+    .chk { display: flex; gap: .7rem; align-items: flex-start; }
+    .chk svg { flex: 0 0 auto; margin-top: .15rem; color: #1E6847; }
+
+    @media(min-width:640px) {
+      .hero-bullets > li {
+        background: #ffffff;
+        border: 1px solid #EFF2F6;
+        border-radius: 999px;
+        padding: .55rem 1.1rem;
+        box-shadow: 0 2px 4px rgba(13,32,51,.04), 0 8px 20px -8px rgba(13,32,51,.1);
+        align-items: center;
+        font-weight: 600;
+        font-size: .88rem;
+      }
+      .hero-bullets > li svg { margin-top: 0; }
+    }
+
+    .map-preview {
+      width: 100%;
+      height: auto;
+      border-radius: 14px;
+      box-shadow: 0 14px 36px -16px rgba(13,32,51,.3);
+      border: 1px solid rgba(13,32,51,.06);
+      display: block;
+      transition: transform .25s ease;
+    }
+    .map-preview:hover {
+      transform: scale(1.015);
+    }
+
+    .ph {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: .35rem;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      min-height: 100%;
+      background: repeating-linear-gradient(45deg, #F5F1E6 0, #F5F1E6 12px, #EBE4D2 12px, #EBE4D2 24px);
+      color: #1E6847;
+      padding: 1rem;
+      border-radius: inherit;
+    }
+
+    /* CARROSSEL TOUCH-SWIPE COM 6 SLIDES */
+    .carousel-container {
+      position: relative;
+      width: 100%;
+    }
+    .carousel {
+      display: flex;
+      gap: 18px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding: 8px 4px 18px;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      touch-action: pan-x pan-y;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      cursor: grab;
+      user-select: none;
+    }
+    .carousel::-webkit-scrollbar { display: none; }
+    .carousel.dragging { cursor: grabbing; scroll-behavior: auto; }
+    
+    .carousel .slide {
+      scroll-snap-align: center;
+      flex: 0 0 85%;
+      max-width: 85%;
+    }
+    @media(min-width: 640px) {
+      .carousel .slide {
+        flex: 0 0 46%;
+        max-width: 46%;
+      }
+    }
+    @media(min-width: 1024px) {
+      .carousel .slide {
+        flex: 0 0 31.5%;
+        max-width: 31.5%;
+      }
+    }
+
+    .carbtn {
+      position: absolute;
+      top: 42%;
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      background: #ffffff;
+      border: 1px solid rgba(13,32,51,.12);
+      box-shadow: 0 8px 20px -6px rgba(13,32,51,.22);
+      cursor: pointer;
+      font-size: 20px;
+      color: #142E47;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      transition: all .2s ease;
+    }
+    .carbtn:hover { background: #FAF8F1; transform: scale(1.06); }
+    @media(min-width: 768px) { .carbtn { display: flex; } }
+    .carbtn.prev { left: -14px; }
+    .carbtn.next { right: -14px; }
+
+    .car-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #DDE3EB;
+      transition: all .25s ease;
+      cursor: pointer;
+    }
+    .car-dot.active {
+      width: 24px;
+      background: #1E6847;
+    }
+
+    /* ESTILOS DO COMPARADOR INTERATIVO ANTES / DEPOIS */
+    .comparison-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto;
+      aspect-ratio: 1 / 1.414;
+      border-radius: 22px;
+      border: 2.5px solid #0D2033;
+      box-shadow: 0 20px 50px -10px rgba(13,32,51,0.28);
+      overflow: hidden;
+      user-select: none;
+      background: #ffffff;
+    }
+    .comparison-layer-right {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      background: #F7FAFC;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .comparison-layer-left {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      background: #FCFBF7;
+      clip-path: inset(0 50% 0 0);
+      will-change: clip-path;
+      z-index: 10;
+    }
+    .comparison-divider {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 2px;
+      background: #0D2033;
+      z-index: 20;
+      pointer-events: none;
+      transform: translateX(-50%);
+      will-change: left;
+    }
+    .comparison-handle-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #ffffff;
+      border: 2px solid #0D2033;
+      box-shadow: 0 6px 18px rgba(13,32,51,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0D2033;
+      cursor: ew-resize;
+      pointer-events: auto;
+      transition: transform 0.15s ease;
+    }
+    .comparison-handle-btn:hover {
+      transform: translate(-50%, -50%) scale(1.08);
+    }
+    .comparison-input-range {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      cursor: ew-resize;
+      z-index: 30;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ESTILOS DE OFERTA E BÃ”NUS (MODELADOS NA REFERÃŠNCIA) */
+    .bonus-card-ref {
+      background: #142E47;
+      border: 1px solid rgba(79, 164, 107, 0.25);
+      border-radius: 18px;
+      padding: 24px;
+      transition: all .25s ease;
+    }
+    .bonus-card-ref:hover {
+      transform: translateY(-3px);
+      border-color: rgba(203, 162, 85, 0.5);
+      box-shadow: 0 18px 40px -10px rgba(0, 0, 0, 0.35);
+      background: #173755;
+    }
+
+    .plan-card-ref {
+      background: #ffffff;
+      border: 2.5px solid #CBA255;
+      border-radius: 26px;
+      box-shadow: 0 20px 50px -10px rgba(203, 162, 85, 0.22), 0 10px 25px -5px rgba(13, 32, 51, 0.08);
+      position: relative;
+      transition: all .25s ease;
+    }
+    .plan-card-ref:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 26px 60px -10px rgba(203, 162, 85, 0.28), 0 14px 30px -5px rgba(13, 32, 51, 0.12);
+    }
+
+    .plan-badge-ref {
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(90deg, #CBA255, #E5C378);
+      color: #0D2033;
+      font-family: 'Sora', sans-serif;
+      font-weight: 800;
+      font-size: 0.76rem;
+      padding: 6px 22px;
+      border-radius: 50px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      box-shadow: 0 4px 14px rgba(203, 162, 85, 0.35);
+    }
+
+    .faq-content { max-height: 0; overflow: hidden; transition: max-height .35s cubic-bezier(0.4, 0, 0.2, 1); }
+    .faq-item.active .faq-content { max-height: 400px; }
+    .faq-item.active .faq-icon { transform: rotate(180deg); }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .6s cubic-bezier(.16,1,.3,1), transform .6s cubic-bezier(.16,1,.3,1);
+    }
+    .reveal.active { opacity: 1; transform: none; }
+    .reveal[data-d="1"] { transition-delay: .08s; }
+    .reveal[data-d="2"] { transition-delay: .16s; }
+
+    ::selection { background: #1E6847; color: #ffffff; }
+    body h1, body h2, body h3, p.balance, .balance { text-wrap: balance; }
+  </style>
+</head>
+<body class="antialiased selection:bg-brand-600 selection:text-white">
+
+  <!-- BLOCO 0: MARCA E IDENTIFICAÃ‡ÃƒO INSTITUCIONAL -->
+  <header class="bg-navy-900 text-white py-2.5 px-4 text-center border-b border-navy-800">
+    <div class="inline-flex items-center justify-center gap-2 text-xs sm:text-sm">
+      <svg viewBox="0 0 24 24" fill="none" class="w-4 h-4 text-gold-400 shrink-0" stroke="currentColor" stroke-width="2">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+      </svg>
+      <span class="font-bold tracking-wide text-ink-100 font-display">100 Mapas da AprovaÃ§Ã£o</span>
+      <span class="text-white/30">|</span>
+      <span class="text-white/80">ServiÃ§o Social SES-TO & FGV</span>
+      <span class="hidden md:inline text-white/30">Â·</span>
+      <span class="hidden md:inline text-gold-300 text-xs font-semibold">Material Independente de Alta PrecisÃ£o</span>
+    </div>
+  </header>
+
+  <!-- BLOCO 1: HERO (TANGIBILIDADE + ATALHO PRONTO COM HEADLINE EQUILIBRADA) -->
+  <section class="pt-6 sm:pt-10 pb-12 sm:pb-16 overflow-hidden" style="background: linear-gradient(180deg, #FAF8F1 0%, #FFFFFF 68%, #F8F9FA 100%);">
+    <div class="relative max-w-5xl mx-auto px-4 sm:px-6 text-center">
+      
+      <!-- Headline Compacta e Equilibrada -->
+      <h1 class="font-display text-[1.4rem] sm:text-[1.85rem] lg:text-[2.15rem] leading-[1.2] text-navy-900 balance max-w-3xl mx-auto font-bold">
+        Tenha em mÃ£os os <span class="text-brand-700">100 mapas visuais prontos</span> para dominar ServiÃ§o Social e LegislaÃ§Ã£o do SUS na prova da SES-TO, sem se perder em leis secas e apostilas interminÃ¡veis
+      </h1>
+
+      <!-- Mockup do Pack em Destaque -->
+      <div class="reveal min-w-0 max-w-sm sm:max-w-xl lg:max-w-2xl mx-auto mt-6 relative">
+        <div class="absolute -inset-2 bg-gradient-to-r from-brand-500/10 via-gold-400/15 to-navy-700/10 rounded-3xl blur-xl -z-10"></div>
+        <img 
+          src="assets/capa-principal.webp" 
+          alt="100 Mapas da AprovaÃ§Ã£o ServiÃ§o Social SES-TO e FGV" 
+          class="w-full h-auto rounded-2xl shadow-lift border border-ink-100"
+          decoding="async" 
+          fetchpriority="high"
+          onerror="this.outerHTML='<div class=\'ph rounded-2xl shadow-card\' style=\'aspect-ratio:16/10\'><span class=\'font-display font-bold text-base\'>100 Mapas da AprovaÃ§Ã£o</span><span class=\'text-xs text-ink-500\'>ServiÃ§o Social para Concursos SES-TO & FGV</span></div>'"
+        >
+      </div>
+
+      <!-- Subheadline -->
+      <p class="mt-6 text-ink-700 text-[15px] leading-snug sm:text-base sm:leading-relaxed max-w-2xl mx-auto balance font-medium">
+        A coleÃ§Ã£o visual e esquematizada no <strong class="text-navy-900">MÃ©todo Gabarito Visual Social</strong> para vocÃª revisar os pontos mais cobrados da FGV em apenas <strong class="text-brand-700">15 minutos por dia</strong>.
+      </p>
+
+      <!-- 3 Bullets EstratÃ©gicos -->
+      <ul class="hero-bullets mt-6 flex flex-col items-start sm:flex-row sm:flex-wrap sm:items-center sm:justify-center gap-2.5 w-fit mx-auto text-left">
+        <li class="chk">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#1E6847"/><path d="M8 12.5l2.5 2.5 5-5.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="text-ink-800">100 mapas mentais radiais em PDF A4 de alta resoluÃ§Ã£o</span>
+        </li>
+        <li class="chk">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#1E6847"/><path d="M8 12.5l2.5 2.5 5-5.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="text-ink-800">Alertas estratÃ©gicos Olho FGV em todas as pÃ¡ginas</span>
+        </li>
+        <li class="chk">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#1E6847"/><path d="M8 12.5l2.5 2.5 5-5.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="text-ink-800">Formato vertical pronto para celular, tablet ou impressÃ£o</span>
+        </li>
+      </ul>
+
+      <!-- Microcopy de ConfianÃ§a -->
+      <div class="mt-7 pt-5 border-t border-ink-200/60 inline-flex flex-wrap items-center justify-center gap-3.5 text-xs font-semibold text-ink-600">
+        <span class="inline-flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-brand-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> Material Digital em PDF</span>
+        <span class="text-ink-300">Â·</span>
+        <span class="inline-flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-brand-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> Acesso Imediato via Email</span>
+        <span class="text-ink-300">Â·</span>
+        <span class="inline-flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-brand-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> Garantia Incondicional de 7 Dias</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BLOCO 2: AGITAÃ‡ÃƒO DA DOR DO CANDIDATO -->
+  <section class="py-14 sm:py-20" style="background: linear-gradient(180deg, #FFFFFF 0%, #FAF8F1 20%, #FAF8F1 100%);">
+    <div class="divtop"></div>
+    <div class="max-w-5xl mx-auto px-5 sm:px-6">
+      
+      <div class="text-center mb-10 reveal">
+        <span class="eyebrow center" style="color: #A92D20;">O Desafio da Sua PreparaÃ§Ã£o</span>
+        <h2 class="mt-3 balance">Se vocÃª sente que o tempo estÃ¡ curto e o volume de leis Ã© esmagador, <span class="text-brand-700">vocÃª nÃ£o estÃ¡ sÃ³</span>.</h2>
+        <div class="gold-rule"></div>
+      </div>
+
+      <!-- Grid de Dores EspecÃ­ficas do Assistente Social Concurseiro -->
+      <div class="grid md:grid-cols-2 gap-5 items-stretch">
+        
+        <div class="card p-6 border-l-4 border-l-coral-500 reveal">
+          <div class="flex items-start gap-4">
+            <div class="w-9 h-9 rounded-xl bg-coral-500/10 text-coral-600 flex items-center justify-center shrink-0 font-bold text-sm">âœ•</div>
+            <div>
+              <h3 class="text-base font-bold text-navy-900 mb-1">AcÃºmulo de apostilas e PDFs gigantes</h3>
+              <p class="text-ink-600 text-xs sm:text-sm leading-relaxed">VocÃª abre arquivos com centenas de pÃ¡ginas, passa horas lendo de forma passiva e percebe que pouco fixou quando tenta lembrar os detalhes no dia seguinte.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card p-6 border-l-4 border-l-coral-500 reveal" data-d="1">
+          <div class="flex items-start gap-4">
+            <div class="w-9 h-9 rounded-xl bg-coral-500/10 text-coral-600 flex items-center justify-center shrink-0 font-bold text-sm">âœ•</div>
+            <div>
+              <h3 class="text-base font-bold text-navy-900 mb-1">ConfusÃ£o entre conceitos e competÃªncias</h3>
+              <p class="text-ink-600 text-xs sm:text-sm leading-relaxed">Na hora de responder questÃµes da FGV, termos parecidos de competÃªncias e atribuiÃ§Ãµes privativas, princÃ­pios do SUS e instrumentos tÃ©cnicos acabam gerando dÃºvida e inseguranÃ§a.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card p-6 border-l-4 border-l-coral-500 reveal">
+          <div class="flex items-start gap-4">
+            <div class="w-9 h-9 rounded-xl bg-coral-500/10 text-coral-600 flex items-center justify-center shrink-0 font-bold text-sm">âœ•</div>
+            <div>
+              <h3 class="text-base font-bold text-navy-900 mb-1">Leis secas cansativas e descontextualizadas</h3>
+              <p class="text-ink-600 text-xs sm:text-sm leading-relaxed">A leitura corrida da Lei 8.662/1993, do ECA e da LegislaÃ§Ã£o do SUS (8.080 e 8.142) se torna desgastante e difÃ­cil de associar aos casos prÃ¡ticos exigidos em concurso.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card p-6 border-l-4 border-l-coral-500 reveal" data-d="1">
+          <div class="flex items-start gap-4">
+            <div class="w-9 h-9 rounded-xl bg-coral-500/10 text-coral-600 flex items-center justify-center shrink-0 font-bold text-sm">âœ•</div>
+            <div>
+              <h3 class="text-base font-bold text-navy-900 mb-1">Rotina corrida sem tempo para maratonar aulas</h3>
+              <p class="text-ink-600 text-xs sm:text-sm leading-relaxed">Entre trabalho, famÃ­lia e compromissos, sentar por 4 ou 5 horas seguidas para estudar Ã© inviÃ¡vel. VocÃª precisa de um mÃ©todo de revisÃ£o que caiba em blocos de 15 minutos.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- AmplificaÃ§Ã£o da Dor -->
+      <div class="mt-10 text-center max-w-3xl mx-auto reveal">
+        <p class="font-display font-bold text-lg sm:text-xl text-navy-900 balance">
+          <span class="text-coral-500">E o pior:</span> a banca FGV Ã© especialista em explorar sutilezas conceituais e pequenas distinÃ§Ãµes que passam despercebidas na leitura linear.
+        </p>
+      </div>
+
+      <!-- BLOCO 3: CALLOUT A CULPA NÃƒO Ã‰ SUA -->
+      <div class="mt-8 max-w-3xl mx-auto reveal">
+        <div class="relative rounded-2xl bg-white border-2 border-gold-300 px-6 sm:px-9 pt-10 pb-7 text-center shadow-card">
+          <div class="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-gold-400 text-white flex items-center justify-center shadow-lift ring-4 ring-white">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+          </div>
+          <div class="font-display font-extrabold text-xl sm:text-2xl text-navy-900 mb-2">A culpa nÃ£o Ã© sua.</div>
+          <p class="text-ink-700 text-sm sm:text-base leading-relaxed balance">
+            O problema nunca foi sua capacidade ou dedicaÃ§Ã£o. O problema Ã© tentar memorizar matÃ©rias densas e cheias de ramificaÃ§Ãµes atravÃ©s de textos corridos e sem hierarquia visual. Para reter conteÃºdos complexos, o seu cÃ©rebro precisa de <strong class="text-brand-700">conexÃ£o, cores, sÃ­ntese e pontos de ancoragem</strong>.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BLOCO 4: SOLUÃ‡ÃƒO, MECANISMO NOMEADO E COMPARADOR INTERATIVO (TEXTO CORRIDO VS MAPA MENTAL) -->
+  <section class="py-14 sm:py-20" style="background: linear-gradient(180deg, #FAF8F1 0%, #FFFFFF 14%, #FFFFFF 100%);">
+    <div class="divtop"></div>
+    
+    <!-- Faixa Navy de Destaque -->
+    <div class="bg-navy-900 text-white py-6 sm:py-8 px-5 text-center mb-12 shadow-card">
+      <span class="font-display font-bold text-lg sm:text-2xl leading-snug max-w-4xl mx-auto block balance">
+        ConheÃ§a os <span class="text-gold-300">100 Mapas da AprovaÃ§Ã£o</span> para ServiÃ§o Social
+      </span>
+      <p class="text-ink-200 text-xs sm:text-sm mt-1.5 max-w-2xl mx-auto">Desenvolvido no MÃ©todo Gabarito Visual Social para o concurso SES-TO</p>
+    </div>
+
+    <div class="max-w-6xl mx-auto px-5 sm:px-6">
+      
+      <div class="text-center max-w-3xl mx-auto mb-10 reveal">
+        <span class="eyebrow center">ComparaÃ§Ã£o Interativa</span>
+        <h2 class="mt-3 balance">Arraste e veja a transformaÃ§Ã£o na prÃ¡tica</h2>
+        <p class="mt-3 text-ink-600 text-sm sm:text-base leading-relaxed balance">
+          De um lado, a lei seca densa, cansativa e sem hierarquia. Do outro, a mesma matÃ©ria esquematizada com conexÃµes lÃ³gicas, cores e alertas diretos da FGV no MÃ©todo Gabarito Visual Social.
+        </p>
+        <div class="gold-rule"></div>
+      </div>
+
+      <!-- Grid com Comparador Interativo e BenefÃ­cios -->
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        
+        <!-- Componente Interativo Before/After Slider -->
+        <div class="reveal">
+          <div class="comparison-wrapper" id="comparison-box">
+            
+            <!-- Layer Direita (Por baixo): Mapa Mental Ilustrado -->
+            <div class="comparison-layer-right">
+              <img 
+                src="assets/mapa-exemplo-sus.webp" 
+                alt="Mapa Mental Ilustrado do SUS" 
+                class="w-full h-full object-contain pointer-events-none"
+              >
+              <!-- Badge Mapa Mental -->
+              <div class="absolute bottom-3 right-3 bg-navy-900/95 backdrop-blur-sm text-white text-[10px] sm:text-[11px] font-bold py-1 px-3.5 rounded-full shadow-lg pointer-events-none z-10 flex items-center gap-1.5 border border-white/20">
+                <span class="w-2 h-2 rounded-full bg-brand-400"></span>
+                Mapa mental
+              </div>
+            </div>
+
+            <!-- Layer Esquerda (Por cima com clip-path): Texto Corrido Totalmente Preenchido -->
+            <div class="comparison-layer-left" id="comparison-overlay">
+              <div class="w-full h-full p-3 sm:p-4.5 text-left bg-[#FCFBF7] text-navy-900 flex flex-col justify-between select-none" style="font-family: Georgia, 'Times New Roman', serif;">
+                
+                <!-- CabeÃ§alho Institucional do Decreto -->
+                <div class="text-center pb-1.5 mb-1.5 border-b border-ink-300/80">
+                  <div class="text-[8.5px] sm:text-[9.5px] font-bold uppercase tracking-wider text-ink-600">PRESIDÃŠNCIA DA REPÃšBLICA Â· CASA CIVIL</div>
+                  <div class="text-[10px] sm:text-[11.5px] font-bold text-navy-900 leading-tight mt-0.5">DECRETO NÂº 7.508, DE 28 DE JUNHO DE 2011</div>
+                  <div class="text-[8px] sm:text-[9px] text-ink-600 italic mt-0.5">Regulamenta a Lei nÂº 8.080/90 para dispor sobre a organizaÃ§Ã£o do SUS</div>
+                </div>
+
+                <!-- Corpo de Artigos Preenchendo 100% da Altura -->
+                <div class="text-[7.5px] sm:text-[9px] leading-[1.28] text-ink-900 space-y-1 flex-1 overflow-hidden">
+                  <p class="font-bold text-navy-900 uppercase text-[8px] sm:text-[9.5px]">CAPÃTULO I - DA ORGANIZAÃ‡ÃƒO DO SUS</p>
+                  <p><strong>Art. 2Âº</strong> Para os efeitos deste Decreto, considera-se:</p>
+                  <p><strong>I - RegiÃ£o de SaÃºde:</strong> espaÃ§o geogrÃ¡fico contÃ­nuo constituÃ­do por agrupamentos de MunicÃ­pios limÃ­trofes, delimitado a partir de identidades culturais, econÃ´micas e sociais e de redes de comunicaÃ§Ã£o e infraestrutura de transportes compartilhados, com a finalidade de integrar a organizaÃ§Ã£o, o planejamento e a execuÃ§Ã£o de aÃ§Ãµes e serviÃ§os de saÃºde;</p>
+                  <p><strong>II - Contrato Organizativo da AÃ§Ã£o PÃºblica da SaÃºde:</strong> acordo de colaboraÃ§Ã£o firmado entre entes federativos com a finalidade de organizar e integrar as aÃ§Ãµes e serviÃ§os de saÃºde na rede regionalizada e hierarquizada;</p>
+                  <p><strong>III - Portas de Entrada:</strong> serviÃ§os de atendimento inicial Ã  saÃºde no Sistema Ãšnico de SaÃºde;</p>
+                  <p><strong>IV - Mapa da SaÃºde:</strong> descriÃ§Ã£o geogrÃ¡fica da distribuiÃ§Ã£o de recursos humanos e de aÃ§Ãµes e serviÃ§os de saÃºde ofertados pelo SUS e pela iniciativa privada;</p>
+                  <p><strong>V - ServiÃ§os Especiais de Acesso Aberto:</strong> serviÃ§os de saÃºde especÃ­ficos para o atendimento da pessoa que, em razÃ£o de seu agravo ou de sua condiÃ§Ã£o de saÃºde, necessite de atendimento especial;</p>
+                  <p><strong>Art. 3Âº</strong> O SUS Ã© constituÃ­do pela conjugaÃ§Ã£o das aÃ§Ãµes e serviÃ§os de promoÃ§Ã£o, proteÃ§Ã£o e recuperaÃ§Ã£o da saÃºde executados pelos entes federativos, de forma direta ou indireta...</p>
+                  <p><strong>Art. 4Âº</strong> As RegiÃµes de SaÃºde serÃ£o instituÃ­das pelo Estado, em articulaÃ§Ã£o com os MunicÃ­pios, respeitadas as diretrizes gerais pactuadas na CIT.</p>
+                  <p><strong>Art. 5Âº</strong> Para ser instituÃ­da, a RegiÃ£o de SaÃºde deve conter, no mÃ­nimo, aÃ§Ãµes e serviÃ§os de: I - atenÃ§Ã£o primÃ¡ria; II - urgÃªncia e emergÃªncia; III - atenÃ§Ã£o psicossocial; IV - atenÃ§Ã£o ambulatorial especializada e hospitalar; e V - vigilÃ¢ncia em saÃºde.</p>
+                  <p><strong>Art. 7Âº</strong> As Redes de AtenÃ§Ã£o Ã  SaÃºde constituem a base para a integraÃ§Ã£o das aÃ§Ãµes e serviÃ§os de saÃºde no territÃ³rio regional, articulando os serviÃ§os em nÃ­veis de complexidade crescente.</p>
+                  <p><strong>Art. 8Âº</strong> O acesso universal, igualitÃ¡rio e ordenado Ã s aÃ§Ãµes e serviÃ§os de saÃºde se inicia pelas Portas de Entrada e completa-se na rede regionalizada e hierarquizada.</p>
+                  <p><strong>Art. 9Âº</strong> SÃ£o Portas de Entrada: I - de atenÃ§Ã£o primÃ¡ria; II - de atenÃ§Ã£o de urgÃªncia e emergÃªncia; III - de atenÃ§Ã£o psicossocial; e IV - especiais de acesso aberto.</p>
+                </div>
+
+                <!-- RodapÃ© Discreto da PÃ¡gina de Lei Seca -->
+                <div class="pt-1 border-t border-ink-200 text-[7.5px] sm:text-[8.5px] text-ink-500 flex justify-between items-center mt-1">
+                  <span>DiÃ¡rio Oficial da UniÃ£o Â· SeÃ§Ã£o 1</span>
+                  <span>LegislaÃ§Ã£o Federal</span>
+                </div>
+
+              </div>
+
+              <!-- Badge Texto Corrido -->
+              <div class="absolute bottom-3 left-3 bg-navy-900/95 backdrop-blur-sm text-white text-[10px] sm:text-[11px] font-bold py-1 px-3.5 rounded-full shadow-lg pointer-events-none z-20 flex items-center gap-1.5 border border-white/20">
+                <span class="w-2 h-2 rounded-full bg-coral-500"></span>
+                Texto corrido
+              </div>
+            </div>
+
+            <!-- Divisor / Barra Central com BotÃ£o de Arraste -->
+            <div class="comparison-divider" id="comparison-handle">
+              <div class="comparison-handle-btn">
+                <svg class="w-5 h-5 text-navy-900" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M8 9l-4 3 4 3m8-6l4 3-4 3"/>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Input Range InvisÃ­vel para Controle TÃ¡til e Suave -->
+            <input 
+              type="range" 
+              min="0" 
+              max="100" 
+              value="50" 
+              aria-label="Controle de comparaÃ§Ã£o entre texto corrido e mapa mental"
+              class="comparison-input-range"
+              id="comparison-range"
+            >
+          </div>
+
+          <!-- Dica Visual de InteraÃ§Ã£o -->
+          <div class="text-center mt-3 flex items-center justify-center gap-2 text-xs font-semibold text-ink-600">
+            <svg class="w-4 h-4 text-brand-700 animate-pulse" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 9l-4 3 4 3m8-6l4 3-4 3"/>
+            </svg>
+            <span>Toque e arraste para os lados para ver a diferenÃ§a</span>
+          </div>
+        </div>
+
+        <!-- Coluna de BenefÃ­cios da Metodologia -->
+        <div class="reveal" data-d="1">
+          <h3 class="text-xl font-bold text-navy-900 mb-3">Em poucos dias de revisÃ£o, vocÃª vai notar:</h3>
+          
+          <ul class="space-y-3">
+            <li class="chk">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#1E6847"/><path d="M8 12.5l2.5 2.5 5-5.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="text-ink-800 text-sm font-medium">Capacidade de revisar um tema denso em menos de 3 minutos</span>
+            </li>
+            <li class="chk">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#1E6847"/><path d="M8 12.5l2.5 2.5 5-5.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="text-ink-800 text-sm font-medium">Clareza para distinguir estudo social, laudo, relatÃ³rio e parecer</span>
+            </li>
+            <li class="chk">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#1E6847"/><path d="M8 12.5l2.5 2.5 5-5.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="text-ink-800 text-sm font-medium">DomÃ­nio das diretrizes e leis do SUS sem reler artigos repetitivos</span>
+            </li>
+            <li class="chk">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#1E6847"/><path d="M8 12.5l2.5 2.5 5-5.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="text-ink-800 text-sm font-medium">SeguranÃ§a imediata ao identificar as pegadinhas e distratores da FGV</span>
+            </li>
+            <li class="chk">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#1E6847"/><path d="M8 12.5l2.5 2.5 5-5.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="text-ink-800 text-sm font-medium">Uma rotina de estudos leve e sustentÃ¡vel de 15 minutos ao dia</span>
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BLOCO 5: ANATOMIA DE CADA MAPA (AS 4 CHAVES DE DOMÃNIO) -->
+  <section class="py-14 sm:py-20" style="background: linear-gradient(180deg, #FFFFFF 0%, #FAF8F1 15%, #FAF8F1 100%);">
+    <div class="divtop"></div>
+    <div class="max-w-6xl mx-auto px-5 sm:px-6">
+      
+      <div class="text-center mb-10 reveal">
+        <span class="eyebrow center">Arquitetura PedagÃ³gica</span>
+        <h2 class="mt-3 balance">As <span class="text-brand-700">4 chaves</span> presentes em cada prancha</h2>
+        <p class="mt-2 text-ink-600 text-sm sm:text-base max-w-2xl mx-auto">Tudo o que vocÃª precisa em uma Ãºnica pÃ¡gina, sem poluiÃ§Ã£o e com foco total na retenÃ§Ã£o.</p>
+        <div class="gold-rule"></div>
+      </div>
+
+      <!-- 4 Cards Estruturais -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        
+        <div class="card p-5 reveal">
+          <div class="w-10 h-10 rounded-xl bg-brand-50 text-brand-700 flex items-center justify-center font-bold text-lg mb-3 shadow-soft">
+            1
+          </div>
+          <h3 class="text-base font-bold text-navy-900 mb-1.5">NÃ³ Central TemÃ¡tico</h3>
+          <p class="text-ink-600 text-xs leading-relaxed">IdentificaÃ§Ã£o imediata do assunto do edital para localizaÃ§Ã£o rÃ¡pida e foco no ponto chave.</p>
+        </div>
+
+        <div class="card p-5 reveal" data-d="1">
+          <div class="w-10 h-10 rounded-xl bg-brand-50 text-brand-700 flex items-center justify-center font-bold text-lg mb-3 shadow-soft">
+            2
+          </div>
+          <h3 class="text-base font-bold text-navy-900 mb-1.5">5 Ramos Conectados</h3>
+          <p class="text-ink-600 text-xs leading-relaxed">SÃ­ntese dos tÃ³picos essenciais, princÃ­pios, artigos e conceitos desdobrados de forma lÃ³gica.</p>
+        </div>
+
+        <div class="card p-5 reveal" data-d="2">
+          <div class="w-10 h-10 rounded-xl bg-brand-50 text-brand-700 flex items-center justify-center font-bold text-lg mb-3 shadow-soft">
+            3
+          </div>
+          <h3 class="text-base font-bold text-navy-900 mb-1.5">IlustraÃ§Ãµes Associativas</h3>
+          <p class="text-ink-600 text-xs leading-relaxed">Elementos visuais em estilo educacional que ativam a memÃ³ria fotogrÃ¡fica e facilitam a evocaÃ§Ã£o.</p>
+        </div>
+
+        <div class="card p-5 reveal" data-d="3">
+          <div class="w-10 h-10 rounded-xl bg-gold-50 text-gold-600 flex items-center justify-center font-bold text-lg mb-3 shadow-soft border border-gold-200">
+            â˜…
+          </div>
+          <h3 class="text-base font-bold text-navy-900 mb-1.5">Alerta Olho FGV</h3>
+          <p class="text-ink-600 text-xs leading-relaxed">Destaque cirÃºrgico das distinÃ§Ãµes conceituais, exceÃ§Ãµes e pegadinhas recorrentes da banca.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BLOCO 6: VEJA NA PRÃTICA (CARROSSEL COM 6 ESPAÃ‡OS E TOUCH-SWIPE COM O DEDO) -->
+  <section class="py-14 sm:py-20" style="background: linear-gradient(180deg, #FAF8F1 0%, #FFFFFF 14%, #FFFFFF 100%);">
+    <div class="divtop"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center max-w-3xl mx-auto mb-8 reveal">
+        <span class="eyebrow center">ConteÃºdo Completo</span>
+        <h2 class="mt-3 balance">Veja as pranchas de revisÃ£o dos mÃ³dulos</h2>
+        <p class="mt-2 text-ink-600 text-sm sm:text-base">Arraste para o lado com o dedo para explorar as Ã¡reas temÃ¡ticas do material.</p>
+        <div class="gold-rule"></div>
+      </div>
+
+      <!-- Carrossel de 6 EspaÃ§os com Touch Swipe -->
+      <div class="carousel-container reveal mb-6">
+        <button class="carbtn prev" onclick="slideCarousel(-1)" aria-label="Anterior">â€¹</button>
+        <button class="carbtn next" onclick="slideCarousel(1)" aria-label="PrÃ³ximo">â€º</button>
+        
+        <div class="carousel" id="car-modulos">
+          
+          <!-- Slide 1 -->
+          <div class="slide">
+            <div class="card p-3 h-full flex flex-col justify-between">
+              <img src="assets/revisao-modulo-01.webp" class="map-preview" loading="lazy" alt="MÃ³dulo 1: Fundamentos do ServiÃ§o Social" onerror="this.outerHTML='<div class=\'ph\' style=\'aspect-ratio:16/10;border-radius:10px\'><span class=\'font-bold text-xs\'>MÃ³dulo 01: Fundamentos</span></div>'">
+              <div class="p-3 text-center">
+                <span class="text-[11px] font-bold text-brand-700 uppercase tracking-wider">EspaÃ§o 01 Â· 12 Mapas</span>
+                <h4 class="font-bold text-navy-900 text-sm mt-0.5">Fundamentos e EspaÃ§os Profissionais</h4>
+                <p class="text-[11px] text-ink-500 mt-1">ServiÃ§o Social contemporÃ¢neo, questÃ£o social e mediaÃ§Ã£o.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="slide">
+            <div class="card p-3 h-full flex flex-col justify-between">
+              <img src="assets/revisao-modulo-02.webp" class="map-preview" loading="lazy" alt="MÃ³dulo 2: DimensÃ£o TÃ©cnico-Operativa" onerror="this.outerHTML='<div class=\'ph\' style=\'aspect-ratio:16/10;border-radius:10px\'><span class=\'font-bold text-xs\'>MÃ³dulo 02: TÃ©cnico-Operativo</span></div>'">
+              <div class="p-3 text-center">
+                <span class="text-[11px] font-bold text-brand-700 uppercase tracking-wider">EspaÃ§o 02 Â· 20 Mapas</span>
+                <h4 class="font-bold text-navy-900 text-sm mt-0.5">DimensÃ£o TÃ©cnico-Operativa e Instrumentais</h4>
+                <p class="text-[11px] text-ink-500 mt-1">Visita domiciliar, estudo social, laudo, parecer e perÃ­cia.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="slide">
+            <div class="card p-3 h-full flex flex-col justify-between">
+              <img src="assets/revisao-modulo-03.webp" class="map-preview" loading="lazy" alt="MÃ³dulo 3: ServiÃ§o Social na SaÃºde" onerror="this.outerHTML='<div class=\'ph\' style=\'aspect-ratio:16/10;border-radius:10px\'><span class=\'font-bold text-xs\'>MÃ³dulo 03: SaÃºde</span></div>'">
+              <div class="p-3 text-center">
+                <span class="text-[11px] font-bold text-brand-700 uppercase tracking-wider">EspaÃ§o 03 Â· 14 Mapas</span>
+                <h4 class="font-bold text-navy-900 text-sm mt-0.5">ServiÃ§o Social na SaÃºde</h4>
+                <p class="text-[11px] text-ink-500 mt-1">Determinantes sociais, redes de atenÃ§Ã£o e humanizaÃ§Ã£o.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="slide">
+            <div class="card p-3 h-full flex flex-col justify-between">
+              <img src="assets/revisao-modulo-04.webp" class="map-preview" loading="lazy" alt="MÃ³dulo 4: PolÃ­ticas Sociais e Seguridade" onerror="this.outerHTML='<div class=\'ph\' style=\'aspect-ratio:16/10;border-radius:10px\'><span class=\'font-bold text-xs\'>MÃ³dulo 04: Seguridade</span></div>'">
+              <div class="p-3 text-center">
+                <span class="text-[11px] font-bold text-brand-700 uppercase tracking-wider">EspaÃ§o 04 Â· 16 Mapas</span>
+                <h4 class="font-bold text-navy-900 text-sm mt-0.5">PolÃ­ticas Sociais e Seguridade Social</h4>
+                <p class="text-[11px] text-ink-500 mt-1">SaÃºde, PrevidÃªncia, AssistÃªncia Social e financiamento.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 5 -->
+          <div class="slide">
+            <div class="card p-3 h-full flex flex-col justify-between">
+              <img src="assets/revisao-modulo-05.webp" class="map-preview" loading="lazy" alt="MÃ³dulo 5: CrianÃ§a, Adolescente e FamÃ­lia" onerror="this.outerHTML='<div class=\'ph\' style=\'aspect-ratio:16/10;border-radius:10px\'><span class=\'font-bold text-xs\'>MÃ³dulo 05: FamÃ­lias</span></div>'">
+              <div class="p-3 text-center">
+                <span class="text-[11px] font-bold text-brand-700 uppercase tracking-wider">EspaÃ§o 05 Â· 20 Mapas</span>
+                <h4 class="font-bold text-navy-900 text-sm mt-0.5">CrianÃ§a, FamÃ­lia e ViolÃªncias</h4>
+                <p class="text-[11px] text-ink-500 mt-1">ECA esquematizado, medidas de proteÃ§Ã£o e enfrentamento.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 6 -->
+          <div class="slide">
+            <div class="card p-3 h-full flex flex-col justify-between">
+              <img src="assets/revisao-modulo-07.webp" class="map-preview" loading="lazy" alt="MÃ³dulo 6: LegislaÃ§Ã£o do SUS e Ã‰tica" onerror="this.outerHTML='<div class=\'ph\' style=\'aspect-ratio:16/10;border-radius:10px\'><span class=\'font-bold text-xs\'>MÃ³dulo 06: SUS & Ã‰tica</span></div>'">
+              <div class="p-3 text-center">
+                <span class="text-[11px] font-bold text-brand-700 uppercase tracking-wider">EspaÃ§o 06 Â· 18 Mapas</span>
+                <h4 class="font-bold text-navy-900 text-sm mt-0.5">LegislaÃ§Ã£o do SUS, Ã‰tica e Lei 8.662</h4>
+                <p class="text-[11px] text-ink-500 mt-1">Leis 8.080, 8.142, Decreto 7.508 e CÃ³digo de Ã‰tica.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Indicador de NavegaÃ§Ã£o (6 Dots) -->
+        <div class="flex items-center justify-center gap-2 mt-4" id="carousel-dots">
+          <span class="car-dot active" onclick="goToSlide(0)"></span>
+          <span class="car-dot" onclick="goToSlide(1)"></span>
+          <span class="car-dot" onclick="goToSlide(2)"></span>
+          <span class="car-dot" onclick="goToSlide(3)"></span>
+          <span class="car-dot" onclick="goToSlide(4)"></span>
+          <span class="car-dot" onclick="goToSlide(5)"></span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BLOCO 7: O QUE MUDA NA SUA PREPARAÃ‡ÃƒO (VIRADA DE RESULTADO) -->
+  <section class="py-14 sm:py-20 bg-navy-900 text-white relative overflow-hidden">
+    <div class="divtop"></div>
+    
+    <div class="max-w-6xl mx-auto px-5 sm:px-6 relative z-10">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12 reveal">
+        <span class="eyebrow center !text-gold-400">TransformaÃ§Ã£o PrÃ¡tica</span>
+        <h2 class="mt-3 text-white balance">O que muda na sua rotina quando vocÃª estuda com mapas visuais</h2>
+        <div class="gold-rule"></div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-5">
+        
+        <div class="rounded-2xl bg-navy-800/80 border border-navy-700 p-5 sm:p-6 reveal">
+          <div class="text-coral-500 font-bold text-xs uppercase tracking-wider mb-2">Antes</div>
+          <h3 class="text-lg font-bold text-white mb-2">Estudo Disperso e Cansativo</h3>
+          <p class="text-ink-200 text-xs sm:text-sm leading-relaxed">Horas gastas lendo apostilas sem saber exatamente o que focar, gerando ansiedade e a sensaÃ§Ã£o de estar sempre atrasado em relaÃ§Ã£o ao edital.</p>
+        </div>
+
+        <div class="rounded-2xl bg-brand-900/60 border border-brand-500/40 p-5 sm:p-6 reveal" data-d="1">
+          <div class="text-gold-300 font-bold text-xs uppercase tracking-wider mb-2">Com os 100 Mapas</div>
+          <h3 class="text-lg font-bold text-white mb-2">RevisÃ£o RÃ¡pida de 15 Minutos</h3>
+          <p class="text-ink-100 text-xs sm:text-sm leading-relaxed">Estudo ativo e recorrente. Cada mapa entrega uma visÃ£o completa do tema com conexÃµes visuais e o alerta direto para a banca FGV.</p>
+        </div>
+
+        <div class="rounded-2xl bg-navy-800/80 border border-navy-700 p-5 sm:p-6 reveal" data-d="2">
+          <div class="text-brand-400 font-bold text-xs uppercase tracking-wider mb-2">No Dia da Prova</div>
+          <h3 class="text-lg font-bold text-white mb-2">SeguranÃ§a e Clareza</h3>
+          <p class="text-ink-200 text-xs sm:text-sm leading-relaxed">Reconhecimento imediato dos conceitos tÃ©cnicos, diferenciaÃ§Ã£o das pegadinhas e tranquilidade para responder as questÃµes especÃ­ficas.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BLOCO 8: BÃ”NUS EXCLUSIVOS (SEÃ‡ÃƒO ESCURA COM OS 6 BÃ”NUS ESTRATÃ‰GICOS) -->
+  <section id="bonus" class="py-16 sm:py-24" style="background: linear-gradient(165deg, #1C3D5E 0%, #142E47 50%, #0D2033 100%); color: #ffffff;">
+    <div class="divtop"></div>
+    <div class="max-w-6xl mx-auto px-5 sm:px-6">
+      
+      <div class="text-center mb-12 reveal">
+        <span class="eyebrow center !text-gold-300">BÃ´nus Exclusivos</span>
+        <h2 class="text-white mt-3 text-2xl sm:text-4xl font-extrabold balance">
+          E vocÃª ainda recebe estes <span class="text-gold-400">6 bÃ´nus estratÃ©gicos, de graÃ§a</span>
+        </h2>
+        <p class="text-ink-200 mt-2 text-sm sm:text-base max-w-2xl mx-auto">
+          Materiais complementares desenvolvidos para acelerar sua fixaÃ§Ã£o e blindar seus pontos na prova da FGV.
+        </p>
+        <div class="gold-rule"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-5 max-w-5xl mx-auto reveal">
+        
+        <!-- BÃ´nus 1 -->
+        <div class="bonus-card-ref flex flex-col justify-between">
+          <div class="h-44 flex items-center justify-center p-3 bg-navy-900/80 rounded-xl border border-white/10 mb-4">
+            <img src="assets/mapa-exemplo-sus.webp" alt="BÃ´nus 1: Guia RÃ¡pido de LegislaÃ§Ã£o do SUS" class="max-h-full max-w-full object-contain rounded drop-shadow-md" loading="lazy">
+          </div>
+          <div class="flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-gold-400 font-extrabold uppercase text-xs tracking-wider mb-1.5 block">BÃ”NUS 1</span>
+              <h3 class="text-white font-bold text-base sm:text-lg mb-2">Guia RÃ¡pido de LegislaÃ§Ã£o do SUS</h3>
+              <p class="text-ink-200 text-xs sm:text-sm leading-relaxed mb-3">
+                Esquemas visuais das Leis 8.080, 8.142 e Decreto 7.508 para vocÃª revisar diretrizes, regionalizaÃ§Ã£o e controle social em poucos minutos.
+              </p>
+            </div>
+            <div class="text-xs text-ink-300 pt-3 border-t border-white/10 flex items-center justify-between mt-auto">
+              <span>Valor avulso: <del class="text-coral-500 font-semibold">R$ 29,00</del></span>
+              <span class="text-gold-400 font-bold text-sm">HOJE: GRÃTIS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- BÃ´nus 2 -->
+        <div class="bonus-card-ref flex flex-col justify-between">
+          <div class="h-44 flex items-center justify-center p-3 bg-navy-900/80 rounded-xl border border-white/10 mb-4">
+            <img src="assets/mapa-exemplo-etica.webp" alt="BÃ´nus 2: Checklist de VÃ©spera FGV" class="max-h-full max-w-full object-contain rounded drop-shadow-md" loading="lazy">
+          </div>
+          <div class="flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-gold-400 font-extrabold uppercase text-xs tracking-wider mb-1.5 block">BÃ”NUS 2</span>
+              <h3 class="text-white font-bold text-base sm:text-lg mb-2">Checklist de VÃ©spera FGV</h3>
+              <p class="text-ink-200 text-xs sm:text-sm leading-relaxed mb-3">
+                As pegadinhas, distratores e distinÃ§Ãµes de competÃªncias vs atribuiÃ§Ãµes privativas que a banca mais explora para confundir os candidatos.
+              </p>
+            </div>
+            <div class="text-xs text-ink-300 pt-3 border-t border-white/10 flex items-center justify-between mt-auto">
+              <span>Valor avulso: <del class="text-coral-500 font-semibold">R$ 27,00</del></span>
+              <span class="text-gold-400 font-bold text-sm">HOJE: GRÃTIS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- BÃ´nus 3 -->
+        <div class="bonus-card-ref flex flex-col justify-between">
+          <div class="h-44 flex items-center justify-center p-3 bg-navy-900/80 rounded-xl border border-white/10 mb-4">
+            <img src="assets/mapa-exemplo-02.webp" alt="BÃ´nus 3: Caderno de Conceitos CrÃ­ticos" class="max-h-full max-w-full object-contain rounded drop-shadow-md" loading="lazy">
+          </div>
+          <div class="flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-gold-400 font-extrabold uppercase text-xs tracking-wider mb-1.5 block">BÃ”NUS 3</span>
+              <h3 class="text-white font-bold text-base sm:text-lg mb-2">Caderno de Conceitos CrÃ­ticos</h3>
+              <p class="text-ink-200 text-xs sm:text-sm leading-relaxed mb-3">
+                Quadro comparativo definitivo para diferenciar estudo social, relatÃ³rio, laudo pericial, parecer e perÃ­cia sem nenhuma dÃºvida na prova.
+              </p>
+            </div>
+            <div class="text-xs text-ink-300 pt-3 border-t border-white/10 flex items-center justify-between mt-auto">
+              <span>Valor avulso: <del class="text-coral-500 font-semibold">R$ 29,00</del></span>
+              <span class="text-gold-400 font-bold text-sm">HOJE: GRÃTIS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- BÃ´nus 4 -->
+        <div class="bonus-card-ref flex flex-col justify-between">
+          <div class="h-44 flex items-center justify-center p-3 bg-navy-900/80 rounded-xl border border-white/10 mb-4">
+            <img src="assets/revisao-modulo-05.webp" alt="BÃ´nus 4: Mapa Expresso do ECA e Medidas de ProteÃ§Ã£o" class="max-h-full max-w-full object-contain rounded drop-shadow-md" loading="lazy">
+          </div>
+          <div class="flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-gold-400 font-extrabold uppercase text-xs tracking-wider mb-1.5 block">BÃ”NUS 4</span>
+              <h3 class="text-white font-bold text-base sm:text-lg mb-2">Mapa Expresso do ECA e ProteÃ§Ã£o</h3>
+              <p class="text-ink-200 text-xs sm:text-sm leading-relaxed mb-3">
+                SÃ­ntese dos artigos essenciais do Estatuto da CrianÃ§a e do Adolescente, acolhimento, guarda, tutela e fluxo da rede de proteÃ§Ã£o a violÃªncias.
+              </p>
+            </div>
+            <div class="text-xs text-ink-300 pt-3 border-t border-white/10 flex items-center justify-between mt-auto">
+              <span>Valor avulso: <del class="text-coral-500 font-semibold">R$ 37,00</del></span>
+              <span class="text-gold-400 font-bold text-sm">HOJE: GRÃTIS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- BÃ´nus 5 -->
+        <div class="bonus-card-ref flex flex-col justify-between">
+          <div class="h-44 flex items-center justify-center p-3 bg-navy-900/80 rounded-xl border border-white/10 mb-4">
+            <img src="assets/mapa-exemplo-01.webp" alt="BÃ´nus 5: Guia da Lei 8.662 e CÃ³digo de Ã‰tica" class="max-h-full max-w-full object-contain rounded drop-shadow-md" loading="lazy">
+          </div>
+          <div class="flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-gold-400 font-extrabold uppercase text-xs tracking-wider mb-1.5 block">BÃ”NUS 5</span>
+              <h3 class="text-white font-bold text-base sm:text-lg mb-2">Guia de AtribuiÃ§Ãµes Privativas vs Gerais</h3>
+              <p class="text-ink-200 text-xs sm:text-sm leading-relaxed mb-3">
+                Tabela visual esquemÃ¡tica comparando os Artigos 4Âº e 5Âº da Lei 8.662/93 e os princÃ­pios fundamentais do CÃ³digo de Ã‰tica Profissional.
+              </p>
+            </div>
+            <div class="text-xs text-ink-300 pt-3 border-t border-white/10 flex items-center justify-between mt-auto">
+              <span>Valor avulso: <del class="text-coral-500 font-semibold">R$ 29,00</del></span>
+              <span class="text-gold-400 font-bold text-sm">HOJE: GRÃTIS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- BÃ´nus 6 -->
+        <div class="bonus-card-ref flex flex-col justify-between">
+          <div class="h-44 flex items-center justify-center p-3 bg-navy-900/80 rounded-xl border border-white/10 mb-4">
+            <img src="assets/indice-conteudos.webp" alt="BÃ´nus 6: Cronograma TÃ¡tico de RevisÃ£o" class="max-h-full max-w-full object-contain rounded drop-shadow-md" loading="lazy">
+          </div>
+          <div class="flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-gold-400 font-extrabold uppercase text-xs tracking-wider mb-1.5 block">BÃ”NUS 6</span>
+              <h3 class="text-white font-bold text-base sm:text-lg mb-2">Cronograma TÃ¡tico de RevisÃ£o 15 Min</h3>
+              <p class="text-ink-200 text-xs sm:text-sm leading-relaxed mb-3">
+                Roteiro passo a passo para distribuir os 100 mapas ao longo das semanas atÃ© a prova, garantindo 100% de cobertura sem sobrecarga.
+              </p>
+            </div>
+            <div class="text-xs text-ink-300 pt-3 border-t border-white/10 flex items-center justify-between mt-auto">
+              <span>Valor avulso: <del class="text-coral-500 font-semibold">R$ 37,00</del></span>
+              <span class="text-gold-400 font-bold text-sm">HOJE: GRÃTIS</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BLOCO 9: AUTORIDADE E RIGOR TÃ‰CNICO -->
+  <section class="py-12 sm:py-16" style="background: linear-gradient(180deg, #FFFFFF 0%, #FAF8F1 100%);">
+    <div class="divtop"></div>
+    <div class="max-w-4xl mx-auto px-5 sm:px-6 text-center reveal">
+      
+      <div class="w-14 h-14 rounded-2xl bg-brand-50 text-brand-700 flex items-center justify-center mx-auto mb-3 shadow-soft">
+        <svg viewBox="0 0 24 24" fill="none" class="w-7 h-7" stroke="currentColor" stroke-width="1.8">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          <path d="m9 12 2 2 4-4"/>
+        </svg>
+      </div>
+
+      <span class="eyebrow center">Metodologia e PrecisÃ£o</span>
+      <h2 class="mt-2 balance">Desenvolvido com foco no perfil de cobranÃ§a da banca FGV</h2>
+      
+      <p class="mt-3 text-ink-700 text-sm sm:text-base leading-relaxed balance max-w-3xl mx-auto">
+        O material foi estruturado a partir da anÃ¡lise aprofundada do conteÃºdo programÃ¡tico de Assistente Social e dos padrÃµes histÃ³ricos de questÃµes da FGV em concursos de saÃºde e assistÃªncia social, garantindo rigor conceitual, fidelidade Ã  legislaÃ§Ã£o e linguagem precisa.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- BLOCO 10: PARA QUEM Ã‰ -->
+  <section class="py-14 sm:py-20" style="background: #FAF8F1;">
+    <div class="divtop"></div>
+    <div class="max-w-5xl mx-auto px-5 sm:px-6">
+      
+      <div class="text-center mb-10 reveal">
+        <span class="eyebrow center">Auto-qualificaÃ§Ã£o</span>
+        <h2 class="mt-2 balance">Este material foi feito para vocÃª que:</h2>
+        <div class="gold-rule"></div>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-3.5">
+        
+        <div class="card p-4 sm:p-5 flex items-start gap-3 reveal">
+          <svg class="w-4 h-4 text-brand-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          <p class="text-xs sm:text-sm font-semibold text-navy-900">Vai prestar o concurso da SES-TO para o cargo de Assistente Social e precisa revisar Conhecimentos EspecÃ­ficos e SUS.</p>
+        </div>
+
+        <div class="card p-4 sm:p-5 flex items-start gap-3 reveal" data-d="1">
+          <svg class="w-4 h-4 text-brand-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          <p class="text-xs sm:text-sm font-semibold text-navy-900">Tem pouco tempo diÃ¡rio e precisa de uma ferramenta rÃ¡pida de 15 minutos que funcione de verdade.</p>
+        </div>
+
+        <div class="card p-4 sm:p-5 flex items-start gap-3 reveal">
+          <svg class="w-4 h-4 text-brand-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          <p class="text-xs sm:text-sm font-semibold text-navy-900">Fica confuso com textos longos e aprende muito mais rÃ¡pido atravÃ©s de esquemas, cores e diagramas visuais.</p>
+        </div>
+
+        <div class="card p-4 sm:p-5 flex items-start gap-3 reveal" data-d="1">
+          <svg class="w-4 h-4 text-brand-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          <p class="text-xs sm:text-sm font-semibold text-navy-900">Quer revisar no celular, tablet ou imprimir as pranchas em A4 para estudar onde e como preferir.</p>
+        </div>
+
+      </div>
+
+      <!-- Card de ConexÃ£o com a Oferta -->
+      <div class="mt-7 text-center reveal">
+        <a href="#oferta" class="inline-flex items-center gap-1.5 text-brand-700 hover:text-brand-800 font-bold text-xs sm:text-sm underline underline-offset-4 decoration-2">
+          Se identificou? Garanta seus mapas com valor especial de lanÃ§amento â†’
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BLOCO 12: COMO RECEBER (3 PASSOS) -->
+  <section class="py-14 sm:py-18" style="background: linear-gradient(180deg, #FAF8F1 0%, #FFFFFF 100%);">
+    <div class="divtop"></div>
+    <div class="max-w-4xl mx-auto px-5 sm:px-6">
+      
+      <div class="text-center mb-10 reveal">
+        <span class="eyebrow center">Acesso Imediato</span>
+        <h2 class="mt-2 balance">Como vocÃª recebe o seu material em 3 passos simples</h2>
+        <div class="gold-rule"></div>
+      </div>
+
+      <div class="grid sm:grid-cols-3 gap-5 text-center">
+        
+        <div class="card p-5 reveal">
+          <div class="w-10 h-10 rounded-full bg-navy-900 text-white font-bold flex items-center justify-center mx-auto mb-3 text-base shadow-soft font-display">
+            1
+          </div>
+          <h3 class="text-sm font-bold text-navy-900 mb-1">InscriÃ§Ã£o Segura</h3>
+          <p class="text-xs text-ink-600 leading-relaxed">Conclua seu pedido na pÃ¡gina de pagamento blindada da Kiwify em poucos segundos.</p>
+        </div>
+
+        <div class="card p-5 reveal" data-d="1">
+          <div class="w-10 h-10 rounded-full bg-brand-700 text-white font-bold flex items-center justify-center mx-auto mb-3 text-base shadow-soft font-display">
+            2
+          </div>
+          <h3 class="text-sm font-bold text-navy-900 mb-1">Envio Imediato</h3>
+          <p class="text-xs text-ink-600 leading-relaxed">VocÃª recebe instantaneamente no seu email o link exclusivo para baixar todos os arquivos em PDF.</p>
+        </div>
+
+        <div class="card p-5 reveal" data-d="2">
+          <div class="w-10 h-10 rounded-full bg-gold-500 text-navy-900 font-bold flex items-center justify-center mx-auto mb-3 text-base shadow-soft font-display">
+            3
+          </div>
+          <h3 class="text-sm font-bold text-navy-900 mb-1">Estude Onde Quiser</h3>
+          <p class="text-xs text-ink-600 leading-relaxed">Abra no celular, tablet, computador ou imprima as pranchas em alta definiÃ§Ã£o para revisar.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BLOCO 13: BLOCO DE OFERTA MODELADO NA REFERÃŠNCIA COM OS 6 BÃ”NUS INTEGRADOS -->
+  <section id="oferta" class="py-16 sm:py-24" style="background: linear-gradient(180deg, #FAF8F1 0%, #FFFFFF 100%);">
+    <div class="divtop"></div>
+    <div class="max-w-4xl mx-auto px-5 sm:px-6">
+      
+      <div class="text-center mb-12 reveal">
+        <span class="eyebrow center">Oferta Especial de LanÃ§amento</span>
+        <h2 class="mt-2 text-2xl sm:text-4xl font-extrabold text-navy-900 balance">
+          Tenha acesso a todo o material hoje mesmo
+        </h2>
+        <div class="gold-rule"></div>
+      </div>
+
+      <div class="max-w-xl mx-auto reveal">
+        
+        <div class="plan-card-ref p-6 sm:p-9 text-left">
+          
+          <!-- Badge Flutuante Superior -->
+          <div class="plan-badge-ref">
+            Plano Completo SES-TO & FGV
+          </div>
+
+          <h3 class="text-xl sm:text-2xl font-bold text-center text-navy-900 mt-2 mb-6">
+            100 Mapas da AprovaÃ§Ã£o + 6 BÃ´nus
+          </h3>
+
+          <!-- Mockup Principal em Destaque -->
+          <div class="h-56 sm:h-64 mb-6 flex items-center justify-center p-2">
+            <img 
+              src="assets/capa-principal.webp" 
+              alt="100 Mapas da AprovaÃ§Ã£o ServiÃ§o Social SES-TO e FGV" 
+              class="max-h-full max-w-full object-contain rounded-xl drop-shadow-xl"
+              loading="lazy"
+            >
+          </div>
+
+          <!-- Lista de EntregÃ¡veis Estilo ReferÃªncia com 6 BÃ´nus -->
+          <ul class="space-y-2.5 mb-7">
+            
+            <li class="flex items-start gap-3 text-xs sm:text-sm text-ink-700 font-medium">
+              <svg class="w-5 h-5 text-brand-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+              <span><strong>100 Mapas Mentais Radiais</strong> de ServiÃ§o Social (PDF de Alta ResoluÃ§Ã£o)</span>
+            </li>
+
+            <li class="flex items-start gap-3 text-xs sm:text-sm text-ink-800 font-semibold bg-brand-50/70 p-2 rounded-lg border border-brand-100">
+              <svg class="w-4 h-4 text-brand-700 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+              <span><strong class="text-brand-700">BÃ´nus 1:</strong> Guia RÃ¡pido de LegislaÃ§Ã£o do SUS (8.080, 8.142 e Dec. 7.508)</span>
+            </li>
+
+            <li class="flex items-start gap-3 text-xs sm:text-sm text-ink-800 font-semibold bg-brand-50/70 p-2 rounded-lg border border-brand-100">
+              <svg class="w-4 h-4 text-brand-700 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+              <span><strong class="text-brand-700">BÃ´nus 2:</strong> Checklist de VÃ©spera FGV (Pegadinhas e Distratores)</span>
+            </li>
+
+            <li class="flex items-start gap-3 text-xs sm:text-sm text-ink-800 font-semibold bg-brand-50/70 p-2 rounded-lg border border-brand-100">
+              <svg class="w-4 h-4 text-brand-700 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+              <span><strong class="text-brand-700">BÃ´nus 3:</strong> Caderno de Conceitos CrÃ­ticos (Laudo, Parecer e Estudo Social)</span>
+            </li>
+
+            <li class="flex items-start gap-3 text-xs sm:text-sm text-ink-800 font-semibold bg-brand-50/70 p-2 rounded-lg border border-brand-100">
+              <svg class="w-4 h-4 text-brand-700 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+              <span><strong class="text-brand-700">BÃ´nus 4:</strong> Mapa Expresso do ECA e Medidas de ProteÃ§Ã£o</span>
+            </li>
+
+            <li class="flex items-start gap-3 text-xs sm:text-sm text-ink-800 font-semibold bg-brand-50/70 p-2 rounded-lg border border-brand-100">
+              <svg class="w-4 h-4 text-brand-700 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+              <span><strong class="text-brand-700">BÃ´nus 5:</strong> Guia de AtribuiÃ§Ãµes Privativas vs CompetÃªncias Gerais</span>
+            </li>
+
+            <li class="flex items-start gap-3 text-xs sm:text-sm text-ink-800 font-semibold bg-brand-50/70 p-2 rounded-lg border border-brand-100">
+              <svg class="w-4 h-4 text-brand-700 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+              <span><strong class="text-brand-700">BÃ´nus 6:</strong> Cronograma TÃ¡tico de RevisÃ£o em 15 Minutos</span>
+            </li>
+
+            <li class="flex items-start gap-3 text-xs sm:text-sm text-ink-700 pt-1">
+              <svg class="w-5 h-5 text-brand-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+              <span>Alertas EstratÃ©gicos Olho FGV integrados em todas as pranchas</span>
+            </li>
+
+            <li class="flex items-start gap-3 text-xs sm:text-sm text-ink-700">
+              <svg class="w-5 h-5 text-brand-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+              <span>Acesso Otimizado para Celular, Tablet e ImpressÃ£o A4</span>
+            </li>
+
+            <li class="flex items-start gap-3 text-xs sm:text-sm text-ink-700">
+              <svg class="w-5 h-5 text-brand-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+              <span>Acesso VitalÃ­cio sem Qualquer Taxa ou Mensalidade</span>
+            </li>
+
+          </ul>
+
+          <!-- Valores e PreÃ§o Estilo ReferÃªncia -->
+          <div class="text-center pt-3 border-t border-ink-100">
+            
+            <div class="text-xs sm:text-sm text-ink-500 font-medium mb-1">
+              Valor total do pacote: <del class="text-coral-500 font-bold">R$ 285,00</del>
+            </div>
+            
+            <div class="font-display font-extrabold text-5xl sm:text-6xl text-brand-700 leading-none my-2 flex items-start justify-center">
+              R$ 37<span class="text-2xl sm:text-3xl font-bold mt-1">,00</span>
+            </div>
+
+            <div class="text-xs sm:text-sm font-bold text-brand-700 uppercase tracking-wide mb-4">
+              Oferta de lanÃ§amento: economize R$ 248,00 hoje
+            </div>
+
+            <!-- BotÃ£o com AnimaÃ§Ã£o Pulsante -->
+            <div class="mt-2">
+              <a href="https://pay.kiwify.com.br/placeholder" class="btn btn-action btn-pulse w-full text-sm sm:text-base uppercase tracking-wider font-extrabold py-4 shadow-lift" target="_blank" rel="noopener noreferrer">
+                QUERO O ACESSO COMPLETO AGORA
+              </a>
+            </div>
+
+            <p class="text-xs text-ink-500 mt-3 leading-relaxed">
+              Acesso imediato e vitalÃ­cio Â· 7 dias de garantia incondicional
+            </p>
+
+            <!-- Selo de Garantia -->
+            <div class="mt-5 pt-4 border-t border-ink-100 flex items-center justify-center gap-2 text-xs font-bold text-ink-700">
+              <svg class="w-5 h-5 text-brand-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+              <span>Garantia de 7 Dias Incondicional</span>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- 3 Selos de ConfianÃ§a fora do Card -->
+        <div class="grid grid-cols-3 gap-3 max-w-xs mx-auto mt-6 text-center">
+          <div>
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1E6847" stroke-width="1.8" class="w-6 h-6 mx-auto mb-1"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <div class="text-[11px] font-bold text-navy-900 leading-tight">Compra<br>SEGURA</div>
+          </div>
+          <div>
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1E6847" stroke-width="1.8" class="w-6 h-6 mx-auto mb-1"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+            <div class="text-[11px] font-bold text-navy-900 leading-tight">Garantia<br>7 DIAS</div>
+          </div>
+          <div>
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1E6847" stroke-width="1.8" class="w-6 h-6 mx-auto mb-1"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            <div class="text-[11px] font-bold text-navy-900 leading-tight">Acesso<br>IMEDIATO</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BLOCO 14: GARANTIA INCONDICIONAL -->
+  <section class="py-12 sm:py-16" style="background: #FAF8F1;">
+    <div class="divtop"></div>
+    <div class="max-w-3xl mx-auto px-5 sm:px-6">
+      
+      <div class="card p-5 sm:p-7 border border-gold-300 bg-white flex flex-col sm:flex-row items-center gap-5 text-center sm:text-left reveal">
+        
+        <div class="w-16 h-16 rounded-2xl bg-gold-50 border border-gold-300 text-gold-600 flex items-center justify-center shrink-0 shadow-soft">
+          <svg viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
+            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+          </svg>
+        </div>
+
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-gold-600">Garantia Blindada de 7 Dias</span>
+          <h3 class="text-lg font-bold text-navy-900 mt-0.5 mb-1.5">Risco Zero para Sua PreparaÃ§Ã£o</h3>
+          <p class="text-xs sm:text-sm text-ink-600 leading-relaxed">
+            Acesse o material, baixe os mapas e teste a metodologia na sua rotina. Se dentro de 7 dias vocÃª sentir que o conteÃºdo nÃ£o agregou clareza aos seus estudos, basta solicitar o reembolso na Kiwify para receber 100% do seu dinheiro de volta, sem burocracia e sem perguntas.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BLOCO 15: FAQ (PERGUNTAS FREQUENTES) -->
+  <section class="py-14 sm:py-20" style="background: linear-gradient(180deg, #FAF8F1 0%, #FFFFFF 100%);">
+    <div class="divtop"></div>
+    <div class="max-w-3xl mx-auto px-5 sm:px-6">
+      
+      <div class="text-center mb-10 reveal">
+        <span class="eyebrow center">Tire Suas DÃºvidas</span>
+        <h2 class="mt-2 balance">Perguntas Frequentes</h2>
+        <div class="gold-rule"></div>
+      </div>
+
+      <div class="space-y-3">
+        
+        <div class="card p-4 sm:p-5 faq-item cursor-pointer" onclick="toggleFaq(this)">
+          <div class="flex items-center justify-between gap-3">
+            <h4 class="font-bold text-navy-900 text-xs sm:text-sm">1. O material Ã© em vÃ­deo ou em PDF?</h4>
+            <span class="faq-icon text-ink-400 font-bold transition-transform text-base">â†“</span>
+          </div>
+          <div class="faq-content text-xs sm:text-sm text-ink-600 pt-2 leading-relaxed">
+            O material Ã© 100% digital, entregue em arquivos PDF de alta resoluÃ§Ã£o. VocÃª pode visualizar confortavelmente no celular, tablet, computador ou realizar a impressÃ£o das pranchas em tamanho A4.
+          </div>
+        </div>
+
+        <div class="card p-4 sm:p-5 faq-item cursor-pointer" onclick="toggleFaq(this)">
+          <div class="flex items-center justify-between gap-3">
+            <h4 class="font-bold text-navy-900 text-xs sm:text-sm">2. O produto cobre toda a prova do concurso?</h4>
+            <span class="faq-icon text-ink-400 font-bold transition-transform text-base">â†“</span>
+          </div>
+          <div class="faq-content text-xs sm:text-sm text-ink-600 pt-2 leading-relaxed">
+            NÃ£o. O foco do material Ã© a parte mais decisiva e densa para o cargo: Conhecimentos EspecÃ­ficos de Assistente Social e LegislaÃ§Ã£o do SUS. NÃ£o contempla matÃ©rias bÃ¡sicas gerais como LÃ­ngua Portuguesa ou RaciocÃ­nio LÃ³gico.
+          </div>
+        </div>
+
+        <div class="card p-4 sm:p-5 faq-item cursor-pointer" onclick="toggleFaq(this)">
+          <div class="flex items-center justify-between gap-3">
+            <h4 class="font-bold text-navy-900 text-xs sm:text-sm">3. Os mapas servem para quem estuda pelo celular?</h4>
+            <span class="faq-icon text-ink-400 font-bold transition-transform text-base">â†“</span>
+          </div>
+          <div class="faq-content text-xs sm:text-sm text-ink-600 pt-2 leading-relaxed">
+            Sim. As pÃ¡ginas foram diagramadas verticalmente em alta definiÃ§Ã£o, permitindo leitura limpa, zoom nÃ­tido e navegaÃ§Ã£o rÃ¡pida direto na tela do seu smartphone ou tablet.
+          </div>
+        </div>
+
+        <div class="card p-4 sm:p-5 faq-item cursor-pointer" onclick="toggleFaq(this)">
+          <div class="flex items-center justify-between gap-3">
+            <h4 class="font-bold text-navy-900 text-xs sm:text-sm">4. Os mapas substituem a leitura de todas as leis?</h4>
+            <span class="faq-icon text-ink-400 font-bold transition-transform text-base">â†“</span>
+          </div>
+          <div class="faq-content text-xs sm:text-sm text-ink-600 pt-2 leading-relaxed">
+            O objetivo Ã© ser uma ferramenta de revisÃ£o ativa, fixaÃ§Ã£o e conexÃ£o visual dos pontos crÃ­ticos. Ele Ã© perfeito para consolidar a matÃ©ria sem precisar reler apostilas inteiras a cada semana de estudo.
+          </div>
+        </div>
+
+        <div class="card p-4 sm:p-5 faq-item cursor-pointer" onclick="toggleFaq(this)">
+          <div class="flex items-center justify-between gap-3">
+            <h4 class="font-bold text-navy-900 text-xs sm:text-sm">5. O que Ã© o alerta Olho FGV presente nas pÃ¡ginas?</h4>
+            <span class="faq-icon text-ink-400 font-bold transition-transform text-base">â†“</span>
+          </div>
+          <div class="faq-content text-xs sm:text-sm text-ink-600 pt-2 leading-relaxed">
+            Em cada mapa hÃ¡ um quadro dedicado Ã s pegadinhas mais comuns da banca examinadora, destacando sutilezas conceituais, termos trocados e artigos que costumam confundir os candidatos.
+          </div>
+        </div>
+
+        <div class="card p-4 sm:p-5 faq-item cursor-pointer" onclick="toggleFaq(this)">
+          <div class="flex items-center justify-between gap-3">
+            <h4 class="font-bold text-navy-900 text-xs sm:text-sm">6. Como e quando recebo o meu acesso?</h4>
+            <span class="faq-icon text-ink-400 font-bold transition-transform text-base">â†“</span>
+          </div>
+          <div class="faq-content text-xs sm:text-sm text-ink-600 pt-2 leading-relaxed">
+            O acesso Ã© imediato. Assim que o pagamento for confirmado pela Kiwify (instantÃ¢neo no PIX e cartÃ£o), vocÃª receberÃ¡ um email com os links diretos para download seguro de todos os arquivos.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BLOCO 16: CTA FINAL EMOCIONAL (SEM PREÃ‡O) -->
+  <section class="py-14 sm:py-20 bg-navy-900 text-white relative overflow-hidden">
+    <div class="divtop"></div>
+    <div class="max-w-4xl mx-auto px-5 sm:px-6 text-center relative z-10 reveal">
+      
+      <span class="eyebrow center !text-gold-400">Reta Final para a SES-TO</span>
+      
+      <h2 class="text-xl sm:text-3xl lg:text-4xl font-bold text-white mt-3 mb-3 balance leading-tight">
+        Chegue no dia da prova com a certeza de quem <span class="text-gold-300">revisou o que realmente importa</span>
+      </h2>
+      
+      <p class="text-ink-200 text-xs sm:text-sm max-w-2xl mx-auto mb-7 balance">
+        O tempo atÃ© o concurso nÃ£o para. VocÃª pode continuar se desgastando em pilhas de PDFs ou organizar sua mente com 100 mapas visuais objetivos.
+      </p>
+
+      <a href="#oferta" class="btn btn-gold text-sm sm:text-base uppercase tracking-wide font-extrabold shadow-lift px-7 py-3.5">
+        QUERO MEUS 100 MAPAS PARA A SES-TO
+      </a>
+
+      <div class="mt-5 text-[11px] text-ink-300 font-medium">
+        Garantia incondicional de 7 dias Â· Acesso imediato Â· Material em PDF
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-navy-900 border-t border-navy-800 text-ink-400 py-8 px-5 text-center text-xs">
+    <div class="max-w-4xl mx-auto space-y-3">
+      <div class="font-display font-bold text-xs sm:text-sm text-ink-200">
+        100 Mapas da AprovaÃ§Ã£o | ServiÃ§o Social para Concursos
+      </div>
+      <p class="text-[11px] leading-relaxed max-w-2xl mx-auto text-ink-400">
+        Aviso Legal: Este material Ã© uma produÃ§Ã£o pedagÃ³gica independente de apoio ao candidato. NÃ£o possui qualquer vÃ­nculo institucional ou afiliaÃ§Ã£o com o Governo do Estado do Tocantins, Secretaria de Estado da SaÃºde (SES-TO) ou FundaÃ§Ã£o Getulio Vargas (FGV).
+      </p>
+      <div class="text-[10px] text-ink-500 pt-3 border-t border-navy-800">
+        &copy; 2026 100 Mapas da AprovaÃ§Ã£o. Todos os direitos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS INTERATIVOS -->
+  <script>
+    // FAQ Accordion
+    function toggleFaq(element) {
+      const isActive = element.classList.contains('active');
+      document.querySelectorAll('.faq-item').forEach(item => {
+        item.classList.remove('active');
+      });
+      if (!isActive) {
+        element.classList.add('active');
+      }
+    }
+
+    // Carrossel com 6 EspaÃ§os e Suporte Total a Touch-Swipe
+    const car = document.getElementById('car-modulos');
+    const dots = document.querySelectorAll('.car-dot');
+
+    function updateActiveDot() {
+      if (!car || !dots.length) return;
+      const scrollLeft = car.scrollLeft;
+      const slideWidth = car.querySelector('.slide')?.offsetWidth || 300;
+      const activeIndex = Math.round(scrollLeft / (slideWidth + 18));
+      dots.forEach((dot, idx) => {
+        dot.classList.toggle('active', idx === Math.min(activeIndex, dots.length - 1));
+      });
+    }
+
+    function slideCarousel(direction) {
+      if (!car) return;
+      const slideWidth = car.querySelector('.slide')?.offsetWidth || 300;
+      car.scrollBy({ left: direction * (slideWidth + 18), behavior: 'smooth' });
+    }
+
+    function goToSlide(index) {
+      if (!car) return;
+      const slideWidth = car.querySelector('.slide')?.offsetWidth || 300;
+      car.scrollTo({ left: index * (slideWidth + 18), behavior: 'smooth' });
+    }
+
+    if (car) {
+      car.addEventListener('scroll', updateActiveDot, { passive: true });
+
+      let isDown = false;
+      let startX, scrollLeft;
+
+      car.addEventListener('mousedown', (e) => {
+        isDown = true;
+        car.classList.add('dragging');
+        startX = e.pageX - car.offsetLeft;
+        scrollLeft = car.scrollLeft;
+      });
+
+      car.addEventListener('mouseleave', () => {
+        isDown = false;
+        car.classList.remove('dragging');
+      });
+
+      car.addEventListener('mouseup', () => {
+        isDown = false;
+        car.classList.remove('dragging');
+      });
+
+      car.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - car.offsetLeft;
+        const walk = (x - startX) * 1.5;
+        car.scrollLeft = scrollLeft - walk;
+      });
+
+      let touchStartX = 0;
+      car.addEventListener('touchstart', (e) => {
+        touchStartX = e.touches[0].pageX;
+      }, { passive: true });
+
+      car.addEventListener('touchend', (e) => {
+        const touchEndX = e.changedTouches[0].pageX;
+        const diff = touchStartX - touchEndX;
+        if (Math.abs(diff) > 40) {
+          slideCarousel(diff > 0 ? 1 : -1);
+        }
+      }, { passive: true });
+    }
+
+    // COMPARADOR INTERATIVO ANTES / DEPOIS (TEXTO CORRIDO VS MAPA MENTAL)
+    const compRange = document.getElementById('comparison-range');
+    const compOverlay = document.getElementById('comparison-overlay');
+    const compHandle = document.getElementById('comparison-handle');
+
+    function updateComparisonSlider(val) {
+      if (compOverlay) {
+        compOverlay.style.clipPath = `inset(0 ${100 - val}% 0 0)`;
+      }
+      if (compHandle) {
+        compHandle.style.left = `${val}%`;
+      }
+    }
+
+    if (compRange) {
+      compRange.addEventListener('input', (e) => {
+        updateComparisonSlider(e.target.value);
+      });
+      // Inicia em 50%
+      updateComparisonSlider(50);
+    }
+
+    // Reveal Animation on Scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
