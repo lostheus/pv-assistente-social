@@ -6,70 +6,18 @@
   <title>100 Mapas da Aprovação | Serviço Social SES-TO & FGV</title>
   <meta name="description" content="O método visual para dominar Legislação Social, SUS e Ética Profissional em 15 minutos por dia, focado no concurso SES-TO da banca FGV.">
   <meta name="theme-color" content="#0D2033">
-  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Preload da Imagem Hero LCP para carregamento ultrarrápido -->
+  <link rel="preload" as="image" href="mockup-principal-assistente.webp" type="image/webp" fetchpriority="high">
+  
+  <!-- Preconnect e Fontes Otimizadas -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['"DM Sans"', 'system-ui', '-apple-system', 'sans-serif'],
-            display: ['Outfit', '"DM Sans"', 'sans-serif']
-          },
-          colors: {
-            brand: {
-              50: '#EAF4ED',
-              100: '#CFE6D6',
-              200: '#A3D0AF',
-              400: '#4FA46B',
-              500: '#2F8350',
-              600: '#277A47',
-              700: '#1E6847',
-              800: '#164E35',
-              900: '#0F3624'
-            },
-            gold: {
-              50: '#FAF6EA',
-              100: '#F4ECD0',
-              300: '#DCBF79',
-              400: '#CBA255',
-              500: '#B88E3A',
-              600: '#9C7322',
-              700: '#7E5B15'
-            },
-            ink: {
-              50: '#F8F9FA',
-              100: '#EFF2F6',
-              200: '#DDE3EB',
-              400: '#7B8A9D',
-              500: '#56667A',
-              600: '#3D4D61',
-              700: '#28384D',
-              800: '#17273A',
-              900: '#0E1A29'
-            },
-            navy: {
-              600: '#254E75',
-              700: '#1C3D5E',
-              800: '#142E47',
-              900: '#0D2033'
-            },
-            coral: {
-              500: '#C0392B',
-              600: '#A92D20'
-            }
-          },
-          boxShadow: {
-            soft: '0 2px 4px rgba(13,32,51,.04), 0 10px 28px -8px rgba(13,32,51,.08)',
-            card: '0 2px 5px rgba(13,32,51,.04), 0 16px 36px -16px rgba(13,32,51,.16)',
-            lift: '0 24px 60px -20px rgba(13,32,51,.32)'
-          }
-        }
-      }
-    }
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS Compilado e Minificado Local (Zero Runtime Blocking JS) -->
+  <link rel="stylesheet" href="dist/output.css">
+
   <style>
     html { font-size: 16px; }
     html, body { background: #FAF8F1; color: #17273A; overflow-x: hidden; max-width: 100%; }
@@ -454,15 +402,16 @@
         +100 Mapas Visuais de <span class="text-brand-700">Serviço Social & SUS</span>: Domine a legislação e os temas mais cobrados da FGV com <span class="text-gold-600">100% de segurança</span>
       </h1>
 
-      <!-- Mockup do Pack em Destaque -->
+      <!-- Mockup do Pack em Destaque (LCP Otimizado com Dimensões Explícitas) -->
       <div class="reveal min-w-0 max-w-sm sm:max-w-xl lg:max-w-2xl mx-auto mt-6 relative flex items-center justify-center">
         <img 
           src="mockup-principal-assistente.webp" 
+          width="720"
+          height="720"
           alt="100 Mapas da Aprovação Serviço Social SES-TO e FGV" 
           class="w-full h-auto drop-shadow-[0_18px_32px_rgba(13,32,51,0.22)]"
           decoding="async" 
           fetchpriority="high"
-          onerror="this.outerHTML='<div class=\'ph rounded-2xl shadow-card\' style=\'aspect-ratio:16/10\'><span class=\'font-display font-bold text-base\'>100 Mapas da Aprovação</span><span class=\'text-sm text-ink-500\'>Serviço Social para Concursos SES-TO & FGV</span></div>'"
         >
       </div>
 
@@ -486,8 +435,6 @@
           <span class="text-ink-800 text-sm sm:text-base font-semibold">Formato vertical pronto para celular, tablet ou impressão</span>
         </li>
       </ul>
-
-
 
     </div>
   </section>
@@ -605,8 +552,12 @@
             <div class="comparison-layer-right">
               <img 
                 src="assets/mapa-exemplo-sus.webp" 
+                width="640"
+                height="905"
                 alt="Mapa Mental Ilustrado do SUS" 
                 class="w-full h-full object-contain pointer-events-none"
+                loading="lazy"
+                decoding="async"
               >
               <!-- Badge Mapa Mental -->
               <div class="absolute bottom-3 right-3 bg-navy-900/95 backdrop-blur-sm text-white text-xs sm:text-sm font-bold py-1.5 px-4 rounded-full shadow-lg pointer-events-none z-10 flex items-center gap-1.5 border border-white/20">
@@ -797,7 +748,7 @@
           <!-- Slide 1 -->
           <div class="slide">
             <div class="card p-3 h-full flex flex-col justify-between">
-              <img src="assets/revisao-modulo-01.webp" class="map-preview" loading="lazy" alt="Módulo 1: Fundamentos do Serviço Social" onerror="this.outerHTML='<div class=\'ph\' style=\'aspect-ratio:16/10;border-radius:10px\'><span class=\'font-bold text-sm\'>Módulo 01: Fundamentos</span></div>'">
+              <img src="assets/revisao-modulo-01.webp" width="640" height="400" class="map-preview" loading="lazy" decoding="async" alt="Módulo 1: Fundamentos do Serviço Social">
               <div class="p-3.5 text-center">
                 <span class="text-xs sm:text-sm font-bold text-brand-700 uppercase tracking-wider">Espaço 01 · 12 Mapas</span>
                 <h4 class="font-bold text-navy-900 text-base mt-1">Fundamentos e Espaços Profissionais</h4>
@@ -809,7 +760,7 @@
           <!-- Slide 2 -->
           <div class="slide">
             <div class="card p-3 h-full flex flex-col justify-between">
-              <img src="assets/revisao-modulo-02.webp" class="map-preview" loading="lazy" alt="Módulo 2: Dimensão Técnico-Operativa" onerror="this.outerHTML='<div class=\'ph\' style=\'aspect-ratio:16/10;border-radius:10px\'><span class=\'font-bold text-sm\'>Módulo 02: Técnico-Operativo</span></div>'">
+              <img src="assets/revisao-modulo-02.webp" width="640" height="400" class="map-preview" loading="lazy" decoding="async" alt="Módulo 2: Dimensão Técnico-Operativa">
               <div class="p-3.5 text-center">
                 <span class="text-xs sm:text-sm font-bold text-brand-700 uppercase tracking-wider">Espaço 02 · 20 Mapas</span>
                 <h4 class="font-bold text-navy-900 text-base mt-1">Dimensão Técnico-Operativa e Instrumentais</h4>
@@ -821,7 +772,7 @@
           <!-- Slide 3 -->
           <div class="slide">
             <div class="card p-3 h-full flex flex-col justify-between">
-              <img src="assets/revisao-modulo-03.webp" class="map-preview" loading="lazy" alt="Módulo 3: Serviço Social na Saúde" onerror="this.outerHTML='<div class=\'ph\' style=\'aspect-ratio:16/10;border-radius:10px\'><span class=\'font-bold text-sm\'>Módulo 03: Saúde</span></div>'">
+              <img src="assets/revisao-modulo-03.webp" width="640" height="400" class="map-preview" loading="lazy" decoding="async" alt="Módulo 3: Serviço Social na Saúde">
               <div class="p-3.5 text-center">
                 <span class="text-xs sm:text-sm font-bold text-brand-700 uppercase tracking-wider">Espaço 03 · 14 Mapas</span>
                 <h4 class="font-bold text-navy-900 text-base mt-1">Serviço Social na Saúde</h4>
@@ -833,7 +784,7 @@
           <!-- Slide 4 -->
           <div class="slide">
             <div class="card p-3 h-full flex flex-col justify-between">
-              <img src="assets/revisao-modulo-04.webp" class="map-preview" loading="lazy" alt="Módulo 4: Políticas Sociais e Seguridade" onerror="this.outerHTML='<div class=\'ph\' style=\'aspect-ratio:16/10;border-radius:10px\'><span class=\'font-bold text-sm\'>Módulo 04: Seguridade</span></div>'">
+              <img src="assets/revisao-modulo-04.webp" width="640" height="400" class="map-preview" loading="lazy" decoding="async" alt="Módulo 4: Políticas Sociais e Seguridade">
               <div class="p-3.5 text-center">
                 <span class="text-xs sm:text-sm font-bold text-brand-700 uppercase tracking-wider">Espaço 04 · 16 Mapas</span>
                 <h4 class="font-bold text-navy-900 text-base mt-1">Políticas Sociais e Seguridade Social</h4>
@@ -845,7 +796,7 @@
           <!-- Slide 5 -->
           <div class="slide">
             <div class="card p-3 h-full flex flex-col justify-between">
-              <img src="assets/revisao-modulo-05.webp" class="map-preview" loading="lazy" alt="Módulo 5: Criança, Adolescente e Família" onerror="this.outerHTML='<div class=\'ph\' style=\'aspect-ratio:16/10;border-radius:10px\'><span class=\'font-bold text-sm\'>Módulo 05: Famílias</span></div>'">
+              <img src="assets/revisao-modulo-05.webp" width="640" height="400" class="map-preview" loading="lazy" decoding="async" alt="Módulo 5: Criança, Adolescente e Família">
               <div class="p-3.5 text-center">
                 <span class="text-xs sm:text-sm font-bold text-brand-700 uppercase tracking-wider">Espaço 05 · 20 Mapas</span>
                 <h4 class="font-bold text-navy-900 text-base mt-1">Criança, Família e Violências</h4>
@@ -857,7 +808,7 @@
           <!-- Slide 6 -->
           <div class="slide">
             <div class="card p-3 h-full flex flex-col justify-between">
-              <img src="assets/revisao-modulo-07.webp" class="map-preview" loading="lazy" alt="Módulo 6: Legislação do SUS e Ética" onerror="this.outerHTML='<div class=\'ph\' style=\'aspect-ratio:16/10;border-radius:10px\'><span class=\'font-bold text-sm\'>Módulo 06: SUS & Ética</span></div>'">
+              <img src="assets/revisao-modulo-07.webp" width="640" height="400" class="map-preview" loading="lazy" decoding="async" alt="Módulo 6: Legislação do SUS e Ética">
               <div class="p-3.5 text-center">
                 <span class="text-xs sm:text-sm font-bold text-brand-700 uppercase tracking-wider">Espaço 06 · 18 Mapas</span>
                 <h4 class="font-bold text-navy-900 text-base mt-1">Legislação do SUS, Ética e Lei 8.662</h4>
@@ -940,7 +891,7 @@
         <!-- Bônus 1 -->
         <div class="bonus-card-ref">
           <div class="h-52 sm:h-60 mb-5 flex items-center justify-center w-full">
-            <img src="bonus/bonus-01.webp" alt="Bônus 1: Guia Rápido de Legislação do SUS" class="max-h-full max-w-full object-contain drop-shadow-[0_12px_22px_rgba(0,0,0,0.4)]" loading="lazy">
+            <img src="bonus/bonus-01.webp" width="400" height="520" alt="Bônus 1: Guia Rápido de Legislação do SUS" class="max-h-full max-w-full object-contain drop-shadow-[0_12px_22px_rgba(0,0,0,0.4)]" loading="lazy" decoding="async">
           </div>
           <div class="w-full flex-1 flex flex-col justify-between items-center">
             <div>
@@ -959,7 +910,7 @@
         <!-- Bônus 2 -->
         <div class="bonus-card-ref">
           <div class="h-52 sm:h-60 mb-5 flex items-center justify-center w-full">
-            <img src="bonus/bonus-02.webp" alt="Bônus 2: Checklist de Véspera FGV" class="max-h-full max-w-full object-contain drop-shadow-[0_12px_22px_rgba(0,0,0,0.4)]" loading="lazy">
+            <img src="bonus/bonus-02.webp" width="400" height="520" alt="Bônus 2: Checklist de Véspera FGV" class="max-h-full max-w-full object-contain drop-shadow-[0_12px_22px_rgba(0,0,0,0.4)]" loading="lazy" decoding="async">
           </div>
           <div class="w-full flex-1 flex flex-col justify-between items-center">
             <div>
@@ -978,7 +929,7 @@
         <!-- Bônus 3 -->
         <div class="bonus-card-ref">
           <div class="h-52 sm:h-60 mb-5 flex items-center justify-center w-full">
-            <img src="bonus/bonus-03.webp" alt="Bônus 3: Caderno de Conceitos Críticos" class="max-h-full max-w-full object-contain drop-shadow-[0_12px_22px_rgba(0,0,0,0.4)]" loading="lazy">
+            <img src="bonus/bonus-03.webp" width="400" height="520" alt="Bônus 3: Caderno de Conceitos Críticos" class="max-h-full max-w-full object-contain drop-shadow-[0_12px_22px_rgba(0,0,0,0.4)]" loading="lazy" decoding="async">
           </div>
           <div class="w-full flex-1 flex flex-col justify-between items-center">
             <div>
@@ -997,7 +948,7 @@
         <!-- Bônus 4 -->
         <div class="bonus-card-ref">
           <div class="h-52 sm:h-60 mb-5 flex items-center justify-center w-full">
-            <img src="bonus/bonus-04.webp" alt="Bônus 4: Mapa Expresso do ECA e Medidas de Proteção" class="max-h-full max-w-full object-contain drop-shadow-[0_12px_22px_rgba(0,0,0,0.4)]" loading="lazy">
+            <img src="bonus/bonus-04.webp" width="400" height="520" alt="Bônus 4: Mapa Expresso do ECA e Medidas de Proteção" class="max-h-full max-w-full object-contain drop-shadow-[0_12px_22px_rgba(0,0,0,0.4)]" loading="lazy" decoding="async">
           </div>
           <div class="w-full flex-1 flex flex-col justify-between items-center">
             <div>
@@ -1016,7 +967,7 @@
         <!-- Bônus 5 -->
         <div class="bonus-card-ref">
           <div class="h-52 sm:h-60 mb-5 flex items-center justify-center w-full">
-            <img src="bonus/bonus-05.webp" alt="Bônus 5: Guia da Lei 8.662 e Código de Ética" class="max-h-full max-w-full object-contain drop-shadow-[0_12px_22px_rgba(0,0,0,0.4)]" loading="lazy">
+            <img src="bonus/bonus-05.webp" width="400" height="520" alt="Bônus 5: Guia da Lei 8.662 e Código de Ética" class="max-h-full max-w-full object-contain drop-shadow-[0_12px_22px_rgba(0,0,0,0.4)]" loading="lazy" decoding="async">
           </div>
           <div class="w-full flex-1 flex flex-col justify-between items-center">
             <div>
@@ -1035,7 +986,7 @@
         <!-- Bônus 6 -->
         <div class="bonus-card-ref">
           <div class="h-52 sm:h-60 mb-5 flex items-center justify-center w-full">
-            <img src="bonus/bonus-06.webp" alt="Bônus 6: Cronograma Tático de Revisão" class="max-h-full max-w-full object-contain drop-shadow-[0_12px_22px_rgba(0,0,0,0.4)]" loading="lazy">
+            <img src="bonus/bonus-06.webp" width="400" height="520" alt="Bônus 6: Cronograma Tático de Revisão" class="max-h-full max-w-full object-contain drop-shadow-[0_12px_22px_rgba(0,0,0,0.4)]" loading="lazy" decoding="async">
           </div>
           <div class="w-full flex-1 flex flex-col justify-between items-center">
             <div>
@@ -1195,9 +1146,12 @@
           <div class="h-60 sm:h-72 mb-6 flex items-center justify-center p-2">
             <img 
               src="mockup-principal-assistente.webp" 
+              width="720"
+              height="720"
               alt="100 Mapas da Aprovação Serviço Social SES-TO e FGV" 
               class="max-h-full max-w-full object-contain drop-shadow-[0_14px_28px_rgba(13,32,51,0.2)]"
               loading="lazy"
+              decoding="async"
             >
           </div>
 
