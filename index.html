@@ -212,50 +212,51 @@
     }
     .carousel {
       display: flex;
-      gap: 18px;
+      gap: 20px;
       overflow-x: auto;
       scroll-snap-type: x mandatory;
-      padding: 8px 4px 18px;
+      padding: 10px 4px 20px;
       scroll-behavior: smooth;
       -webkit-overflow-scrolling: touch;
-      touch-action: pan-x pan-y;
       scrollbar-width: none;
       -ms-overflow-style: none;
-      cursor: grab;
       user-select: none;
     }
     .carousel::-webkit-scrollbar { display: none; }
-    .carousel.dragging { cursor: grabbing; scroll-behavior: auto; }
+    .carousel.dragging { cursor: grabbing; scroll-behavior: auto; scroll-snap-type: none; }
     
     .carousel .slide {
-      scroll-snap-align: center;
-      flex: 0 0 85%;
-      max-width: 85%;
+      scroll-snap-align: start;
+      scroll-snap-stop: normal;
+      flex: 0 0 calc(100% - 36px);
+      max-width: calc(100% - 36px);
+      transition: transform .2s ease;
     }
     @media(min-width: 640px) {
       .carousel .slide {
-        flex: 0 0 46%;
-        max-width: 46%;
+        flex: 0 0 calc(50% - 10px);
+        max-width: calc(50% - 10px);
       }
     }
     @media(min-width: 1024px) {
       .carousel .slide {
-        flex: 0 0 31.5%;
-        max-width: 31.5%;
+        flex: 0 0 calc(33.333% - 14px);
+        max-width: calc(33.333% - 14px);
       }
     }
 
     .carbtn {
       position: absolute;
-      top: 42%;
-      width: 44px;
-      height: 44px;
+      top: 40%;
+      width: 46px;
+      height: 46px;
       border-radius: 999px;
       background: #ffffff;
       border: 1px solid rgba(13,32,51,.12);
       box-shadow: 0 8px 20px -6px rgba(13,32,51,.22);
       cursor: pointer;
-      font-size: 20px;
+      font-size: 22px;
+      font-weight: 700;
       color: #142E47;
       display: none;
       align-items: center;
@@ -263,21 +264,21 @@
       z-index: 10;
       transition: all .2s ease;
     }
-    .carbtn:hover { background: #FAF8F1; transform: scale(1.06); }
+    .carbtn:hover { background: #FAF8F1; transform: scale(1.08); box-shadow: 0 10px 24px -4px rgba(13,32,51,.3); }
     @media(min-width: 768px) { .carbtn { display: flex; } }
-    .carbtn.prev { left: -14px; }
-    .carbtn.next { right: -14px; }
+    .carbtn.prev { left: -16px; }
+    .carbtn.next { right: -16px; }
 
     .car-dot {
-      width: 8px;
-      height: 8px;
+      width: 9px;
+      height: 9px;
       border-radius: 999px;
       background: #DDE3EB;
       transition: all .25s ease;
       cursor: pointer;
     }
     .car-dot.active {
-      width: 24px;
+      width: 28px;
       background: #1E6847;
     }
 
@@ -1470,35 +1471,62 @@
       }
     }
 
-    // Carrossel com 6 Espaços e Suporte Total a Touch-Swipe
+    // Carrossel com 6 Espaços e Suporte Fluido a Touch-Swipe
     const car = document.getElementById('car-modulos');
     const dots = document.querySelectorAll('.car-dot');
 
-    function updateActiveDot() {
-      if (!car || !dots.length) return;
-      const scrollLeft = car.scrollLeft;
-      const slideWidth = car.querySelector('.slide')?.offsetWidth || 300;
-      const activeIndex = Math.round(scrollLeft / (slideWidth + 18));
-      dots.forEach((dot, idx) => {
-        dot.classList.toggle('active', idx === Math.min(activeIndex, dots.length - 1));
+    function getActiveSlideIndex() {
+      if (!car) return 0;
+      const slides = car.querySelectorAll('.slide');
+      const currentScroll = car.scrollLeft;
+      let closestIdx = 0;
+      let minDiff = Infinity;
+      slides.forEach((slide, idx) => {
+        const diff = Math.abs(slide.offsetLeft - car.offsetLeft - currentScroll);
+        if (diff < minDiff) {
+          minDiff = diff;
+          closestIdx = idx;
+        }
       });
+      return closestIdx;
     }
 
-    function slideCarousel(direction) {
-      if (!car) return;
-      const slideWidth = car.querySelector('.slide')?.offsetWidth || 300;
-      car.scrollBy({ left: direction * (slideWidth + 18), behavior: 'smooth' });
+    function updateActiveDot() {
+      if (!car || !dots.length) return;
+      const activeIndex = getActiveSlideIndex();
+      dots.forEach((dot, idx) => {
+        dot.classList.toggle('active', idx === activeIndex);
+      });
     }
 
     function goToSlide(index) {
       if (!car) return;
-      const slideWidth = car.querySelector('.slide')?.offsetWidth || 300;
-      car.scrollTo({ left: index * (slideWidth + 18), behavior: 'smooth' });
+      const slides = car.querySelectorAll('.slide');
+      if (index < 0) index = 0;
+      if (index >= slides.length) index = slides.length - 1;
+      const targetSlide = slides[index];
+      if (targetSlide) {
+        car.scrollTo({
+          left: targetSlide.offsetLeft - car.offsetLeft - 4,
+          behavior: 'smooth'
+        });
+      }
+    }
+
+    function slideCarousel(direction) {
+      if (!car) return;
+      const currentIndex = getActiveSlideIndex();
+      goToSlide(currentIndex + direction);
     }
 
     if (car) {
-      car.addEventListener('scroll', updateActiveDot, { passive: true });
+      let scrollTimer = null;
+      car.addEventListener('scroll', () => {
+        if (scrollTimer) cancelAnimationFrame(scrollTimer);
+        scrollTimer = requestAnimationFrame(updateActiveDot);
+      }, { passive: true });
 
+      // Suporte a Arrastar com Mouse no Desktop
       let isDown = false;
       let startX, scrollLeft;
 
@@ -1509,36 +1537,20 @@
         scrollLeft = car.scrollLeft;
       });
 
-      car.addEventListener('mouseleave', () => {
+      window.addEventListener('mouseup', () => {
+        if (!isDown) return;
         isDown = false;
         car.classList.remove('dragging');
-      });
-
-      car.addEventListener('mouseup', () => {
-        isDown = false;
-        car.classList.remove('dragging');
+        updateActiveDot();
       });
 
       car.addEventListener('mousemove', (e) => {
         if (!isDown) return;
         e.preventDefault();
         const x = e.pageX - car.offsetLeft;
-        const walk = (x - startX) * 1.5;
+        const walk = (x - startX) * 1.2;
         car.scrollLeft = scrollLeft - walk;
       });
-
-      let touchStartX = 0;
-      car.addEventListener('touchstart', (e) => {
-        touchStartX = e.touches[0].pageX;
-      }, { passive: true });
-
-      car.addEventListener('touchend', (e) => {
-        const touchEndX = e.changedTouches[0].pageX;
-        const diff = touchStartX - touchEndX;
-        if (Math.abs(diff) > 40) {
-          slideCarousel(diff > 0 ? 1 : -1);
-        }
-      }, { passive: true });
     }
 
     // COMPARADOR INTERATIVO ANTES / DEPOIS (TEXTO CORRIDO VS MAPA MENTAL)
