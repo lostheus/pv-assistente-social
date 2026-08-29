@@ -4,8 +4,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"DM Sans"', 'system-ui', '-apple-system', 'sans-serif'],
-        display: ['Outfit', '"DM Sans"', 'sans-serif']
+        sans: ['Montserrat', 'system-ui', '-apple-system', 'sans-serif'],
+        display: ['Montserrat', 'system-ui', 'sans-serif']
       },
       colors: {
         brand: {
